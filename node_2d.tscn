@@ -488,11 +488,11 @@ tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAABAP7/AQABAAAAAAACAP7/AQABAAA
 tile_set = SubResource("TileSet_mxw0r")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 195.0
+offset_left = 60.0
 offset_top = -108.0
-offset_right = 329.0
-offset_bottom = -33.0
-text = "Hillel's a fag"
+offset_right = 211.0
+offset_bottom = -68.0
+text = "Nadav Loves dihh"
 
 [connection signal="body_entered" from="CharacterBody2D/Hurtbox" to="CharacterBody2D" method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="CharacterBody2D/Hurtbox" to="CharacterBody2D/Hurtbox" method="_on_body_entered"]
