@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://uknglwydosjw"]
 
-[ext_resource type="Texture2D" uid="uid://8oy26atonqfk" path="res://output-onlinetools.png" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://8oy26atonqfk" path="res://art/output-onlinetools.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://24wkohk5s3p4" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://dlubt7roymxl3" path="res://Caracol Island.ttf" id="2_7vrkn"]
 
