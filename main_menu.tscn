@@ -1,11 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://uknglwydosjw"]
+[gd_scene load_steps=14 format=3 uid="uid://uknglwydosjw"]
 
-[ext_resource type="Texture2D" uid="uid://8oy26atonqfk" path="res://art/output-onlinetools.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://24wkohk5s3p4" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="FontFile" uid="uid://dlubt7roymxl3" path="res://Caracol Island.ttf" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://clogx8g6uyc4e" path="res://usablemainmenubgrpss224x126.png" id="2_7vrkn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
-texture = ExtResource("1_06t4h")
+texture = ExtResource("2_7vrkn")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
@@ -93,12 +92,11 @@ grow_vertical = 2
 script = ExtResource("1_fu7sn")
 
 [node name="Panel" type="Panel" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -13.0
-offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
@@ -110,12 +108,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 33.0
-offset_top = -133.0
-offset_right = 341.0
-offset_bottom = 99.0
+offset_left = -176.0
+offset_top = -14.0
+offset_right = 329.71423
+offset_bottom = 218.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.7, 0.7)
 theme_override_constants/separation = 29
 
 [node name="start" type="Button" parent="VBoxContainer"]
@@ -164,23 +163,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_glbon")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
 text = "exit (please no)"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -242.5
-offset_top = 141.0
-offset_right = 242.5
-offset_bottom = 250.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_7vrkn")
-theme_override_font_sizes/font_size = 48
-text = "ROCK, PAPER, SCISSORS, SHOOT!
-"
-horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_2_pressed"]
