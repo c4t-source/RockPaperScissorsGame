@@ -2,7 +2,9 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		await get_tree().create_timer(1.5).timeut
+		get_tree().paused = true
+		await get_tree().create_timer(1.5).timeout
+		get_tree().paused = false
 		var current_scene = get_tree().current_scene.scene_file_path
 		var file_name = current_scene.get_file()
 		var level_number = file_name.get_basename().split("_")[1].to_int()
