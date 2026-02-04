@@ -132,3 +132,4 @@ tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAFAP3/AQADAAMAAAAEAP7/AQABAAA
 tile_set = SubResource("TileSet_mxw0r")
 
 [node name="endlevel" parent="." instance=ExtResource("4_5uqhs")]
+position = Vector2(1246, -44)

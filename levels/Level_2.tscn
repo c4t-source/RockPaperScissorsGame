@@ -131,5 +131,6 @@ tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAFAP3/AQADAAMAAAAEAP7/AQABAAA
 tile_set = SubResource("TileSet_wos53")
 
 [node name="endlevel" parent="TextureRect" instance=ExtResource("2_se8g3")]
+position = Vector2(1238, -44)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_uvfbj")]
