@@ -31,7 +31,6 @@ var current_character: int = CharacterType.X
 @export var jump_velocity_y := -400.0
 @export var jump_velocity_z := -400.0
 
-
 var deathornotdeath := false
 var ability_duration = 8
 var amount_of_swaps = 0
