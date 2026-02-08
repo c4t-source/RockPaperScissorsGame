@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgygxw5qiw85t"]
-
-[ext_resource type="Script" uid="uid://c8x51c2crcjxd" path="res://wind_area_2d.gd" id="1_sre2f"]
-
-[node name="WindArea2D" type="Area2D"]
-script = ExtResource("1_sre2f")
