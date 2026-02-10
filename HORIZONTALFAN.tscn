@@ -1,76 +1,68 @@
-[gd_scene load_steps=11 format=3 uid="uid://cooxbadu6yj48"]
+[gd_scene load_steps=7 format=3 uid="uid://cooxbadu6yj48"]
 
+[ext_resource type="Script" uid="uid://d4guei0irf2m7" path="res://horizontalfan.gd" id="1_eqae4"]
 [ext_resource type="Texture2D" uid="uid://cdiy6k8ttxygt" path="res://WINDYFANRPSS.png" id="1_mnuec"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eqae4"]
-atlas = ExtResource("1_mnuec")
-region = Rect2(0, 0, 48, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5vnl"]
+size = Vector2(180, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o5vnl"]
-atlas = ExtResource("1_mnuec")
-region = Rect2(48, 0, 48, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ydq5l"]
-atlas = ExtResource("1_mnuec")
-region = Rect2(96, 0, 48, 32)
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ydq5l"]
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 10.0
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+gravity = Vector3(98, 0, 0)
+scale_min = 1.5
+scale_max = 1.5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg20e"]
 atlas = ExtResource("1_mnuec")
-region = Rect2(144, 0, 48, 32)
+region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8u0i"]
-atlas = ExtResource("1_mnuec")
-region = Rect2(192, 0, 48, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j0w6f"]
-atlas = ExtResource("1_mnuec")
-region = Rect2(240, 0, 48, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xabf6"]
-atlas = ExtResource("1_mnuec")
-region = Rect2(288, 0, 48, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vw1wd"]
-atlas = ExtResource("1_mnuec")
-region = Rect2(336, 0, 48, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6oye2"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8u0i"]
 animations = [{
-"frames": [{
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_eqae4")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_o5vnl")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_ydq5l")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_gg20e")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_x8u0i")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_j0w6f")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_xabf6")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_vw1wd")
-}],
+"frames": [],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg20e")
+}],
+"loop": true,
+"name": &"new_animation_1",
 "speed": 5.0
 }]
 
 [node name="HORIZONTAL FAN" type="Area2D"]
+script = ExtResource("1_eqae4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(90, 0)
+shape = SubResource("RectangleShape2D_o5vnl")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(24, -4)
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_ydq5l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_6oye2")
-frame_progress = 0.36194265
+position = Vector2(14, 0)
+sprite_frames = SubResource("SpriteFrames_x8u0i")
+animation = &"new_animation_1"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
