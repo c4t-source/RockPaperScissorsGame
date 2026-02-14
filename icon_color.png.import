@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdiy6k8ttxygt"
-path="res://.godot/imported/WINDYFANRPSS.png-e86be7eaaa9bae49efd00308fa57e429.ctex"
+uid="uid://b6cl2vyhu7mkj"
+path="res://.godot/imported/icon_color.png-ae4071d873347cce354c5580e75f1138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/WINDYFANRPSS.png"
-dest_files=["res://.godot/imported/WINDYFANRPSS.png-e86be7eaaa9bae49efd00308fa57e429.ctex"]
+source_file="res://icon_color.png"
+dest_files=["res://.godot/imported/icon_color.png-ae4071d873347cce354c5580e75f1138.ctex"]
 
 [params]
 

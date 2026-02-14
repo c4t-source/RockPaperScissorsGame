@@ -1,12 +1,13 @@
-[gd_scene load_steps=28 format=3 uid="uid://do4uxdlii4wws"]
+[gd_scene load_steps=29 format=3 uid="uid://cieaw8rrsq2td"]
 
-[ext_resource type="Texture2D" uid="uid://ctogwl5vyi1k2" path="res://art/PaperRPSS4Game.png" id="1_px5sl"]
-[ext_resource type="Texture2D" uid="uid://rdvdp6pjju21" path="res://art/RockRPS4Gamespritesheet.png" id="2_0qfo5"]
-[ext_resource type="Texture2D" uid="uid://drnpfk5yaj406" path="res://art/ScissorsRPSS4GAME.png" id="3_yxww1"]
-[ext_resource type="Texture2D" uid="uid://devnisj2oiys3" path="res://art/scissorsanimthatihaventsaidbeforeinprogress.png" id="4_wdpcj"]
-[ext_resource type="AudioStream" uid="uid://doof4nwbictfl" path="res://art/super-mario-64-thwomp-sound-online-audio-converter.mp3" id="5_qi5as"]
+[ext_resource type="Texture2D" uid="uid://cf82simgc8u5y" path="res://art/unnamed (1).png" id="1_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://ctogwl5vyi1k2" path="res://PaperRPSS4Game.png" id="2_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://drnpfk5yaj406" path="res://art/ScissorsRPSS4GAME.png" id="3_dw050"]
+[ext_resource type="Texture2D" uid="uid://rdvdp6pjju21" path="res://art/RockRPS4Gamespritesheet.png" id="4_b26j0"]
+[ext_resource type="Texture2D" uid="uid://devnisj2oiys3" path="res://art/scissorsanimthatihaventsaidbeforeinprogress.png" id="5_n7ghd"]
+[ext_resource type="AudioStream" uid="uid://doof4nwbictfl" path="res://art/super-mario-64-thwomp-sound-online-audio-converter.mp3" id="6_nvl01"]
 
-[sub_resource type="GDScript" id="GDScript_kgqac"]
+[sub_resource type="GDScript" id="GDScript_jm67y"]
 script/source = "extends CharacterBody2D
 
 enum CharacterType { X, Y, Z }
@@ -30,7 +31,6 @@ var current_character: int = CharacterType.X
 @export var jump_velocity_y := -400.0
 @export var jump_velocity_z := -400.0
 
-
 var deathornotdeath := false
 var ability_duration = 8
 var amount_of_swaps = 0
@@ -38,12 +38,12 @@ var current_speed := 0.0
 var current_gravity_scale := 1.0
 var current_jump_velocity := 0.0
 var can_jump := true
-
+var base_gravity := 0.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var Collision: CollisionShape2D = $CollisionShape2D
 @onready var deadbox: CollisionShape2D = $Hurtbox/deadbox
-var base_gravity := 0.0
+
 
 
 
@@ -61,6 +61,10 @@ func _input(event):
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += base_gravity * current_gravity_scale * delta
+	
+	
+	
+	#var dir is direction
 
 	var dir := Input.get_axis(\"move_left\", \"move_right\")
 	velocity.x = dir * current_speed
@@ -76,10 +80,13 @@ func _physics_process(delta):
 				
 		if abs(velocity.x) < 1 and current_character == CharacterType.X:
 				audio.play()
-			
+		
+	
+
 
 	if Input.is_action_just_pressed(\"Jump\") and is_on_floor() and can_jump:
 		velocity.y = current_jump_velocity
+	
 
 	move_and_slide()
 
@@ -122,7 +129,7 @@ func apply_character():
 			amount_of_swaps = amount_of_swaps + 1
 			print(amount_of_swaps)
 			Collision.shape.extents = Vector2(19,14)
-			deadbox.shape.extents = Vector2(14,20)
+			deadbox.shape.extents = Vector2(15,21)
 			if sprite and sprite_y:
 				sprite.play(\"cutpaperthing\")
 				floor_max_angle = 45
@@ -136,7 +143,8 @@ func apply_character():
 			amount_of_swaps = amount_of_swaps + 1
 			print(amount_of_swaps)
 			Collision.shape.extents = Vector2(20, 15)
-			deadbox.shape.extents = Vector2(14, 22)
+			deadbox.shape.extents = Vector2(15, 23)
+			floor_max_angle = 0
 			if sprite and sprite_z:
 				sprite.play(\"Paper\")
 			
@@ -159,8 +167,8 @@ func z_ability():
 	current_gravity_scale = -0.1
 
 
-func _on_hurtbox_body_entered(_dddqdbody: Node2D) -> void:
-	if not deathornotdeath:
+func _on_hurtbox_body_entered(_body: Node2D) -> void:
+	if not deathornotdeath and current_character != CharacterType.X:
 		die()
 
 func die():
@@ -173,84 +181,84 @@ func die():
 	get_tree().reload_current_scene()
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx6px"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbnov"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oyhbj"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oun7w"]
 size = Vector2(25, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h82qw"]
-atlas = ExtResource("1_px5sl")
+atlas = ExtResource("2_1jxqw")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd4yj"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5csp"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72h0a"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wvw5"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4s2f1"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ymmx1"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5xre"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a02hs"]
-atlas = ExtResource("2_0qfo5")
+atlas = ExtResource("4_b26j0")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dscgp"]
-atlas = ExtResource("3_yxww1")
+atlas = ExtResource("3_dw050")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_162o2"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8xxjn"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p60so"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1y6tq"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0iaf"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntxjc"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3rww"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rgy8"]
-atlas = ExtResource("4_wdpcj")
+atlas = ExtResource("5_n7ghd")
 region = Rect2(224, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lgjvw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkvc5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -322,14 +330,18 @@ animations = [{
 "speed": 4.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
-script = SubResource("GDScript_kgqac")
+collision_mask = 3
+script = SubResource("GDScript_jm67y")
+sprite_x = ExtResource("1_2hs0m")
+sprite_y = ExtResource("2_1jxqw")
+sprite_z = ExtResource("3_dw050")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(75.5, -21.5)
 rotation = -1.5708
-shape = SubResource("RectangleShape2D_vx6px")
+shape = SubResource("RectangleShape2D_sbnov")
 debug_color = Color(0.0179929, 0.642844, 0.302838, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -344,18 +356,18 @@ collision_mask = 2
 
 [node name="deadbox" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(75.365, -23)
-shape = SubResource("RectangleShape2D_oyhbj")
+shape = SubResource("RectangleShape2D_oun7w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 show_behind_parent = true
 texture_filter = 1
 position = Vector2(76, -22)
 scale = Vector2(1.47347, 1.47347)
-sprite_frames = SubResource("SpriteFrames_lgjvw")
+sprite_frames = SubResource("SpriteFrames_xkvc5")
 animation = &"Paper"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_qi5as")
+stream = ExtResource("6_nvl01")
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="Hurtbox" to="Hurtbox" method="_on_body_entered"]
