@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=4 uid="uid://cstlmnkwj0syd"]
 
-[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="2_a004i"]
-[ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://endlevel.tscn" id="2_se8g3"]
-[ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://player.tscn" id="3_uvfbj"]
+[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_qt6nw"]
+[ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="2_gnqhv"]
+[ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="3_c0t0n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a004i"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uvfbj"]
-texture = ExtResource("2_a004i")
+texture = ExtResource("1_qt6nw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -131,7 +131,7 @@ position = Vector2(42, 65)
 tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAFAP3/AQADAAMAAAAEAP7/AQABAAAAAAADAP7/AQABAAAAAAACAP7/AQABAAAAAAABAP7/AQABAAAAAAAFAP7/AQABAAAAAAAGAP7/AQABAAAAAAAHAP7/AQABAAAAAAAIAP7/AQABAAAAAAAJAP7/AQABAAAAAAAKAP7/AQABAAAAAAALAP7/AQABAAAAAAAMAP7/AQABAAAAAAANAP7/AQABAAAAAAAOAP7/AQABAAAAAAAPAP7/AQABAAAAAAAQAP7/AQABAAAAAAARAP7/AQABAAAAAAASAP7/AQABAAAAAAATAP7/AQABAAAAAAAUAP7/AQABAAAAAAAVAP7/AQABAAAAAAAWAP7/AQABAAAAAAAXAP7/AQABAAAAAAAJAP3/AQAAAAMAAAAJAPz/AQAAAAMAAAAKAP3/AQAAAAMAAAAKAPz/AQAGAAAAAAALAP3/AQAGAAAAAAAGAP3/AQADAAMAAAAEAP3/AQABAAMAAAAHAP3/AQAAAAUAAAAIAP3/AQAAAAUAAAAMAP3/AQAAAAUAAAANAP3/AQAAAAUAAAAOAP3/AQAAAAMAAAAOAPz/AQADAAAAAAAJAPv/AQADAAIAAAARAP3/AQAAAAIAAAARAPv/AQAAAAAAAAASAPv/AQABAAAAAAATAPv/AQABAAAAAAAUAPv/AQABAAAAAAAVAPv/AQABAAAAAAAWAPv/AQACAAAAAAARAPz/AQAAAAEAAAAWAPz/AQACAAEAAAAWAP3/AQACAAIAAAASAPr/AQAGAAQAAAATAPr/AQAHAAQAAAAUAPr/AQAAAAMAAAAVAPr/AQADAAMAAAAWAPr/AQADAAAAAAAYAP7/AQABAAAAAAAZAP7/AQABAAAAAAAaAP7/AQABAAAAAAAbAP7/AQABAAAAAAAcAP7/AQABAAAAAAAdAP7/AQABAAAAAAAeAP7/AQABAAAAAAAYAP3/AQAAAAcAAAAZAP3/AQABAAcAAAAaAP3/AQACAAcAAAAbAP3/AQAFAAAAAAAcAP3/AQAAAAMAAAAdAP3/AQAEAAAAAAAfAP7/AQABAAAAAAAgAP7/AQABAAAAAAAhAP7/AQABAAAAAAAiAP7/AQABAAAAAAAjAP7/AQABAAAAAAAgAP3/AQADAAEAAAAhAP3/AQAAAAUAAAAiAP3/AQAAAAUAAAAjAP3/AQAFAAMAAAAkAP7/AQACAAAAAAADAPv/AQACAAIAAAABAPv/AQACAAIAAAACAPv/AQACAAIAAAAAAPv/AQACAAIAAAA=")
 tile_set = SubResource("TileSet_wos53")
 
-[node name="endlevel" parent="TextureRect" instance=ExtResource("2_se8g3")]
+[node name="endlevel" parent="TextureRect" instance=ExtResource("2_gnqhv")]
 position = Vector2(1238, -44)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_uvfbj")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_c0t0n")]
