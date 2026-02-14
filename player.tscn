@@ -39,7 +39,6 @@ var current_gravity_scale := 1.0
 var current_jump_velocity := 0.0
 var can_jump := true
 var base_gravity := 0.0
-var external_force_x := 0.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var Collision: CollisionShape2D = $CollisionShape2D
@@ -82,15 +81,6 @@ func _physics_process(delta):
 		if abs(velocity.x) < 1 and current_character == CharacterType.X:
 				audio.play()
 		
-	var input_velocity = 0.0
-	if dir:
-		input_velocity = dir * current_speed
-	else: 
-		input_velocity = move_toward(velocity.x, 0, current_speed)
-		
-	velocity.x = input_velocity + external_force_x
-	external_force_x = 0.0
-	
 	
 
 
@@ -154,6 +144,7 @@ func apply_character():
 			print(amount_of_swaps)
 			Collision.shape.extents = Vector2(20, 15)
 			deadbox.shape.extents = Vector2(15, 23)
+			floor_max_angle = 0
 			if sprite and sprite_z:
 				sprite.play(\"Paper\")
 			
@@ -188,10 +179,6 @@ func die():
 	set_physics_process(false)
 	await get_tree().create_timer(1.5).timeout
 	get_tree().reload_current_scene()
-
-
-func push_across(horizontal_force):
-	external_force_x += horizontal_force
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbnov"]
