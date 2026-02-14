@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://ckkf3g0f50ewd"]
+
+[ext_resource type="Script" uid="uid://cl0w03a7yfd8s" path="res://scripts/vertical_fan.gd" id="1_koxyi"]
+[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="2_t1sbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iybw1"]
+size = Vector2(34, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47ydw"]
+atlas = ExtResource("2_t1sbg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4tko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47ydw")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47ydw")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve" id="Curve_6ohl3"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_m68jg"]
+curve = SubResource("Curve_6ohl3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7n4em"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 0, 0)
+alpha_curve = SubResource("CurveTexture_m68jg")
+
+[node name="vertical fan" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_koxyi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -90)
+shape = SubResource("RectangleShape2D_iybw1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_o4tko")
+animation = &"on"
+autoplay = "on"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 16
+lifetime = 5.0
+randomness = 0.2
+trail_enabled = true
+trail_lifetime = 0.6
+process_material = SubResource("ParticleProcessMaterial_7n4em")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

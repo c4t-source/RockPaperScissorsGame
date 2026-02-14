@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cit2ihbiuam5q"]
 
-[ext_resource type="Script" uid="uid://cidv40djjj2td" path="res://endlevel.gd" id="1_pjyb7"]
-[ext_resource type="Texture2D" uid="uid://owpbkm7tjqd2" path="res://endlevelrpss.png" id="2_66gg6"]
+[ext_resource type="Script" uid="uid://cidv40djjj2td" path="res://scripts/endlevel.gd" id="1_pjyb7"]
+[ext_resource type="Texture2D" uid="uid://owpbkm7tjqd2" path="res://art/endlevelrpss.png" id="2_66gg6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vi8uq"]
 size = Vector2(28, 46)
