@@ -1,13 +1,12 @@
 extends Area2D
 
-@onready var animated_sprite_2D: AnimatedSprite2D = $AnimatedSprite2D
-@onready var GPU_particles_2D: GPUParticles2D = $GPUParticles2D
-
-var horizontal_force = 80
-var player 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 
 
-func _physics_process(delta: float) -> void:
+var  horizontal_force = 800
+var player
+func _physics_process(_delta: float) -> void:
 	if player:
 		player.push_across(horizontal_force)
 
@@ -17,6 +16,8 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_body_exited(body: Node2D) -> void:
-	player = null
+	if body.is_in_group("player"):
+		player = null
+	
 	
 	

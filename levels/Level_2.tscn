@@ -112,6 +112,7 @@ physics_layer_1/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_uvfbj")
 
 [node name="Level_two" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-506.0, -372.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15

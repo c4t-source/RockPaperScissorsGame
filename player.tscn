@@ -38,13 +38,13 @@ var current_speed := 0.0
 var current_gravity_scale := 1.0
 var current_jump_velocity := 0.0
 var can_jump := true
-var external_force_x = 0.0
-
+var base_gravity := 0.0
+var external_force_x := 0.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var Collision: CollisionShape2D = $CollisionShape2D
 @onready var deadbox: CollisionShape2D = $Hurtbox/deadbox
-var base_gravity := 0.0
+
 
 
 
