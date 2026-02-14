@@ -1,13 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://3kup5s2id4qr"]
+[gd_scene load_steps=7 format=4 uid="uid://3kup5s2id4qr"]
 
-[ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="1_cnmxh"]
-[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="3_u8eek"]
-[ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="4_t1jjp"]
-[ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="5_5x2jh"]
-[ext_resource type="Texture2D" uid="uid://c7creeeokf0su" path="res://unnamed (5).png" id="5_u8eek"]
+[ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://player.tscn" id="1_iv6j0"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_mpguo"]
+[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="3_btk8o"]
+[ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://endlevel.tscn" id="4_5uqhs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u16a4"]
-texture = ExtResource("3_u8eek")
+texture = ExtResource("3_btk8o")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -113,39 +112,23 @@ sources/1 = SubResource("TileSetAtlasSource_u16a4")
 [node name="Level_1" type="Node2D"]
 position = Vector2(201, 371)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_cnmxh")]
-position = Vector2(-202, -407)
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_iv6j0")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-z_index = -4096
-texture_filter = 1
-anchors_preset = 9
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -2764.0002
-offset_right = 2800.0
-offset_bottom = -768.00024
+grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3.755, 3.755)
-mouse_filter = 2
-texture = ExtResource("5_u8eek")
-stretch_mode = 1
+texture = ExtResource("2_mpguo")
+expand_mode = 1
 
-[node name="endlevel" parent="." instance=ExtResource("4_t1jjp")]
-position = Vector2(969, -457)
-
-[node name="vertical fan" parent="." instance=ExtResource("5_5x2jh")]
-position = Vector2(-181, -421)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="TextureRect"]
 physics_interpolation_mode = 1
 texture_filter = 1
-position = Vector2(23, 13)
-tile_map_data = PackedByteArray("AAD5//P/AQAAAAAAAAD6//P/AQABAAAAAAD7//P/AQABAAAAAAD8//P/AQABAAAAAAD9//L/AQABAAMAAAD9//P/AQABAAAAAAD+//L/AQADAAMAAAD+//P/AQABAAAAAAD///L/AQADAAMAAAD///P/AQABAAAAAAAAAPL/AQAAAAUAAAAAAPP/AQABAAAAAAABAPL/AQAAAAUAAAABAPP/AQABAAAAAAACAPD/AQADAAIAAAACAPH/AQAAAAMAAAACAPL/AQAAAAMAAAACAPP/AQABAAAAAAADAPH/AQAGAAAAAAADAPL/AQAAAAMAAAADAPP/AQABAAAAAAAEAPL/AQAGAAAAAAAEAPP/AQABAAAAAAAFAPL/AQAAAAUAAAAFAPP/AQABAAAAAAAGAPL/AQAAAAUAAAAGAPP/AQABAAAAAAAHAPH/AQADAAAAAAAHAPL/AQAAAAMAAAAHAPP/AQABAAAAAAAIAPP/AQABAAAAAAAJAPP/AQABAAAAAAAKAPD/AQAAAAAAAAAKAPH/AQAAAAEAAAAKAPL/AQAAAAIAAAAKAPP/AQABAAAAAAALAO//AQAGAAQAAAALAPD/AQABAAAAAAALAPP/AQABAAAAAAAMAO//AQAHAAQAAAAMAPD/AQABAAAAAAAMAPP/AQABAAAAAAANAO//AQAAAAMAAAANAPD/AQABAAAAAAANAPP/AQABAAAAAAAOAO//AQADAAMAAAAOAPD/AQABAAAAAAAOAPP/AQABAAAAAAAPAO//AQADAAAAAAAPAPD/AQACAAAAAAAPAPH/AQACAAEAAAAPAPL/AQACAAIAAAAPAPP/AQABAAAAAAAQAPP/AQABAAAAAAARAPL/AQAAAAcAAAARAPP/AQABAAAAAAASAPL/AQABAAcAAAASAPP/AQABAAAAAAATAPL/AQACAAcAAAATAPP/AQABAAAAAAAUAPL/AQAFAAAAAAAUAPP/AQABAAAAAAAVAPL/AQAAAAMAAAAVAPP/AQABAAAAAAAWAPL/AQAEAAAAAAAWAPP/AQABAAAAAAAXAPP/AQABAAAAAAAYAPP/AQABAAAAAAAZAPL/AQADAAEAAAAZAPP/AQABAAAAAAAaAPL/AQAAAAUAAAAaAPP/AQABAAAAAAAbAPL/AQAAAAUAAAAbAPP/AQABAAAAAAAcAPL/AQAFAAMAAAAcAPP/AQABAAAAAAAdAPP/AQACAAAAAAA=")
+position = Vector2(42, 65)
+tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAFAP3/AQADAAMAAAAEAP7/AQABAAAAAAADAP7/AQABAAAAAAACAP7/AQABAAAAAAABAP7/AQABAAAAAAAFAP7/AQABAAAAAAAGAP7/AQABAAAAAAAHAP7/AQABAAAAAAAIAP7/AQABAAAAAAAJAP7/AQABAAAAAAAKAP7/AQABAAAAAAALAP7/AQABAAAAAAAMAP7/AQABAAAAAAANAP7/AQABAAAAAAAOAP7/AQABAAAAAAAPAP7/AQABAAAAAAAQAP7/AQABAAAAAAARAP7/AQABAAAAAAASAP7/AQABAAAAAAATAP7/AQABAAAAAAAUAP7/AQABAAAAAAAVAP7/AQABAAAAAAAWAP7/AQABAAAAAAAXAP7/AQABAAAAAAAJAP3/AQAAAAMAAAAJAPz/AQAAAAMAAAAKAP3/AQAAAAMAAAAKAPz/AQAGAAAAAAALAP3/AQAGAAAAAAAGAP3/AQADAAMAAAAEAP3/AQABAAMAAAAHAP3/AQAAAAUAAAAIAP3/AQAAAAUAAAAMAP3/AQAAAAUAAAANAP3/AQAAAAUAAAAOAP3/AQAAAAMAAAAOAPz/AQADAAAAAAAJAPv/AQADAAIAAAARAP3/AQAAAAIAAAARAPv/AQAAAAAAAAASAPv/AQABAAAAAAATAPv/AQABAAAAAAAUAPv/AQABAAAAAAAVAPv/AQABAAAAAAAWAPv/AQACAAAAAAARAPz/AQAAAAEAAAAWAPz/AQACAAEAAAAWAP3/AQACAAIAAAASAPr/AQAGAAQAAAATAPr/AQAHAAQAAAAUAPr/AQAAAAMAAAAVAPr/AQADAAMAAAAWAPr/AQADAAAAAAAYAP7/AQABAAAAAAAZAP7/AQABAAAAAAAaAP7/AQABAAAAAAAbAP7/AQABAAAAAAAcAP7/AQABAAAAAAAdAP7/AQABAAAAAAAeAP7/AQABAAAAAAAYAP3/AQAAAAcAAAAZAP3/AQABAAcAAAAaAP3/AQACAAcAAAAbAP3/AQAFAAAAAAAcAP3/AQAAAAMAAAAdAP3/AQAEAAAAAAAfAP7/AQABAAAAAAAgAP7/AQABAAAAAAAhAP7/AQABAAAAAAAiAP7/AQABAAAAAAAjAP7/AQABAAAAAAAgAP3/AQADAAEAAAAhAP3/AQAAAAUAAAAiAP3/AQAAAAUAAAAjAP3/AQAFAAMAAAAkAP7/AQACAAAAAAA=")
 tile_set = SubResource("TileSet_mxw0r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -4096
-texture_filter = 1
-position = Vector2(393, -805)
-scale = Vector2(10.540178, 12.840277)
+[node name="endlevel" parent="." instance=ExtResource("4_5uqhs")]
+position = Vector2(1246, -44)
