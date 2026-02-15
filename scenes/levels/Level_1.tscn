@@ -1,11 +1,25 @@
-[gd_scene load_steps=9 format=4 uid="uid://3kup5s2id4qr"]
+[gd_scene load_steps=12 format=4 uid="uid://3kup5s2id4qr"]
 
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="1_cnmxh"]
+[ext_resource type="Texture2D" uid="uid://6dgdmvwse3rr" path="res://art/Blue.png" id="2_t1jjp"]
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="3_u8eek"]
 [ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="4_t1jjp"]
 [ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="5_5x2jh"]
-[ext_resource type="Texture2D" uid="uid://c7creeeokf0su" path="res://art/unnamed (5).png" id="5_u8eek"]
+[ext_resource type="Texture2D" uid="uid://da6excawcccj6" path="res://art/rps altmini  tileset.png" id="5_50olt"]
 [ext_resource type="PackedScene" uid="uid://l80shcho8jj" path="res://scenes/other scenes/Horizontal_fan.tscn" id="6_u8eek"]
+[ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://breaking_platform.tscn" id="8_50olt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u84xi"]
+texture = ExtResource("5_50olt")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, 16, 16, 16, 0.31863022, -1.2745209, 0.31863022, -16, 0.31863022)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -2.2304153, -0.31863022, -2.5490456, -16, -2.8676758)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, 16, 16, 16, -16, 0, -16, -16, -16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, 16, 16, 16, -16, 0, -16, -16, -16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u16a4"]
 texture = ExtResource("3_u8eek")
@@ -110,6 +124,7 @@ physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_u16a4")
+sources/0 = SubResource("TileSetAtlasSource_u84xi")
 
 [node name="Level_1" type="Node2D"]
 position = Vector2(201, 371)
@@ -120,16 +135,14 @@ position = Vector2(-202, -407)
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -4096
 texture_filter = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -2764.0002
-offset_right = 2800.0
-offset_bottom = -768.00024
-grow_vertical = 2
+offset_left = -1192.0
+offset_top = -1529.0002
+offset_right = -251.92017
+offset_bottom = -943.9137
 scale = Vector2(3.755, 3.755)
 mouse_filter = 2
-texture = ExtResource("5_u8eek")
+texture = ExtResource("2_t1jjp")
+expand_mode = 2
 stretch_mode = 1
 
 [node name="endlevel" parent="." instance=ExtResource("4_t1jjp")]
@@ -155,3 +168,6 @@ scale = Vector2(10.540178, 12.840277)
 position = Vector2(419, -546)
 rotation = 6.2831855
 speed = Vector2(500, 0)
+
+[node name="Breaking Platform" parent="." instance=ExtResource("8_50olt")]
+position = Vector2(-14, -484)
