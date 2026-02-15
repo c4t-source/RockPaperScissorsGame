@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://l80shcho8jj"]
+
+[ext_resource type="Script" uid="uid://dgo8s6u8whyxb" path="res://horizontal_fan.gd" id="1_f2agi"]
+[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_ln46t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2agi"]
+size = Vector2(202, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q0fv"]
+atlas = ExtResource("1_ln46t")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5q37"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q0fv")
+}],
+"loop": true,
+"name": &"Fan",
+"speed": 5.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6i5b4"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(6.475, 0, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1, 9, 1)
+spread = 10.0
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+gravity = Vector3(98, 0, 0)
+scale_min = 1.5
+scale_max = 1.5
+
+[node name="Horizontal_Fan" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_f2agi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(101, 0)
+shape = SubResource("RectangleShape2D_f2agi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_e5q37")
+animation = &"Fan"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_6i5b4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

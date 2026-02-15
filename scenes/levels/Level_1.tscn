@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://3kup5s2id4qr"]
+[gd_scene load_steps=9 format=4 uid="uid://3kup5s2id4qr"]
 
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="1_cnmxh"]
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="3_u8eek"]
 [ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="4_t1jjp"]
 [ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="5_5x2jh"]
-[ext_resource type="Texture2D" uid="uid://c7creeeokf0su" path="res://unnamed (5).png" id="5_u8eek"]
+[ext_resource type="Texture2D" uid="uid://c7creeeokf0su" path="res://art/unnamed (5).png" id="5_u8eek"]
+[ext_resource type="PackedScene" uid="uid://l80shcho8jj" path="res://scenes/other scenes/Horizontal_fan.tscn" id="6_u8eek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u16a4"]
 texture = ExtResource("3_u8eek")
@@ -149,3 +150,8 @@ z_index = -4096
 texture_filter = 1
 position = Vector2(393, -805)
 scale = Vector2(10.540178, 12.840277)
+
+[node name="Horizontal fan" parent="." instance=ExtResource("6_u8eek")]
+position = Vector2(419, -546)
+rotation = 6.2831855
+speed = Vector2(500, 0)

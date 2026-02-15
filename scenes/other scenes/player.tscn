@@ -39,7 +39,9 @@ var current_gravity_scale := 1.0
 var current_jump_velocity := 0.0
 var can_jump := true
 var base_gravity := 0.0
-var wind_velocity: Vector2 = Vector2.ZERO
+var wind_velocity_horizontal: Vector2 = Vector2.ZERO
+var wind_velocity_vertical: Vector2 = Vector2.ZERO
+
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
@@ -87,8 +89,14 @@ func _physics_process(delta):
 		velocity.y = current_jump_velocity
 	
 	
-	velocity.y += current_gravity_scale if wind_velocity.y == 0.0 else 0.0
-	velocity += wind_velocity * 0.4 
+	velocity.y += current_gravity_scale if wind_velocity_vertical.y == 0.0 else 0.0
+	velocity += wind_velocity_vertical * 0.4 
+	if current_character == CharacterType.X:
+		velocity.y += current_gravity_scale if wind_velocity_horizontal.x == 0.0 else 0.0
+		velocity -= wind_velocity_horizontal * -0.01
+	else:
+		velocity.y += current_gravity_scale if wind_velocity_horizontal.x == 0.0 else 0.0
+		velocity -= wind_velocity_horizontal * -0.4
 	move_and_slide()
 
 func swap_character():

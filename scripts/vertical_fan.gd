@@ -7,11 +7,11 @@ class_name WindArea2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if "wind_velocity" in body:
+	if "wind_velocity_vertical" in body:
 		if speed.y < 0.0:
 			body.velocity.y = speed.y
-		body.wind_velocity += speed
+		body.wind_velocity_vertical += speed
 
 func _on_body_exited(body: Node2D) -> void:
-	if "wind_velocity" in body:
-		body.wind_velocity -= speed
+	if "wind_velocity_vertical" in body:
+		body.wind_velocity_vertical -= speed
