@@ -145,17 +145,11 @@ texture = ExtResource("2_t1jjp")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="endlevel" parent="." instance=ExtResource("4_t1jjp")]
-position = Vector2(969, -457)
-
-[node name="vertical fan" parent="." instance=ExtResource("5_5x2jh")]
-position = Vector2(-181, -421)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(23, 13)
-tile_map_data = PackedByteArray("AAD5//P/AQAAAAAAAAD6//P/AQABAAAAAAD7//P/AQABAAAAAAD8//P/AQABAAAAAAD9//L/AQABAAMAAAD9//P/AQABAAAAAAD+//L/AQADAAMAAAD+//P/AQABAAAAAAD///L/AQADAAMAAAD///P/AQABAAAAAAAAAPL/AQAAAAUAAAAAAPP/AQABAAAAAAABAPL/AQAAAAUAAAABAPP/AQABAAAAAAACAPD/AQADAAIAAAACAPH/AQAAAAMAAAACAPL/AQAAAAMAAAACAPP/AQABAAAAAAADAPH/AQAGAAAAAAADAPL/AQAAAAMAAAADAPP/AQABAAAAAAAEAPL/AQAGAAAAAAAEAPP/AQABAAAAAAAFAPL/AQAAAAUAAAAFAPP/AQABAAAAAAAGAPL/AQAAAAUAAAAGAPP/AQABAAAAAAAHAPH/AQADAAAAAAAHAPL/AQAAAAMAAAAHAPP/AQABAAAAAAAIAPP/AQABAAAAAAAJAPP/AQABAAAAAAAKAPD/AQAAAAAAAAAKAPH/AQAAAAEAAAAKAPL/AQAAAAIAAAAKAPP/AQABAAAAAAALAO//AQAGAAQAAAALAPD/AQABAAAAAAALAPP/AQABAAAAAAAMAO//AQAHAAQAAAAMAPD/AQABAAAAAAAMAPP/AQABAAAAAAANAO//AQAAAAMAAAANAPD/AQABAAAAAAANAPP/AQABAAAAAAAOAO//AQADAAMAAAAOAPD/AQABAAAAAAAOAPP/AQABAAAAAAAPAO//AQADAAAAAAAPAPD/AQACAAAAAAAPAPH/AQACAAEAAAAPAPL/AQACAAIAAAAPAPP/AQABAAAAAAAQAPP/AQABAAAAAAARAPL/AQAAAAcAAAARAPP/AQABAAAAAAASAPL/AQABAAcAAAASAPP/AQABAAAAAAATAPL/AQACAAcAAAATAPP/AQABAAAAAAAUAPL/AQAFAAAAAAAUAPP/AQABAAAAAAAVAPL/AQAAAAMAAAAVAPP/AQABAAAAAAAWAPL/AQAEAAAAAAAWAPP/AQABAAAAAAAXAPP/AQABAAAAAAAYAPP/AQABAAAAAAAZAPL/AQADAAEAAAAZAPP/AQABAAAAAAAaAPL/AQAAAAUAAAAaAPP/AQABAAAAAAAbAPL/AQAAAAUAAAAbAPP/AQABAAAAAAAcAPL/AQAFAAMAAAAcAPP/AQABAAAAAAAdAPP/AQACAAAAAAA=")
+tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_mxw0r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -164,10 +158,79 @@ texture_filter = 1
 position = Vector2(393, -805)
 scale = Vector2(10.540178, 12.840277)
 
-[node name="Horizontal fan" parent="." instance=ExtResource("6_u8eek")]
-position = Vector2(419, -546)
-rotation = 6.2831855
+[node name="Scene Objects" type="Node" parent="."]
+
+[node name="endlevel" parent="Scene Objects" instance=ExtResource("4_t1jjp")]
+position = Vector2(1756, -1037)
+
+[node name="Vertical Fans" type="Node" parent="Scene Objects"]
+
+[node name="vertical fan" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(176, -47.999985)
+
+[node name="vertical fan2" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(462, -270)
+
+[node name="vertical fan3" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(1008, -464)
+
+[node name="vertical fan4" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(176, -47.999985)
+
+[node name="vertical fan5" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(462, -270)
+
+[node name="vertical fan6" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(1456, -336)
+
+[node name="vertical fan7" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(1424, -592)
+
+[node name="vertical fan8" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
+position = Vector2(1520, -816)
+
+[node name="Horizontal Fans" type="Node" parent="Scene Objects"]
+
+[node name="Horizontal fan" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
+position = Vector2(112, -272)
 speed = Vector2(500, 0)
 
-[node name="Breaking Platform" parent="." instance=ExtResource("8_50olt")]
-position = Vector2(-14, -484)
+[node name="Horizontal fan4" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
+position = Vector2(112, -272)
+speed = Vector2(500, 0)
+
+[node name="Horizontal fan3" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
+position = Vector2(112, -336)
+speed = Vector2(500, 0)
+
+[node name="Horizontal fan2" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
+position = Vector2(1392, -976)
+speed = Vector2(500, 0)
+
+[node name="Breaking Platforms" type="Node" parent="Scene Objects"]
+
+[node name="Breaking Platform" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
+position = Vector2(1065, -674)
+
+[node name="Breaking Platform2" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
+position = Vector2(1097, -674)
+
+[node name="Breaking Platform3" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
+position = Vector2(1129, -674)
+
+[node name="Breaking Platforms2" type="Node" parent="Scene Objects"]
+
+[node name="Breaking Platform" parent="Scene Objects/Breaking Platforms2" instance=ExtResource("8_50olt")]
+position = Vector2(1065, -674)
+
+[node name="Breaking Platform2" parent="Scene Objects/Breaking Platforms2" instance=ExtResource("8_50olt")]
+position = Vector2(1097, -674)
+
+[node name="Breaking Platform3" parent="Scene Objects/Breaking Platforms2" instance=ExtResource("8_50olt")]
+position = Vector2(1360, -312)
+
+[node name="Breaking Platform4" parent="Scene Objects/Breaking Platforms2" instance=ExtResource("8_50olt")]
+position = Vector2(1392, -312)
+
+[node name="Breaking Platform5" parent="Scene Objects/Breaking Platforms2" instance=ExtResource("8_50olt")]
+position = Vector2(1328, -312)

@@ -18,17 +18,17 @@ var current_character: int = CharacterType.X
 @export var sprite_z: Texture2D
 
 @export var speed_x := 100
-@export var speed_y := 175
+@export var speed_y := 150
 @export var speed_z := 175
 
 @export var gravity_scale_x := 1
 #2.8
-@export var gravity_scale_y := 0.35
+@export var gravity_scale_y := 0.55
 #0.4
-@export var gravity_scale_z := 0.2
+@export var gravity_scale_z := 0.35
 #0.3
 @export var jump_velocity_x := 0.0
-@export var jump_velocity_y := -400.0
+@export var jump_velocity_y := -300.0
 @export var jump_velocity_z := -400.0
 
 var deathornotdeath := false
