@@ -167,15 +167,13 @@ position = Vector2(1756, -1037)
 
 [node name="vertical fan" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
 position = Vector2(176, -47.999985)
+speed = Vector2(0, -80)
 
 [node name="vertical fan2" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
 position = Vector2(462, -270)
 
 [node name="vertical fan3" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
 position = Vector2(1008, -464)
-
-[node name="vertical fan4" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
-position = Vector2(176, -47.999985)
 
 [node name="vertical fan5" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
 position = Vector2(462, -270)
