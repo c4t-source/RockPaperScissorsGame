@@ -23,9 +23,9 @@ var current_character: int = CharacterType.X
 
 @export var gravity_scale_x := 1
 #2.8
-@export var gravity_scale_y := 0.55
+@export var gravity_scale_y := 0.6
 #0.4
-@export var gravity_scale_z := 0.35
+@export var gravity_scale_z := 0.4
 #0.3
 @export var jump_velocity_x := 0.0
 @export var jump_velocity_y := -300.0

@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://3kup5s2id4qr"]
+[gd_scene load_steps=14 format=4 uid="uid://3kup5s2id4qr"]
 
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="1_cnmxh"]
-[ext_resource type="Texture2D" uid="uid://6dgdmvwse3rr" path="res://art/Blue.png" id="2_t1jjp"]
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="3_u8eek"]
+[ext_resource type="Texture2D" uid="uid://bjhhbc4xnjv06" path="res://art/realbackgroundforrpssgameplay.png" id="4_50olt"]
 [ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="4_t1jjp"]
 [ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="5_5x2jh"]
 [ext_resource type="Texture2D" uid="uid://da6excawcccj6" path="res://art/rps altmini  tileset.png" id="5_50olt"]
@@ -126,6 +126,8 @@ physics_layer_1/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_u16a4")
 sources/0 = SubResource("TileSetAtlasSource_u84xi")
 
+[sub_resource type="Theme" id="Theme_50olt"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_50olt"]
 line_spacing = -1.825
 font_size = 11
@@ -134,26 +136,13 @@ font_size = 11
 position = Vector2(201, 371)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_cnmxh")]
-position = Vector2(-202, -407)
-
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -4096
-texture_filter = 1
-offset_left = -1192.0
-offset_top = -1529.0002
-offset_right = -251.92017
-offset_bottom = -943.9137
-scale = Vector2(3.755, 3.755)
-mouse_filter = 2
-texture = ExtResource("2_t1jjp")
-expand_mode = 2
-stretch_mode = 1
+position = Vector2(-292, -403)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(23, 13)
-tile_map_data = PackedByteArray("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AADx//f/AQAAAAEAAADx//j/AQAAAAEAAADt//X/AQAAAAEAAADt//b/AQAAAAEAAADt//f/AQAAAAEAAADt//j/AQAAAAEAAAADAPL/AQAFAAQAAAACAPH/AQAFAAQAAAABAPD/AQAFAAQAAAACAPL/AQAEAAQAAAABAPH/AQAEAAQAAAAYAOb/AAABAAAAAAAaAOj/AAADAAAAAAAaAOn/AAABAAAAAAAbAOj/AQAAAAUAAAAbAOn/AAABAAAAAAAcAOj/AQAAAAUAAAAcAOn/AAABAAAAAAAdAOn/AAABAAAAAAAeAOn/AAABAAAAAAAfAOn/AAABAAAAAAAgAOn/AAABAAAAAAAtANb/AAABAAAAAAAuANX/AQAHAAAAAAAuANb/AAABAAAAAAAZAOb/AAABAAAAAAAaAOX/AQADAAAAAAAaAOb/AAABAAAAAAAaAOf/AQADAAIAAAAdAOj/AQAAAAUAAAAeAOj/AQAAAAUAAAAhAOn/AAABAAAAAAAiAOn/AQAGAAAAAAAiAOr/AAABAAAAAAAjAOr/AAABAAAAAAAmANX/AQADAAIAAAAmANb/AAABAAAAAAAmAOD/AAACAAAAAAAmAOH/AAACAAAAAAAmAOL/AAABAAAAAAAnAOH/AQADAAAAAAAnAOL/AAABAAAAAAAnAOr/AAABAAAAAAAoAOn/AQADAAAAAAAoAOr/AAABAAAAAAAqANr/AQADAAAAAAAqANv/AAABAAAAAAAvANX/AQADAAMAAAAvANb/AAABAAAAAAAwANX/AQAAAAMAAAAwANb/AAABAAAAAAAVAOX/AQAAAAYAAAATAOL/AQABAAAAAAATAOH/AAADAAAAAAATAOD/AQABAAAAAAAUAOL/AQACAAEAAAAUAOH/AQACAAEAAAAUAOD/AQACAAEAAAASAOL/AQAAAAEAAAASAOH/AQAAAAEAAAASAOD/AQAAAAEAAAATAOP/AAABAAAAAAAWAOX/AQAAAAYAAAAWAOb/AAABAAAAAAAXAOb/AAABAAAAAAAHAOv/AQADAAAAAAAdAPL/AQAAAAUAAAAcAPL/AQAAAAUAAAAbAPL/AQAAAAUAAAAaAPL/AQAAAAUAAAAZAPL/AQAAAAUAAAAYAPL/AQAAAAUAAAAXAPL/AQAAAAUAAAArAPL/AQAAAAUAAAA=")
+tile_map_data = PackedByteArray("AAD5//P/AQAAAAAAAAD6//P/AQABAAAAAAD7//P/AQABAAAAAAD8//P/AQABAAAAAAD9//P/AQABAAAAAAD+//P/AQABAAAAAAD///P/AQABAAAAAAAAAPP/AQABAAAAAAABAPP/AQABAAAAAAACAPP/AQABAAAAAAADAPP/AQABAAAAAAAEAPP/AQABAAAAAAAFAPP/AQABAAAAAAAGAPP/AQABAAAAAAAHAPP/AQABAAAAAAAIAPP/AQABAAAAAAAJAPP/AQABAAAAAAAKAPP/AQABAAAAAAALAPP/AQABAAAAAAAMAPP/AQABAAAAAAANAPP/AQABAAAAAAAOAPP/AQABAAAAAAAPAPP/AQABAAAAAAAQAPP/AQABAAAAAAARAPP/AQABAAAAAAASAPP/AQABAAAAAAATAPP/AQABAAAAAAAUAPP/AQABAAAAAAAVAPP/AQABAAAAAAAWAPP/AQABAAAAAAAXAPP/AQABAAAAAAAYAPP/AQABAAAAAAAZAPP/AQABAAAAAAAaAPP/AQABAAAAAAAbAPP/AQABAAAAAAAcAPP/AQABAAAAAAAdAPP/AQACAAAAAAD4//P/AQABAAAAAAD3//P/AQABAAAAAAD2//P/AQABAAAAAAD1//P/AQAAAAAAAAACAO7/AAABAAAAAAABAPL/AQADAAAAAAACAPD/AAACAAAAAAACAPH/AAACAAAAAAACAPL/AQAAAAMAAAAHAPH/AAABAAAAAAAHAPD/AQADAAIAAAAKAPH/AAABAAAAAAAJAPH/AAABAAAAAAAGAPD/AAACAAAAAAAGAO//AAACAAAAAAAGAO7/AAACAAAAAAAGAO3/AAACAAAAAAAGAOz/AAACAAAAAAAGAPH/AAABAAAAAAAGAOv/AAACAAAAAAD9//L/AQAAAAUAAAD8//L/AQAAAAUAAAD7//L/AQAAAAUAAAD6//L/AQAHAAAAAAD1//L/AAACAAAAAAD1//H/AAACAAAAAAD1//D/AAADAAAAAAD1/+//AAACAAAAAAD1/+7/AAADAAAAAAD1/+3/AAACAAAAAAD1/+z/AAADAAAAAAD1/+v/AAACAAAAAAANAPH/AAABAAAAAAAOAPH/AAABAAAAAAATAPL/AAACAAAAAAATAPH/AAACAAAAAAATAPD/AAACAAAAAAATAO//AAACAAAAAAATAO7/AAACAAAAAAASAPL/AQAAAAUAAAARAPL/AQAAAAMAAAAQAPL/AQAHAAAAAAAAAPL/AAADAAAAAAATAO3/AAACAAAAAAAMAPH/AAABAAAAAAALAPH/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_mxw0r")
 use_kinematic_bodies = true
 
@@ -166,89 +155,152 @@ scale = Vector2(10.540178, 12.840277)
 [node name="Scene Objects" type="Node" parent="."]
 
 [node name="endlevel" parent="Scene Objects" instance=ExtResource("4_t1jjp")]
-position = Vector2(1756, -1037)
+position = Vector2(570, -142)
 
 [node name="Vertical Fans" type="Node" parent="Scene Objects"]
 
-[node name="vertical fan" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
-position = Vector2(176, -47.999985)
-speed = Vector2(0, -80)
-
 [node name="vertical fan2" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
-position = Vector2(464, -272)
-
-[node name="vertical fan3" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
-position = Vector2(1072, -464)
-
-[node name="vertical fan6" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
-position = Vector2(1520, -336)
-
-[node name="vertical fan7" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
-position = Vector2(1488, -592)
-
-[node name="vertical fan8" parent="Scene Objects/Vertical Fans" instance=ExtResource("5_5x2jh")]
-position = Vector2(1584, -816)
+position = Vector2(272, -48)
 
 [node name="Horizontal Fans" type="Node" parent="Scene Objects"]
 
-[node name="Horizontal fan" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
-position = Vector2(112, -272)
-speed = Vector2(650, 0)
-
-[node name="Horizontal fan" parent="Scene Objects/Horizontal Fans/Horizontal fan" instance=ExtResource("6_u8eek")]
-position = Vector2(960, -128)
-speed = Vector2(4500, 0)
-
 [node name="Horizontal fan3" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
-position = Vector2(112, -336)
+position = Vector2(464, -112)
+rotation = -6.2863793
 speed = Vector2(650, 0)
-
-[node name="Horizontal fan2" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
-position = Vector2(1456, -976)
-speed = Vector2(500, 0)
 
 [node name="Breaking Platforms" type="Node" parent="Scene Objects"]
 
-[node name="Breaking Platform4" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1129, -674)
-
-[node name="Breaking Platform5" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1161, -674)
-
-[node name="Breaking Platform6" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1424, -312)
-
-[node name="Breaking Platform7" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1456, -312)
-
-[node name="Breaking Platform8" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1392, -312)
-
 [node name="Breaking Platform" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1129, -674)
+position = Vector2(336, -184)
 
 [node name="Breaking Platform2" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1161, -674)
-
-[node name="Breaking Platform3" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(1193, -674)
+position = Vector2(368, -184)
 
 [node name="Tutorial text" type="Node" parent="."]
 
-[node name="Label" type="Label" parent="Tutorial text"]
-offset_left = -115.0
-offset_top = -170.0
-offset_right = 136.0
-offset_bottom = -43.0
-text = "welcome to rock paper scissors shoot. the fan over here cannot push the rock upwards. transform from rock to scissors by pressing Q. "
+[node name="intro scissors" type="Label" parent="Tutorial text"]
+offset_left = -88.0
+offset_top = -146.0
+offset_right = 72.0
+offset_bottom = -99.0
+theme = SubResource("Theme_50olt")
+text = "Welcome! Only scissors can go up stairs. You can swap between characters with Q!"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="Tutorial text"]
-offset_left = 213.0
-offset_top = -416.0
-offset_right = 464.0
-offset_bottom = -289.0
-text = "welcome to rock paper scissors shoot. the fan over here cannot push the rock upwards. transform from rock to scissors by pressing Q. "
+[node name="behind intro" type="ColorRect" parent="Tutorial text"]
+z_index = -1
+offset_left = -96.0
+offset_top = -148.0
+offset_right = 75.0
+offset_bottom = -101.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="rock + fan" type="Label" parent="Tutorial text"]
+offset_left = 89.0
+offset_top = -151.0
+offset_right = 249.0
+offset_bottom = -104.0
+theme = SubResource("Theme_50olt")
+text = "Only rock can survive pencil spikes, and fans only move paper =)"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
+
+[node name="behind rock + fan" type="ColorRect" parent="Tutorial text"]
+z_index = -1
+offset_left = 83.0
+offset_top = -150.0
+offset_right = 249.0
+offset_bottom = -103.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="breaking shelves" type="Label" parent="Tutorial text"]
+offset_left = 292.0
+offset_top = -264.0
+offset_right = 413.0
+offset_bottom = -203.0
+theme = SubResource("Theme_50olt")
+text = "Be careful! Cracked shelves break. Step on them to go down!"
+label_settings = SubResource("LabelSettings_50olt")
+autowrap_mode = 2
+
+[node name="breaking shelves behind" type="ColorRect" parent="Tutorial text"]
+z_index = -1
+offset_left = 292.0
+offset_top = -263.0
+offset_right = 408.0
+offset_bottom = -216.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="fan can push too" type="Label" parent="Tutorial text"]
+offset_left = 607.0
+offset_top = -182.0
+offset_right = 712.0
+offset_bottom = -133.0
+theme = SubResource("Theme_50olt")
+text = "Fans can push paper and scissors, but not rock!"
+label_settings = SubResource("LabelSettings_50olt")
+autowrap_mode = 2
+
+[node name="behind fan can push too" type="ColorRect" parent="Tutorial text"]
+z_index = -1
+offset_left = 594.0
+offset_top = -180.0
+offset_right = 710.0
+offset_bottom = -133.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="end level" type="Label" parent="Tutorial text"]
+offset_left = 464.0
+offset_top = -197.0
+offset_right = 599.0
+offset_bottom = -148.0
+theme = SubResource("Theme_50olt")
+text = "Nice! You made it to the end. The flag will take you to the next level!"
+label_settings = SubResource("LabelSettings_50olt")
+autowrap_mode = 2
+
+[node name="end level behind" type="ColorRect" parent="Tutorial text"]
+z_index = -1
+offset_left = 460.0
+offset_top = -198.0
+offset_right = 596.0
+offset_bottom = -151.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="background" type="Node" parent="."]
+
+[node name="Background2" type="Sprite2D" parent="background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(846.0594, -161)
+scale = Vector2(2.7004952, 2.6875)
+texture = ExtResource("4_50olt")
+metadata/_edit_lock_ = true
+
+[node name="back reverse" type="Sprite2D" parent="background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(198.00002, -494)
+rotation = 3.1414099
+scale = Vector2(2.7031431, 2.5216405)
+texture = ExtResource("4_50olt")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(197.99998, -161)
+scale = Vector2(2.7, 2.6874998)
+texture = ExtResource("4_50olt")
+metadata/_edit_lock_ = true
+
+[node name="back reverse2" type="Sprite2D" parent="background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(845.99994, -494)
+rotation = 3.1414108
+scale = Vector2(2.6985166, 2.5190701)
+texture = ExtResource("4_50olt")
+metadata/_edit_lock_ = true
