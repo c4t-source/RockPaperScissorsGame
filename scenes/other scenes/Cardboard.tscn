@@ -20,9 +20,10 @@ scale_max = 2.7
 size = Vector2(53, 79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2e06"]
-size = Vector2(99, 128)
+size = Vector2(63.73057, 90.53175)
 
 [node name="Area2D" type="Area2D"]
+scale = Vector2(0.25164413, 0.2662808)
 collision_layer = 8
 script = ExtResource("1_3i5qj")
 
@@ -53,7 +54,7 @@ position = Vector2(26.5, 29.5)
 shape = SubResource("RectangleShape2D_3i5qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(28.5, 30)
+position = Vector2(27.085493, 29.383114)
 shape = SubResource("RectangleShape2D_j2e06")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
