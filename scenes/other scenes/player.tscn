@@ -137,7 +137,7 @@ func apply_character():
 			can_jump = true
 			amount_of_swaps = amount_of_swaps + 1
 			print(amount_of_swaps)
-			Collision.shape.extents = Vector2(19,14)
+			Collision.shape.extents = Vector2(20,14)
 			deadbox.shape.extents = Vector2(15,21)
 			if sprite and sprite_y:
 				sprite.play(\"cutpaperthing\")
@@ -341,7 +341,7 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
-collision_mask = 7
+collision_mask = 15
 script = SubResource("GDScript_jm67y")
 sprite_x = ExtResource("1_2hs0m")
 sprite_y = ExtResource("2_1jxqw")
@@ -355,9 +355,12 @@ debug_color = Color(0.0179929, 0.642844, 0.302838, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(76, -22)
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
+limit_left = -256
+limit_bottom = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 4.865
+editor_draw_limits = true
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 0

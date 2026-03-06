@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdp7hokd82lql"]
+
+[ext_resource type="Script" uid="uid://bsi5g5va76so4" path="res://scripts/cardboard.gd" id="1_3i5qj"]
+[ext_resource type="Texture2D" uid="uid://c34e2fjrj0an0" path="res://art/cardboardrpss.png" id="1_o1ctx"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3i5qj"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3i5qj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3i5qj"]
+size = Vector2(53, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2e06"]
+size = Vector2(99, 128)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_3i5qj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(27, 27)
+scale = Vector2(2.6875, 2.6875)
+texture = ExtResource("1_o1ctx")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_3i5qj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 8
+physics_material_override = SubResource("PhysicsMaterial_3i5qj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(26.5, 29.5)
+shape = SubResource("RectangleShape2D_3i5qj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28.5, 30)
+shape = SubResource("RectangleShape2D_j2e06")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
