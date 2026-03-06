@@ -6,10 +6,13 @@
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j2e06"]
 particle_flag_disable_z = true
+emission_shape_scale = Vector3(0.8, 0.8, 1)
 spread = 180.0
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 gravity = Vector3(0, 0, 0)
+scale_min = 2.7
+scale_max = 2.7
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3i5qj"]
 
@@ -30,10 +33,14 @@ scale = Vector2(2.6875, 2.6875)
 texture = ExtResource("1_o1ctx")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.4611013, 0.21647221, 0.18625626, 1)
 position = Vector2(27, 32)
+scale = Vector2(1.5, 1.5)
 emitting = false
 amount = 64
+lifetime = 0.25
 one_shot = true
+speed_scale = 0.8
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_j2e06")
 
@@ -42,17 +49,14 @@ collision_layer = 8
 physics_material_override = SubResource("PhysicsMaterial_3i5qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
 position = Vector2(26.5, 29.5)
 shape = SubResource("RectangleShape2D_3i5qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(28.5, 30)
 shape = SubResource("RectangleShape2D_j2e06")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-visible = false
 stream = ExtResource("3_j2e06")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
