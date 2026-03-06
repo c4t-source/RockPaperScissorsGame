@@ -138,7 +138,7 @@ func apply_character():
 			amount_of_swaps = amount_of_swaps + 1
 			print(amount_of_swaps)
 			Collision.shape.extents = Vector2(20,14)
-			deadbox.shape.extents = Vector2(15,21)
+			deadbox.shape.extents = Vector2(15,22)
 			if sprite and sprite_y:
 				sprite.play(\"cutpaperthing\")
 				floor_max_angle = 45
