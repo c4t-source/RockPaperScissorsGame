@@ -8,6 +8,7 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if player.current_character == player.CharacterType.Y:
 		particles.emitting = true
+		await get_tree().create_timer(0.1).timeout
 		$Sprite2D.visible = false
 		$StaticBody2D/CollisionShape2D.queue_free()
 		$CollisionShape2D.queue_free()
