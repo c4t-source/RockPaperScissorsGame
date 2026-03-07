@@ -138,7 +138,7 @@ func apply_character():
 			deadbox.shape.extents = Vector2(15,22)
 			if sprite and sprite_y:
 				sprite.play(\"cutpaperthing\")
-				floor_max_angle = 45
+				floor_max_angle = deg_to_rad(70)
 			
 
 		CharacterType.Z:
