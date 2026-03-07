@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://cstlmnkwj0syd"]
+[gd_scene load_steps=9 format=4 uid="uid://cstlmnkwj0syd"]
 
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_qt6nw"]
 [ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="2_gnqhv"]
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="3_c0t0n"]
 [ext_resource type="Texture2D" uid="uid://6dgdmvwse3rr" path="res://art/Blue.png" id="4_gnqhv"]
+[ext_resource type="PackedScene" uid="uid://nv4dupa0q4gh" path="res://scenes/other scenes/death_screen.tscn" id="5_c0t0n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a004i"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
@@ -145,3 +146,5 @@ offset_right = 1325.0
 offset_bottom = 249.0
 texture = ExtResource("4_gnqhv")
 stretch_mode = 1
+
+[node name="Death Screen" parent="." instance=ExtResource("5_c0t0n")]
