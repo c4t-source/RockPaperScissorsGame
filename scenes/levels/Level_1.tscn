@@ -283,7 +283,7 @@ color = Color(0, 0, 0, 0.5882353)
 [node name="Background2" type="Sprite2D" parent="background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(745.06, -161)
+position = Vector2(743.99994, -161)
 scale = Vector2(2.7004952, 2.6875)
 texture = ExtResource("4_50olt")
 metadata/_edit_lock_ = true
@@ -308,7 +308,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse2" type="Sprite2D" parent="background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(745.06, -494)
+position = Vector2(744.0001, -494.00003)
 rotation = 3.1414108
 scale = Vector2(2.6985166, 2.5190701)
 texture = ExtResource("4_50olt")
