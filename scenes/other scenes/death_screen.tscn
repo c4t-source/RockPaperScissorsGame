@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://nv4dupa0q4gh"]
+
+[ext_resource type="Script" uid="uid://1qk6yp8knw8w" path="res://scripts/death_screen.gd" id="1_drkur"]
+[ext_resource type="FontFile" uid="uid://dirqoanfdv7ia" path="res://art/Daydream DEMO.otf" id="1_xyeeu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyeeu"]
+bg_color = Color(1, 1, 1, 0.98039216)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Death Screen" type="CanvasLayer"]
+script = ExtResource("1_drkur")
+
+[node name="Label" type="Label" parent="."]
+z_index = 2
+offset_left = 255.0
+offset_top = 124.0
+offset_right = 849.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("1_xyeeu")
+theme_override_font_sizes/font_size = 64
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 366.0
+offset_top = 295.0
+offset_right = 735.0
+offset_bottom = 370.0
+theme_override_colors/icon_normal_color = Color(0.06666667, 0.06666667, 0.06666667, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_xyeeu")
+text = "RESTART?"
+
+[node name="Go To Main Menu" type="Button" parent="."]
+offset_left = 362.0
+offset_top = 394.0
+offset_right = 736.0
+offset_bottom = 469.0
+theme_override_colors/icon_normal_color = Color(0.06666667, 0.06666667, 0.06666667, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_xyeeu")
+text = "Main Menu"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Go To Main Menu" to="." method="_on_go_to_main_menu_pressed"]

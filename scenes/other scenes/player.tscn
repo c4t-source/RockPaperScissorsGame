@@ -41,6 +41,7 @@ var can_jump := true
 var base_gravity := 0.0
 var wind_velocity_horizontal: Vector2 = Vector2.ZERO
 var wind_velocity_vertical: Vector2 = Vector2.ZERO
+signal player_died
 
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -52,9 +53,11 @@ var wind_velocity_vertical: Vector2 = Vector2.ZERO
 
 
 
+
 func _ready():
 	base_gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 	apply_character()
+	add_to_group(\"player\")
 
 func _input(event):
 	if event.is_action_pressed(\"swap_character\") and amount_of_swaps < 100:
@@ -183,8 +186,7 @@ func die():
 	sprite.pause()
 	audio.play()
 	set_physics_process(false)
-	await get_tree().create_timer(1.5).timeout
-	get_tree().reload_current_scene()
+	player_died.emit()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbnov"]
