@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://uknglwydosjw"]
+[gd_scene load_steps=19 format=3 uid="uid://uknglwydosjw"]
 
 [ext_resource type="Script" uid="uid://24wkohk5s3p4" path="res://scripts/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://clogx8g6uyc4e" path="res://art/usablemainmenubgrpss224x126.png" id="2_7vrkn"]
-[ext_resource type="AudioStream" uid="uid://bd4e3qk4ors7k" path="res://scenes/other scenes/broke_nigga_alertyoutubetomp3.mp3" id="3_xhrka"]
+[ext_resource type="Script" uid="uid://cx8i5aakbwq1x" path="res://scenes/other scenes/audioslider.gd" id="3_6gp4m"]
+[ext_resource type="AudioStream" uid="uid://dn2rrqjelg6ky" path="res://scenes/other scenes/smoke-detector-beep.mp3" id="4_fsydl"]
+[ext_resource type="Script" uid="uid://dgfk8gw3td5qy" path="res://scenes/other scenes/fullscreen_control.gd" id="4_htw6m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("2_7vrkn")
@@ -83,6 +85,14 @@ shadow_offset = Vector2(3.165, 4.68)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xe2w1"]
+color = Color(1, 1, 1, 1)
+thickness = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xhrka"]
+color = Color(0.10564222, 0.570978, 0.8344184, 1)
+thickness = 6
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -103,6 +113,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
 
 [node name="Menubuttons" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -172,10 +183,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -239.0
-offset_top = -113.0
-offset_right = 236.0
-offset_bottom = 194.5
+offset_left = -275.0
+offset_top = -160.0
+offset_right = 286.0
+offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -192,12 +203,26 @@ theme_override_font_sizes/font_size = 32
 text = "Options"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="options/Label"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -402.5
+offset_top = 115.0
+offset_right = 73.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Sound effect"
+horizontal_alignment = 1
+
 [node name="back" type="Button" parent="options"]
 layout_mode = 0
-offset_left = 86.0
-offset_top = 223.0
-offset_right = 396.0
-offset_bottom = 268.0
+offset_left = 123.0
+offset_top = 301.0
+offset_right = 433.0
+offset_bottom = 346.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -211,12 +236,99 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
 text = "Back"
 
+[node name="Audioslider" type="HSlider" parent="options"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 53.0
+offset_right = 480.0
+offset_bottom = 181.0
+theme_override_styles/slider = SubResource("StyleBoxLine_xe2w1")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_xhrka")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_xhrka")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_6gp4m")
+audio_bus_name = "Music"
+
+[node name="Fullscreen control" type="CheckButton" parent="options"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 241.0
+offset_right = 449.0
+offset_bottom = 300.0
+text = "Fullscreen"
+script = ExtResource("4_htw6m")
+
+[node name="Label2" type="Label" parent="options"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -395.5
+offset_top = 66.0
+offset_right = 80.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Master Audio"
+horizontal_alignment = 1
+
+[node name="Audioslider2" type="HSlider" parent="options"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 99.0
+offset_right = 480.0
+offset_bottom = 227.0
+theme_override_styles/slider = SubResource("StyleBoxLine_xe2w1")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_xhrka")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_xhrka")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_6gp4m")
+audio_bus_name = "SFX"
+
+[node name="Label3" type="Label" parent="options"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -452.5
+offset_top = 162.0
+offset_right = 23.0
+offset_bottom = 207.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Music "
+horizontal_alignment = 1
+
+[node name="Audioslider3" type="HSlider" parent="options"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 162.0
+offset_right = 480.0
+offset_bottom = 290.0
+theme_override_styles/slider = SubResource("StyleBoxLine_xe2w1")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_xhrka")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_xhrka")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_6gp4m")
+audio_bus_name = "SFX"
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_xhrka")
+stream = ExtResource("4_fsydl")
 autoplay = true
+bus = &"Music"
 parameters/looping = true
 
 [connection signal="pressed" from="Menubuttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menubuttons/options" to="." method="_on_options_2_pressed"]
 [connection signal="pressed" from="Menubuttons/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="options/back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="options/Audioslider" to="options/Audioslider" method="_on_value_changed"]
+[connection signal="toggled" from="options/Fullscreen control" to="options/Fullscreen control" method="_on_toggled"]
+[connection signal="value_changed" from="options/Audioslider2" to="options/Audioslider2" method="_on_value_changed"]
+[connection signal="value_changed" from="options/Audioslider3" to="options/Audioslider3" method="_on_value_changed"]
