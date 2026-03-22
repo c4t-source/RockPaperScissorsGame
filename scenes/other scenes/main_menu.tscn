@@ -203,20 +203,6 @@ theme_override_font_sizes/font_size = 32
 text = "Options"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="options/Label"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -402.5
-offset_top = 115.0
-offset_right = 73.0
-offset_bottom = 160.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Sound effect"
-horizontal_alignment = 1
-
 [node name="back" type="Button" parent="options"]
 layout_mode = 0
 offset_left = 123.0
@@ -238,10 +224,10 @@ text = "Back"
 
 [node name="Audioslider" type="HSlider" parent="options"]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 53.0
-offset_right = 480.0
-offset_bottom = 181.0
+offset_left = 21.0
+offset_top = 27.0
+offset_right = 481.0
+offset_bottom = 155.0
 theme_override_styles/slider = SubResource("StyleBoxLine_xe2w1")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_xhrka")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_xhrka")
@@ -253,22 +239,24 @@ audio_bus_name = "Music"
 
 [node name="Fullscreen control" type="CheckButton" parent="options"]
 layout_mode = 0
-offset_left = 47.0
+offset_left = 16.19
 offset_top = 241.0
-offset_right = 449.0
+offset_right = 421.495
 offset_bottom = 300.0
+scale = Vector2(1.155, 1.155)
+theme_override_font_sizes/font_size = 30
 text = "Fullscreen"
 script = ExtResource("4_htw6m")
 
-[node name="Label2" type="Label" parent="options"]
+[node name="Master" type="Label" parent="options"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -395.5
-offset_top = 66.0
-offset_right = 80.0
-offset_bottom = 111.0
+offset_left = -396.5
+offset_top = 40.0
+offset_right = 79.0
+offset_bottom = 85.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 text = "Master Audio"
@@ -289,26 +277,26 @@ value = 1.0
 script = ExtResource("3_6gp4m")
 audio_bus_name = "SFX"
 
-[node name="Label3" type="Label" parent="options"]
+[node name="Sound effects" type="Label" parent="options"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -452.5
-offset_top = 162.0
-offset_right = 23.0
-offset_bottom = 207.0
+offset_left = -392.5
+offset_top = 109.0
+offset_right = 83.0
+offset_bottom = 154.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Music "
+text = "Sound effects "
 horizontal_alignment = 1
 
 [node name="Audioslider3" type="HSlider" parent="options"]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 162.0
+offset_top = 169.0
 offset_right = 480.0
-offset_bottom = 290.0
+offset_bottom = 297.0
 theme_override_styles/slider = SubResource("StyleBoxLine_xe2w1")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_xhrka")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_xhrka")
@@ -316,7 +304,21 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 script = ExtResource("3_6gp4m")
-audio_bus_name = "SFX"
+audio_bus_name = "Music"
+
+[node name="Music2" type="Label" parent="options"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -456.5
+offset_top = 180.0
+offset_right = 19.0
+offset_bottom = 225.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Music"
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_fsydl")
