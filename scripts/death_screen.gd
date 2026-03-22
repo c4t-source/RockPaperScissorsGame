@@ -10,7 +10,7 @@ func _ready():
 		player.player_died.connect(_on_player_died)
 
 func _on_player_died():
-	await get_tree().create_timer(0.5).timeout
+	await TransitionFade.fade(0.75, 0.5).finished
 	show()
 
 func _on_restart_pressed():

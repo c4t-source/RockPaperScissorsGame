@@ -114,6 +114,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
 
 [node name="Menubuttons" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -177,7 +178,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
 text = "exit (please no)"
 
 [node name="options" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -328,7 +328,6 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="TransitionFade" parent="." instance=ExtResource("6_htw6m")]
-visible = false
 
 [connection signal="pressed" from="Menubuttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menubuttons/options" to="." method="_on_options_2_pressed"]

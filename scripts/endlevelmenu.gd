@@ -1,5 +1,7 @@
 extends CanvasLayer
 @onready var particles = $GPUParticles2D
+@onready var character_body_2d = $"../CharacterBody2D"
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide() 
@@ -11,7 +13,10 @@ func _ready():
 
 
 func _on_player_finished_level():
-	await get_tree().create_timer(0.5).timeout
+	character_body_2d.set_process_input(false)
+	character_body_2d.set_physics_process(false)
+	get_tree().paused = false
+	await TransitionFade.fade(0.75, 0.5).finished
 	show()
 	await get_tree().create_timer(0.5).timeout
 	particles.emitting = true

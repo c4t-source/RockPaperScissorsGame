@@ -15,6 +15,10 @@ run/main_scene="uid://uknglwydosjw"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://4q335xxs2p"
 
+[autoload]
+
+TransitionFade="*res://scenes/other scenes/transition_fade.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"

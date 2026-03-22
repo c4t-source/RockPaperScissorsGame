@@ -80,7 +80,7 @@ text = "Next Level
 position = Vector2(550, 255)
 emitting = false
 amount = 85
-lifetime = 2.0
+lifetime = 1.5
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_xng11")
 
