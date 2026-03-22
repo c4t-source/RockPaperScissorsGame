@@ -11,7 +11,7 @@ func _ready():
 	await TransitionFade.fade(0.0, 0.5).finished
 
 func _on_start_pressed() -> void:
-	await transition_fade.fade(1.0, 1.0).finished 
+	await TransitionFade.fade(1.0, 1.0).finished 
 	TransitionFade.color_rect.color.a = 1.0
 	get_tree().change_scene_to_file("res://scenes/levels/Level_1.tscn")
 
@@ -22,7 +22,7 @@ func _on_options_2_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	await transition_fade.fade(1.0, 1.0).finished 
+	await TransitionFade.fade(1.0, 1.0).finished 
 	get_tree().quit()
 
 

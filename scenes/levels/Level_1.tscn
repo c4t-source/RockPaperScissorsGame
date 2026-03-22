@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://3kup5s2id4qr"]
+[gd_scene load_steps=19 format=4 uid="uid://3kup5s2id4qr"]
 
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="1_cnmxh"]
 [ext_resource type="Script" uid="uid://b32xfcjq1ppm1" path="res://scripts/level_1_script.gd" id="1_y54f7"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="8_50olt"]
 [ext_resource type="PackedScene" uid="uid://cdp7hokd82lql" path="res://scenes/other scenes/Cardboard.tscn" id="9_u84xi"]
 [ext_resource type="PackedScene" uid="uid://nv4dupa0q4gh" path="res://scenes/other scenes/death_screen.tscn" id="10_jrjue"]
+[ext_resource type="FontFile" uid="uid://b2b81568uij0a" path="res://Huxtable.otf" id="10_sha1w"]
 [ext_resource type="PackedScene" uid="uid://2ph7t6u1l6nh" path="res://scenes/other scenes/End Level Menu.tscn" id="11_y54f7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u84xi"]
@@ -189,86 +190,93 @@ scale = Vector2(0.9132885, 0.9524529)
 [node name="Tutorial text" type="Node" parent="."]
 
 [node name="intro scissors" type="Label" parent="Tutorial text"]
-offset_left = -206.0
-offset_top = -148.0
-offset_right = -46.0
-offset_bottom = -101.0
+z_index = -1
+offset_left = -199.0
+offset_top = -176.0
+offset_right = -35.0
+offset_bottom = -132.0
 theme = SubResource("Theme_50olt")
+theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Welcome! Only scissors can go up stairs. You can swap between characters with Q!"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
 
 [node name="behind intro" type="ColorRect" parent="Tutorial text"]
-z_index = -1
-offset_left = -206.0
-offset_top = -148.0
-offset_right = -35.0
-offset_bottom = -101.0
+z_index = -2
+offset_left = -208.0
+offset_top = -178.0
+offset_right = -44.0
+offset_bottom = -131.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="rock + fan" type="Label" parent="Tutorial text"]
+z_index = -1
 offset_left = 33.0
 offset_top = -151.0
 offset_right = 193.0
 offset_bottom = -104.0
 theme = SubResource("Theme_50olt")
+theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Only rock can survive pencil spikes, and fans only move paper =)"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
 
 [node name="behind rock + fan" type="ColorRect" parent="Tutorial text"]
-z_index = -1
-offset_left = 33.0
-offset_top = -151.0
-offset_right = 201.0
-offset_bottom = -104.0
+z_index = -2
+offset_left = 23.0
+offset_top = -160.0
+offset_right = 191.0
+offset_bottom = -113.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="breaking shelves" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 298.0
-offset_top = -263.0
-offset_right = 419.0
-offset_bottom = -202.0
+offset_left = 293.0
+offset_top = -267.0
+offset_right = 415.0
+offset_bottom = -228.4375
 theme = SubResource("Theme_50olt")
+theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Be careful! Cracked shelves break. Step on them to go down!"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
 
 [node name="breaking shelves behind" type="ColorRect" parent="Tutorial text"]
 z_index = -2
-offset_left = 292.0
-offset_top = -263.0
-offset_right = 408.0
-offset_bottom = -216.0
+offset_left = 288.0
+offset_top = -272.0
+offset_right = 414.0
+offset_bottom = -225.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="fan can push too" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 607.0
-offset_top = -182.0
-offset_right = 712.0
-offset_bottom = -133.0
+offset_left = 614.0
+offset_top = -195.0
+offset_right = 725.0
+offset_bottom = -146.0
 theme = SubResource("Theme_50olt")
+theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Fans can push paper and scissors, but not rock!"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
 
 [node name="behind fan can push too" type="ColorRect" parent="Tutorial text"]
 z_index = -2
-offset_left = 594.0
-offset_top = -180.0
-offset_right = 710.0
-offset_bottom = -133.0
+offset_left = 608.0
+offset_top = -202.0
+offset_right = 728.0
+offset_bottom = -155.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="end level" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 464.0
-offset_top = -197.0
-offset_right = 599.0
-offset_bottom = -148.0
+offset_left = 467.0
+offset_top = -194.0
+offset_right = 602.0
+offset_bottom = -145.0
 theme = SubResource("Theme_50olt")
+theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Nice! You made it to the end. The flag will take you to the next level!"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
@@ -323,6 +331,7 @@ offset_left = -257.0
 offset_top = -656.0
 offset_right = 1068.0
 offset_bottom = -33.0
+metadata/_edit_lock_ = true
 
 [node name="Death Screen" parent="." instance=ExtResource("10_jrjue")]
 

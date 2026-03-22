@@ -2,21 +2,21 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://s77pstr6yp83"
-path="res://.godot/imported/PHONIXEA.otf-169d823177b283c3bd5b8dd268870bc5.fontdata"
+uid="uid://b2b81568uij0a"
+path="res://.godot/imported/Huxtable.otf-98742beb40d5bba61f414fdc23001684.fontdata"
 
 [deps]
 
-source_file="res://PHONIXEA.otf"
-dest_files=["res://.godot/imported/PHONIXEA.otf-169d823177b283c3bd5b8dd268870bc5.fontdata"]
+source_file="res://Huxtable.otf"
+dest_files=["res://.godot/imported/Huxtable.otf-98742beb40d5bba61f414fdc23001684.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
-generate_mipmaps=false
+generate_mipmaps=true
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
@@ -30,7 +30,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}
