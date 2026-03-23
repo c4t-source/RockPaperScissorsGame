@@ -1,13 +1,30 @@
-[gd_scene load_steps=9 format=4 uid="uid://cstlmnkwj0syd"]
+[gd_scene load_steps=15 format=4 uid="uid://cstlmnkwj0syd"]
 
+[ext_resource type="Script" uid="uid://bkpk11hnw5qw2" path="res://scripts/level_2.gd" id="1_gurnj"]
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_qt6nw"]
+[ext_resource type="Texture2D" uid="uid://da6excawcccj6" path="res://art/rps altmini  tileset.png" id="2_dqhji"]
 [ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="2_gnqhv"]
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="3_c0t0n"]
-[ext_resource type="Texture2D" uid="uid://6dgdmvwse3rr" path="res://art/Blue.png" id="4_gnqhv"]
 [ext_resource type="PackedScene" uid="uid://nv4dupa0q4gh" path="res://scenes/other scenes/death_screen.tscn" id="5_c0t0n"]
+[ext_resource type="Texture2D" uid="uid://bjhhbc4xnjv06" path="res://art/realbackgroundforrpssgameplay.png" id="5_gurnj"]
+[ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="7_h47uo"]
+[ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="8_h47uo"]
+[ext_resource type="PackedScene" uid="uid://cdp7hokd82lql" path="res://scenes/other scenes/Cardboard.tscn" id="9_5ftci"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a004i"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ftci"]
+texture = ExtResource("2_dqhji")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 13.382492, -16, 13.701122)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 13.382492, -16, 13.701122)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uvfbj"]
 texture = ExtResource("1_qt6nw")
@@ -112,8 +129,10 @@ physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_uvfbj")
+sources/0 = SubResource("TileSetAtlasSource_5ftci")
 
 [node name="Level_two" type="Node2D"]
+script = ExtResource("1_gurnj")
 metadata/_edit_vertical_guides_ = [-506.0, -372.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -130,21 +149,127 @@ metadata/_edit_use_anchors_ = true
 physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(42, 65)
-tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAFAP3/AQADAAMAAAAEAP7/AQABAAAAAAADAP7/AQABAAAAAAACAP7/AQABAAAAAAABAP7/AQABAAAAAAAFAP7/AQABAAAAAAAGAP7/AQABAAAAAAAHAP7/AQABAAAAAAAIAP7/AQABAAAAAAAJAP7/AQABAAAAAAAKAP7/AQABAAAAAAALAP7/AQABAAAAAAAMAP7/AQABAAAAAAANAP7/AQABAAAAAAAOAP7/AQABAAAAAAAPAP7/AQABAAAAAAAQAP7/AQABAAAAAAARAP7/AQABAAAAAAASAP7/AQABAAAAAAATAP7/AQABAAAAAAAUAP7/AQABAAAAAAAVAP7/AQABAAAAAAAWAP7/AQABAAAAAAAXAP7/AQABAAAAAAAJAP3/AQAAAAMAAAAJAPz/AQAAAAMAAAAKAP3/AQAAAAMAAAAKAPz/AQAGAAAAAAALAP3/AQAGAAAAAAAGAP3/AQADAAMAAAAEAP3/AQABAAMAAAAHAP3/AQAAAAUAAAAIAP3/AQAAAAUAAAAMAP3/AQAAAAUAAAANAP3/AQAAAAUAAAAOAP3/AQAAAAMAAAAOAPz/AQADAAAAAAAJAPv/AQADAAIAAAARAP3/AQAAAAIAAAARAPv/AQAAAAAAAAASAPv/AQABAAAAAAATAPv/AQABAAAAAAAUAPv/AQABAAAAAAAVAPv/AQABAAAAAAAWAPv/AQACAAAAAAARAPz/AQAAAAEAAAAWAPz/AQACAAEAAAAWAP3/AQACAAIAAAASAPr/AQAGAAQAAAATAPr/AQAHAAQAAAAUAPr/AQAAAAMAAAAVAPr/AQADAAMAAAAWAPr/AQADAAAAAAAYAP7/AQABAAAAAAAZAP7/AQABAAAAAAAaAP7/AQABAAAAAAAbAP7/AQABAAAAAAAcAP7/AQABAAAAAAAdAP7/AQABAAAAAAAeAP7/AQABAAAAAAAYAP3/AQAAAAcAAAAZAP3/AQABAAcAAAAaAP3/AQACAAcAAAAbAP3/AQAFAAAAAAAcAP3/AQAAAAMAAAAdAP3/AQAEAAAAAAAfAP7/AQABAAAAAAAgAP7/AQABAAAAAAAhAP7/AQABAAAAAAAiAP7/AQABAAAAAAAjAP7/AQABAAAAAAAgAP3/AQADAAEAAAAhAP3/AQAAAAUAAAAiAP3/AQAAAAUAAAAjAP3/AQAFAAMAAAAkAP7/AQACAAAAAAA=")
+tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQACAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAAUAPv/AQABAAAAAAAVAPv/AQABAAAAAAAWAPv/AQABAAAAAAAXAPv/AQABAAAAAAAYAPv/AQABAAAAAAAZAPv/AQABAAAAAAAaAPv/AQABAAAAAAAbAPv/AQABAAAAAAAcAPv/AQABAAAAAAAdAPv/AQABAAAAAAAeAPv/AQABAAAAAAAfAPv/AQABAAAAAAAgAPv/AQACAAAAAAD6//z/AQAAAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD4//z/AQAAAAEAAAD4//3/AQAAAAIAAAD6//v/AQAAAAUAAAD7//v/AQAAAAUAAAD8//v/AQAAAAUAAAD9//v/AQAAAAUAAAABAPr/AQADAAAAAAD3//r/AAACAAAAAAD3//n/AAACAAAAAAD3//j/AAACAAAAAAD3//f/AAACAAAAAAD3//b/AAACAAAAAAD3//X/AAACAAAAAAD3//T/AAACAAAAAAD3//P/AAACAAAAAAD3//L/AAACAAAAAAD+//z/AQABAAAAAAD///z/AQACAAAAAAD///v/AQAFAAAAAAD+//v/AQAFAAMAAAAKAPr/AAABAAAAAAAPAPr/AAABAAAAAAAQAPr/AAABAAAAAAAOAPr/AAABAAAAAAACAPv/AQACAAAAAAAFAPr/AAABAAAAAAAFAP3/AAABAAAAAAAKAP3/AAABAAAAAAAGAP3/AAABAAAAAAAHAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAP3/AAABAAAAAAAHAPz/AQAAAAUAAAAIAPz/AQAAAAUAAAAJAPz/AQAAAAUAAAAGAPz/AQAAAAUAAAAFAPz/AQAHAAEAAAACAPb/AAABAAAAAAADAPb/AAABAAAAAAAEAPb/AAABAAAAAAAFAPb/AAABAAAAAAAGAPb/AAABAAAAAAAHAPb/AAABAAAAAAAIAPb/AAABAAAAAAAJAPb/AAABAAAAAAAKAPb/AAABAAAAAAALAPb/AAABAAAAAAAFAPX/AQAFAAIAAAAGAPX/AQAAAAUAAAAHAPX/AQAAAAUAAAAIAPX/AQAAAAUAAAAKAPX/AQAAAAUAAAAJAPX/AQAAAAUAAAALAPX/AQAEAAEAAAARAPr/AAABAAAAAAASAPr/AAABAAAAAAASAPf/AQADAAMAAAASAPj/AQAAAAMAAAASAPn/AAACAAAAAAANAPr/AAABAAAAAAAEAPz/AAAAAAAAAAADAPz/AAAAAAAAAAALAPz/AAAAAAAAAAAMAPz/AAAAAAAAAAANAPz/AAAAAAAAAAAKAPz/AQAFAAEAAAA=")
 tile_set = SubResource("TileSet_wos53")
 
-[node name="endlevel" parent="TextureRect" instance=ExtResource("2_gnqhv")]
-position = Vector2(1238, -44)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_c0t0n")]
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-z_index = -1
-offset_left = -144.0
-offset_top = -263.0
-offset_right = 1325.0
-offset_bottom = 249.0
-texture = ExtResource("4_gnqhv")
-stretch_mode = 1
+position = Vector2(-250, -96)
 
 [node name="Death Screen" parent="." instance=ExtResource("5_c0t0n")]
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Background2" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(745, -161)
+scale = Vector2(2.7004952, 2.6875)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="back reverse" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(94.00001, -494)
+rotation = 3.1414099
+scale = Vector2(2.7031431, 2.5216405)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(97, -161)
+scale = Vector2(2.7, 2.6874998)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="back reverse2" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(742.0001, -494)
+rotation = 3.1414108
+scale = Vector2(2.6985166, 2.5190701)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="background separator" type="Panel" parent="Background"]
+z_index = -2
+offset_left = -257.0
+offset_top = -656.0
+offset_right = 1070.0
+offset_bottom = -1.0
+metadata/_edit_lock_ = true
+
+[node name="Background3" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(2040.4067, -161)
+scale = Vector2(2.7004952, 2.6875)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="back reverse3" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(1389.4067, -494)
+rotation = 3.1414099
+scale = Vector2(2.7031431, 2.5216405)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="Background4" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(1392.4067, -161)
+scale = Vector2(2.7, 2.6874998)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="back reverse4" type="Sprite2D" parent="Background"]
+z_index = -10
+texture_filter = 1
+position = Vector2(2037.4067, -494)
+rotation = 3.1414108
+scale = Vector2(2.6985166, 2.5190701)
+texture = ExtResource("5_gurnj")
+metadata/_edit_lock_ = true
+
+[node name="background separator2" type="Panel" parent="Background"]
+z_index = -2
+offset_left = 1070.0
+offset_top = -656.0
+offset_right = 2394.4067
+offset_bottom = -1.0
+metadata/_edit_lock_ = true
+
+[node name="Scene objects" type="Node" parent="."]
+
+[node name="Vertical Fans" type="Node" parent="Scene objects"]
+
+[node name="vertical fan" parent="Scene objects/Vertical Fans" instance=ExtResource("7_h47uo")]
+position = Vector2(90, -111)
+
+[node name="Horizontal Fans" type="Node" parent="Scene objects"]
+
+[node name="Breakable Shelves" type="Node" parent="Scene objects"]
+
+[node name="Breaking Platform" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
+position = Vector2(250, -119)
+
+[node name="Breaking Platform2" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
+position = Vector2(282, -119)
+
+[node name="Breaking Platform3" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
+position = Vector2(314, -119)
+
+[node name="Breaking Platform4" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
+position = Vector2(346, -119)
+
+[node name="Cardboard" type="Node" parent="Scene objects"]
+
+[node name="Area2D" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(528, -146)
+
+[node name="endlevel" parent="Scene objects" instance=ExtResource("2_gnqhv")]
+position = Vector2(1075, -141)

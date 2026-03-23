@@ -17,10 +17,10 @@ scale_max = 2.7
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3i5qj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3i5qj"]
-size = Vector2(53, 79)
+size = Vector2(59.607986, 90.13042)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2e06"]
-size = Vector2(63.73057, 90.53175)
+size = Vector2(68.36165, 97.181595)
 
 [node name="Area2D" type="Area2D"]
 scale = Vector2(0.25164413, 0.2662808)
@@ -29,8 +29,8 @@ script = ExtResource("1_3i5qj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(27, 27)
-scale = Vector2(2.6875, 2.6875)
+position = Vector2(29.751728, 23.733698)
+scale = Vector2(2.859483, 2.891644)
 texture = ExtResource("1_o1ctx")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
@@ -50,11 +50,11 @@ collision_layer = 8
 physics_material_override = SubResource("PhysicsMaterial_3i5qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(26.5, 29.5)
+position = Vector2(29.803993, 26.28804)
 shape = SubResource("RectangleShape2D_3i5qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(27.085493, 29.383114)
+position = Vector2(29.40103, 26.058193)
 shape = SubResource("RectangleShape2D_j2e06")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
