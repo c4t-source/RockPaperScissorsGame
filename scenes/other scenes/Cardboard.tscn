@@ -22,7 +22,7 @@ size = Vector2(59.607986, 90.13042)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2e06"]
 size = Vector2(68.36165, 97.181595)
 
-[node name="Area2D" type="Area2D"]
+[node name="Cardboard" type="Area2D"]
 scale = Vector2(0.25164413, 0.2662808)
 collision_layer = 8
 script = ExtResource("1_3i5qj")

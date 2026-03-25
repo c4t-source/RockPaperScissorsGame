@@ -6,7 +6,9 @@ extends Area2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var particles = $GPUParticles2D
 func _on_body_entered(body: Node2D) -> void:
-	if player.current_character == player.CharacterType.Y:
+	if not body is CharacterBody2D:
+		return
+	if body.current_character == body.CharacterType.Y:
 		particles.emitting = true
 		await get_tree().create_timer(0.1).timeout
 		$Sprite2D.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cstlmnkwj0syd"]
+[gd_scene load_steps=16 format=4 uid="uid://cstlmnkwj0syd"]
 
 [ext_resource type="Script" uid="uid://bkpk11hnw5qw2" path="res://scripts/level_2.gd" id="1_gurnj"]
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_qt6nw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="3_c0t0n"]
 [ext_resource type="PackedScene" uid="uid://nv4dupa0q4gh" path="res://scenes/other scenes/death_screen.tscn" id="5_c0t0n"]
 [ext_resource type="Texture2D" uid="uid://bjhhbc4xnjv06" path="res://art/realbackgroundforrpssgameplay.png" id="5_gurnj"]
+[ext_resource type="PackedScene" uid="uid://2ph7t6u1l6nh" path="res://scenes/other scenes/End Level Menu.tscn" id="5_oig5m"]
 [ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="7_h47uo"]
 [ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="8_h47uo"]
 [ext_resource type="PackedScene" uid="uid://cdp7hokd82lql" path="res://scenes/other scenes/Cardboard.tscn" id="9_5ftci"]
@@ -20,7 +21,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 13.382492, -16, 13.701122)
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 13.382492, -16, 13.701122)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -2.6978807, -16, -2.6978798)
 2:0/0 = 0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:0/0 = 0
@@ -64,7 +65,7 @@ texture_region_size = Vector2i(32, 32)
 7:0/0 = 0
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -16, 16, -16, 16, 7.25, -16, 16, -16, 16, 16, -16, 16)
 7:1/0 = 0
-7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.25, 10.75, -9.25, 4.5, -5.25, -1, -2, -6, 16, -5.75, 16, 16, -16, 16)
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.593153, -5.7353535, 16, -5.755479, 16, 16, -16, 16)
 7:2/0 = 0
 7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -10.5, 16, 16, -16, 16, -16, 9.25, 2, -10.75)
 6:2/0 = 0
@@ -149,11 +150,13 @@ metadata/_edit_use_anchors_ = true
 physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(42, 65)
-tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQACAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAAUAPv/AQABAAAAAAAVAPv/AQABAAAAAAAWAPv/AQABAAAAAAAXAPv/AQABAAAAAAAYAPv/AQABAAAAAAAZAPv/AQABAAAAAAAaAPv/AQABAAAAAAAbAPv/AQABAAAAAAAcAPv/AQABAAAAAAAdAPv/AQABAAAAAAAeAPv/AQABAAAAAAAfAPv/AQABAAAAAAAgAPv/AQACAAAAAAD6//z/AQAAAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD4//z/AQAAAAEAAAD4//3/AQAAAAIAAAD6//v/AQAAAAUAAAD7//v/AQAAAAUAAAD8//v/AQAAAAUAAAD9//v/AQAAAAUAAAABAPr/AQADAAAAAAD3//r/AAACAAAAAAD3//n/AAACAAAAAAD3//j/AAACAAAAAAD3//f/AAACAAAAAAD3//b/AAACAAAAAAD3//X/AAACAAAAAAD3//T/AAACAAAAAAD3//P/AAACAAAAAAD3//L/AAACAAAAAAD+//z/AQABAAAAAAD///z/AQACAAAAAAD///v/AQAFAAAAAAD+//v/AQAFAAMAAAAKAPr/AAABAAAAAAAPAPr/AAABAAAAAAAQAPr/AAABAAAAAAAOAPr/AAABAAAAAAACAPv/AQACAAAAAAAFAPr/AAABAAAAAAAFAP3/AAABAAAAAAAKAP3/AAABAAAAAAAGAP3/AAABAAAAAAAHAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAP3/AAABAAAAAAAHAPz/AQAAAAUAAAAIAPz/AQAAAAUAAAAJAPz/AQAAAAUAAAAGAPz/AQAAAAUAAAAFAPz/AQAHAAEAAAACAPb/AAABAAAAAAADAPb/AAABAAAAAAAEAPb/AAABAAAAAAAFAPb/AAABAAAAAAAGAPb/AAABAAAAAAAHAPb/AAABAAAAAAAIAPb/AAABAAAAAAAJAPb/AAABAAAAAAAKAPb/AAABAAAAAAALAPb/AAABAAAAAAAFAPX/AQAFAAIAAAAGAPX/AQAAAAUAAAAHAPX/AQAAAAUAAAAIAPX/AQAAAAUAAAAKAPX/AQAAAAUAAAAJAPX/AQAAAAUAAAALAPX/AQAEAAEAAAARAPr/AAABAAAAAAASAPr/AAABAAAAAAASAPf/AQADAAMAAAASAPj/AQAAAAMAAAASAPn/AAACAAAAAAANAPr/AAABAAAAAAAEAPz/AAAAAAAAAAADAPz/AAAAAAAAAAALAPz/AAAAAAAAAAAMAPz/AAAAAAAAAAANAPz/AAAAAAAAAAAKAPz/AQAFAAEAAAA=")
+tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQACAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAD6//z/AQAAAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD4//z/AQAAAAEAAAD4//3/AQAAAAIAAAD6//v/AQAAAAUAAAD7//v/AQAAAAUAAAD8//v/AQAAAAUAAAD9//v/AQAAAAUAAAABAPr/AQADAAAAAAD3//r/AAACAAAAAAD3//n/AAACAAAAAAD3//j/AAACAAAAAAD3//f/AAACAAAAAAD3//b/AAACAAAAAAD3//X/AAACAAAAAAD3//T/AAACAAAAAAD3//P/AAACAAAAAAD3//L/AAACAAAAAAD+//z/AQABAAAAAAD///z/AQACAAAAAAD///v/AQAFAAAAAAD+//v/AQAFAAMAAAAKAPr/AAABAAAAAAAPAPr/AAABAAAAAAAQAPr/AAABAAAAAAAOAPr/AAABAAAAAAACAPv/AQACAAAAAAAFAPr/AAABAAAAAAAFAP3/AAABAAAAAAAKAP3/AAABAAAAAAAGAP3/AAABAAAAAAAHAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAP3/AAABAAAAAAAHAPz/AQAAAAUAAAAIAPz/AQAAAAUAAAAJAPz/AQAAAAUAAAAGAPz/AQAAAAUAAAAFAPz/AQAHAAEAAAACAPb/AAABAAAAAAADAPb/AAABAAAAAAAEAPb/AAABAAAAAAAFAPb/AAABAAAAAAAGAPb/AAABAAAAAAAHAPb/AAABAAAAAAAIAPb/AAABAAAAAAAJAPb/AAABAAAAAAAKAPb/AAABAAAAAAALAPb/AAABAAAAAAAFAPX/AQAFAAIAAAAGAPX/AQAAAAUAAAAHAPX/AQAAAAUAAAAIAPX/AQAAAAUAAAAKAPX/AQAAAAUAAAAJAPX/AQAAAAUAAAALAPX/AQAEAAEAAAARAPr/AAABAAAAAAASAPr/AAABAAAAAAASAPf/AAACAAAAAAASAPj/AQAAAAMAAAASAPn/AAACAAAAAAAKAPz/AQAEAAEAAAAEAP3/AAABAAAAAAADAP3/AAABAAAAAAACAP3/AAABAAAAAAACAPz/AAACAAAAAAALAP3/AAABAAAAAAAMAP3/AAABAAAAAAANAP3/AAABAAAAAAAOAP3/AAABAAAAAAAPAP3/AAABAAAAAAAQAP3/AAABAAAAAAARAP3/AAABAAAAAAAUAP3/AAABAAAAAAATAP3/AAABAAAAAAASAP3/AAABAAAAAAANAPz/AQADAAAAAAAMAPz/AQAFAAIAAAAMAPb/AAABAAAAAAANAPb/AAABAAAAAAAOAPb/AAABAAAAAAAPAPb/AAABAAAAAAAQAPb/AAABAAAAAAARAPb/AAABAAAAAAASAPb/AAABAAAAAAAVAP3/AAABAAAAAAAWAP3/AAABAAAAAAAUAPz/AQADAAAAAAARAPX/AQAHAAAAAAASAPX/AQADAAMAAAATAPX/AAABAAAAAAAUAPX/AAABAAAAAAAXAPf/AAABAAAAAAAXAPb/AQAFAAAAAAAYAPb/AAABAAAAAAAVAPX/AAABAAAAAAAdAPz/AAACAAAAAAAdAPv/AAACAAAAAAAdAPr/AAACAAAAAAAdAPn/AAACAAAAAAAdAPj/AAACAAAAAAAdAPf/AAACAAAAAAAdAPb/AAACAAAAAAAdAPX/AAACAAAAAAAdAPT/AAACAAAAAAAdAPP/AAACAAAAAAAdAPL/AAACAAAAAAAdAPH/AAACAAAAAAAXAPz/AQAAAAUAAAAYAPz/AQAAAAUAAAAZAPz/AQAAAAUAAAAaAPz/AQAAAAUAAAAbAPz/AQAAAAUAAAAcAPz/AQAAAAUAAAAXAP3/AAABAAAAAAAYAP3/AAABAAAAAAAZAP3/AAABAAAAAAAaAP3/AAABAAAAAAAbAP3/AAABAAAAAAAcAP3/AAABAAAAAAAdAP3/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_wos53")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_c0t0n")]
-position = Vector2(-250, -96)
+position = Vector2(-261, -95)
+
+[node name="End Level Menu" parent="." instance=ExtResource("5_oig5m")]
 
 [node name="Death Screen" parent="." instance=ExtResource("5_c0t0n")]
 
@@ -250,6 +253,12 @@ metadata/_edit_lock_ = true
 [node name="vertical fan" parent="Scene objects/Vertical Fans" instance=ExtResource("7_h47uo")]
 position = Vector2(90, -111)
 
+[node name="vertical fan2" parent="Scene objects/Vertical Fans" instance=ExtResource("7_h47uo")]
+position = Vector2(474, -47)
+
+[node name="vertical fan3" parent="Scene objects/Vertical Fans" instance=ExtResource("7_h47uo")]
+position = Vector2(698, -47)
+
 [node name="Horizontal Fans" type="Node" parent="Scene objects"]
 
 [node name="Breakable Shelves" type="Node" parent="Scene objects"]
@@ -266,10 +275,37 @@ position = Vector2(314, -119)
 [node name="Breaking Platform4" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
 position = Vector2(346, -119)
 
+[node name="Breaking Platform5" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
+position = Vector2(730, -205)
+
+[node name="Breaking Platform6" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
+position = Vector2(762, -205)
+
 [node name="Cardboard" type="Node" parent="Scene objects"]
 
-[node name="Area2D" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
-position = Vector2(528, -146)
+[node name="Cardboard" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(493, -274)
+
+[node name="Cardboard2" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(493, -298)
+
+[node name="Cardboard3" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(508, -274)
+
+[node name="Cardboard4" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(508, -298)
+
+[node name="Cardboard5" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(523, -146)
+
+[node name="Cardboard6" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(523, -170)
+
+[node name="Cardboard7" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(538, -146)
+
+[node name="Cardboard8" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(538, -170)
 
 [node name="endlevel" parent="Scene objects" instance=ExtResource("2_gnqhv")]
-position = Vector2(1075, -141)
+position = Vector2(733, -334)
