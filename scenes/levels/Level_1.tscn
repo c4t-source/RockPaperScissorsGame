@@ -148,7 +148,7 @@ position = Vector2(-438.3, -403)
 physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(23, 13)
-tile_map_data = PackedByteArray("AAD///P/AQABAAAAAAAAAPP/AQABAAAAAAABAPP/AQABAAAAAAACAPP/AQABAAAAAAADAPP/AQABAAAAAAAEAPP/AQABAAAAAAAFAPP/AQABAAAAAAAGAPP/AQABAAAAAAAHAPP/AQABAAAAAAAIAPP/AQABAAAAAAAJAPP/AQABAAAAAAAKAPP/AQABAAAAAAALAPP/AQABAAAAAAAMAPP/AQABAAAAAAANAPP/AQABAAAAAAAOAPP/AQABAAAAAAAPAPP/AQABAAAAAAAQAPP/AQABAAAAAAARAPP/AQABAAAAAAASAPP/AQABAAAAAAATAPP/AQABAAAAAAAUAPP/AQABAAAAAAAVAPP/AQABAAAAAAAWAPP/AQABAAAAAAAXAPP/AQABAAAAAAAYAPP/AQABAAAAAAAZAPP/AQABAAAAAAAaAPP/AQABAAAAAAAbAPP/AQABAAAAAAAcAPP/AQABAAAAAAAdAPP/AQACAAAAAAACAO7/AAABAAAAAAABAPL/AQADAAAAAAACAPD/AAACAAAAAAACAPH/AAACAAAAAAACAPL/AQAAAAMAAAAHAPH/AAABAAAAAAAHAPD/AQADAAIAAAAKAPH/AAABAAAAAAAJAPH/AAABAAAAAAAGAPD/AAACAAAAAAAGAO//AAACAAAAAAAGAO7/AAACAAAAAAAGAO3/AAACAAAAAAAGAOz/AAACAAAAAAAGAPH/AAABAAAAAAAGAOv/AAACAAAAAAANAPH/AAABAAAAAAAOAPH/AAABAAAAAAATAPL/AAACAAAAAAATAPH/AAACAAAAAAATAPD/AAACAAAAAAATAO//AAACAAAAAAATAO7/AAACAAAAAAASAPL/AQAAAAUAAAARAPL/AQAAAAMAAAAQAPL/AQAHAAAAAAAAAPL/AAADAAAAAAATAO3/AAACAAAAAAAMAPH/AAABAAAAAAALAPH/AAABAAAAAAAIAPH/AAABAAAAAAD1//P/AQABAAAAAAD2//P/AQABAAAAAAD3//P/AQABAAAAAAD4//P/AQABAAAAAAD5//P/AQABAAAAAAD6//P/AQABAAAAAADx/+v/AAACAAAAAADx/+z/AAADAAAAAADx/+3/AAACAAAAAADx/+7/AAADAAAAAADx/+//AAACAAAAAADx//D/AAADAAAAAADx//H/AAACAAAAAADx//L/AAACAAAAAADx//P/AQAAAAAAAADy//P/AQABAAAAAADz//P/AQABAAAAAAD0//P/AQABAAAAAAD1//L/AQAHAAAAAAD5//L/AQAAAAUAAAD6//L/AQAAAAUAAAD7//L/AQAAAAUAAAD2//L/AQABAAAAAAD3//L/AQABAAAAAAD+//P/AQABAAAAAAD9//P/AQABAAAAAAD8//P/AQABAAAAAAD7//P/AQABAAAAAAD8//L/AQACAAcAAAD4//L/AQAAAAcAAAA=")
+tile_map_data = PackedByteArray("AAD///P/AQABAAAAAAAAAPP/AQABAAAAAAABAPP/AQABAAAAAAACAPP/AQABAAAAAAADAPP/AQABAAAAAAAEAPP/AQABAAAAAAAFAPP/AQABAAAAAAAGAPP/AQABAAAAAAAHAPP/AQABAAAAAAAIAPP/AQABAAAAAAAJAPP/AQABAAAAAAAKAPP/AQABAAAAAAALAPP/AQABAAAAAAAMAPP/AQABAAAAAAANAPP/AQABAAAAAAAOAPP/AQABAAAAAAAPAPP/AQABAAAAAAAQAPP/AQABAAAAAAARAPP/AQABAAAAAAASAPP/AQABAAAAAAATAPP/AQABAAAAAAAUAPP/AQABAAAAAAAVAPP/AQABAAAAAAAWAPP/AQABAAAAAAAXAPP/AQABAAAAAAAYAPP/AQABAAAAAAAZAPP/AQABAAAAAAAaAPP/AQABAAAAAAAbAPP/AQABAAAAAAAcAPP/AQABAAAAAAAdAPP/AQACAAAAAAACAO7/AAABAAAAAAABAPL/AQADAAAAAAACAPD/AAACAAAAAAACAPH/AAACAAAAAAACAPL/AQAAAAMAAAAHAPH/AAABAAAAAAAHAPD/AQADAAIAAAAKAPH/AAABAAAAAAAJAPH/AAABAAAAAAAGAPD/AAACAAAAAAAGAO//AAACAAAAAAAGAO7/AAACAAAAAAAGAO3/AAACAAAAAAAGAOz/AAACAAAAAAAGAPH/AAABAAAAAAAGAOv/AAACAAAAAAANAPH/AAABAAAAAAAOAPH/AAABAAAAAAATAPL/AAACAAAAAAATAPH/AAACAAAAAAATAPD/AAACAAAAAAATAO//AAACAAAAAAATAO7/AAACAAAAAAASAPL/AQAAAAUAAAARAPL/AQAAAAMAAAAQAPL/AQAHAAAAAAAAAPL/AAADAAAAAAATAO3/AAACAAAAAAAMAPH/AAABAAAAAAALAPH/AAABAAAAAAAIAPH/AAABAAAAAAD1//P/AQABAAAAAAD2//P/AQABAAAAAAD3//P/AQABAAAAAAD4//P/AQABAAAAAAD5//P/AQABAAAAAAD6//P/AQABAAAAAADx/+v/AAACAAAAAADx/+z/AAADAAAAAADx/+3/AAACAAAAAADx/+7/AAADAAAAAADx/+//AAACAAAAAADx//D/AAADAAAAAADx//H/AAACAAAAAADx//L/AAACAAAAAADx//P/AQAAAAAAAADy//P/AQABAAAAAADz//P/AQABAAAAAAD0//P/AQABAAAAAAD1//L/AQAHAAAAAAD5//L/AQAAAAUAAAD6//L/AQAAAAUAAAD7//L/AQAAAAUAAAD+//P/AQABAAAAAAD9//P/AQABAAAAAAD8//P/AQABAAAAAAD7//P/AQABAAAAAAD8//L/AQACAAcAAAD4//L/AQAAAAcAAAD2//L/AAADAAAAAAD3//L/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_mxw0r")
 use_kinematic_bodies = true
 
@@ -183,18 +183,28 @@ position = Vector2(336, -184)
 [node name="Breaking Platform2" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
 position = Vector2(368, -184)
 
-[node name="Cardboard" parent="Scene Objects" instance=ExtResource("9_u84xi")]
-position = Vector2(-91, -133.00002)
-scale = Vector2(0.9132885, 0.9524529)
+[node name="Cardboard" type="Node" parent="Scene Objects"]
+
+[node name="Cardboard9" parent="Scene Objects/Cardboard" instance=ExtResource("9_u84xi")]
+position = Vector2(523, -51)
+
+[node name="Cardboard10" parent="Scene Objects/Cardboard" instance=ExtResource("9_u84xi")]
+position = Vector2(523, -75)
+
+[node name="Cardboard11" parent="Scene Objects/Cardboard" instance=ExtResource("9_u84xi")]
+position = Vector2(538, -51)
+
+[node name="Cardboard12" parent="Scene Objects/Cardboard" instance=ExtResource("9_u84xi")]
+position = Vector2(538, -75)
 
 [node name="Tutorial text" type="Node" parent="."]
 
 [node name="intro scissors" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = -199.0
-offset_top = -176.0
-offset_right = -35.0
-offset_bottom = -132.0
+offset_left = -197.0
+offset_top = -156.0
+offset_right = -33.0
+offset_bottom = -112.0
 theme = SubResource("Theme_50olt")
 theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Welcome! Only scissors can go up stairs. You can swap between characters with Q!"
@@ -204,9 +214,9 @@ autowrap_mode = 2
 [node name="behind intro" type="ColorRect" parent="Tutorial text"]
 z_index = -2
 offset_left = -208.0
-offset_top = -178.0
+offset_top = -156.0
 offset_right = -44.0
-offset_bottom = -131.0
+offset_bottom = -109.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="rock + fan" type="Label" parent="Tutorial text"]
@@ -289,12 +299,33 @@ offset_right = 596.0
 offset_bottom = -151.0
 color = Color(0, 0, 0, 0.5882353)
 
+[node name="behind cardboard" type="ColorRect" parent="Tutorial text"]
+z_index = -2
+offset_left = 555.0
+offset_top = -75.0
+offset_right = 664.0
+offset_bottom = -37.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="fan can push too2" type="Label" parent="Tutorial text"]
+z_index = -1
+offset_left = 562.0
+offset_top = -70.0
+offset_right = 673.0
+offset_bottom = -21.0
+theme = SubResource("Theme_50olt")
+theme_override_fonts/font = ExtResource("10_sha1w")
+text = "What cuts cardboard? 
+That's right, Scissors!"
+label_settings = SubResource("LabelSettings_50olt")
+autowrap_mode = 2
+
 [node name="background" type="Node" parent="."]
 
 [node name="Background2" type="Sprite2D" parent="background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(743.99994, -161)
+position = Vector2(712.99994, -161)
 scale = Vector2(2.7004952, 2.6875)
 texture = ExtResource("4_50olt")
 metadata/_edit_lock_ = true
@@ -302,7 +333,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse" type="Sprite2D" parent="background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(96.45, -494)
+position = Vector2(65.45, -494)
 rotation = 3.1414099
 scale = Vector2(2.7031431, 2.5216405)
 texture = ExtResource("4_50olt")
@@ -311,7 +342,7 @@ metadata/_edit_lock_ = true
 [node name="Background" type="Sprite2D" parent="background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(96.45, -161)
+position = Vector2(65.45, -161)
 scale = Vector2(2.7, 2.6874998)
 texture = ExtResource("4_50olt")
 metadata/_edit_lock_ = true
@@ -319,7 +350,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse2" type="Sprite2D" parent="background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(744.0001, -494.00003)
+position = Vector2(713.0001, -494.00003)
 rotation = 3.1414108
 scale = Vector2(2.6985166, 2.5190701)
 texture = ExtResource("4_50olt")
@@ -327,9 +358,9 @@ metadata/_edit_lock_ = true
 
 [node name="background separator" type="Panel" parent="background"]
 z_index = -2
-offset_left = -257.0
+offset_left = -288.0
 offset_top = -656.0
-offset_right = 1068.0
+offset_right = 1037.0
 offset_bottom = -33.0
 metadata/_edit_lock_ = true
 

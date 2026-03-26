@@ -158,7 +158,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qe12f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fu7sn")
-text = "options :)
+text = "Options 
 "
 
 [node name="exit" type="Button" parent="Menubuttons"]
@@ -174,7 +174,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_glbon")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
-text = "exit (please no)"
+text = "Exit"
 
 [node name="options" type="Panel" parent="."]
 visible = false
@@ -367,7 +367,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_glbon")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
-text = "Level 1"
+text = "Tutorial"
 
 [node name="Level1B" type="Button" parent="Levels"]
 layout_mode = 0

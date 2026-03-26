@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cstlmnkwj0syd"]
+[gd_scene load_steps=17 format=4 uid="uid://cstlmnkwj0syd"]
 
 [ext_resource type="Script" uid="uid://bkpk11hnw5qw2" path="res://scripts/level_2.gd" id="1_gurnj"]
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_qt6nw"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="7_h47uo"]
 [ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="8_h47uo"]
 [ext_resource type="PackedScene" uid="uid://cdp7hokd82lql" path="res://scenes/other scenes/Cardboard.tscn" id="9_5ftci"]
+[ext_resource type="FontFile" uid="uid://b2b81568uij0a" path="res://Huxtable.otf" id="12_0e0np"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a004i"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
@@ -150,11 +151,11 @@ metadata/_edit_use_anchors_ = true
 physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(42, 65)
-tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQACAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAD6//z/AQAAAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD4//z/AQAAAAEAAAD4//3/AQAAAAIAAAD6//v/AQAAAAUAAAD7//v/AQAAAAUAAAD8//v/AQAAAAUAAAD9//v/AQAAAAUAAAABAPr/AQADAAAAAAD3//r/AAACAAAAAAD3//n/AAACAAAAAAD3//j/AAACAAAAAAD3//f/AAACAAAAAAD3//b/AAACAAAAAAD3//X/AAACAAAAAAD3//T/AAACAAAAAAD3//P/AAACAAAAAAD3//L/AAACAAAAAAD+//z/AQABAAAAAAD///z/AQACAAAAAAD///v/AQAFAAAAAAD+//v/AQAFAAMAAAAKAPr/AAABAAAAAAAPAPr/AAABAAAAAAAQAPr/AAABAAAAAAAOAPr/AAABAAAAAAACAPv/AQACAAAAAAAFAPr/AAABAAAAAAAFAP3/AAABAAAAAAAKAP3/AAABAAAAAAAGAP3/AAABAAAAAAAHAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAP3/AAABAAAAAAAHAPz/AQAAAAUAAAAIAPz/AQAAAAUAAAAJAPz/AQAAAAUAAAAGAPz/AQAAAAUAAAAFAPz/AQAHAAEAAAACAPb/AAABAAAAAAADAPb/AAABAAAAAAAEAPb/AAABAAAAAAAFAPb/AAABAAAAAAAGAPb/AAABAAAAAAAHAPb/AAABAAAAAAAIAPb/AAABAAAAAAAJAPb/AAABAAAAAAAKAPb/AAABAAAAAAALAPb/AAABAAAAAAAFAPX/AQAFAAIAAAAGAPX/AQAAAAUAAAAHAPX/AQAAAAUAAAAIAPX/AQAAAAUAAAAKAPX/AQAAAAUAAAAJAPX/AQAAAAUAAAALAPX/AQAEAAEAAAARAPr/AAABAAAAAAASAPr/AAABAAAAAAASAPf/AAACAAAAAAASAPj/AQAAAAMAAAASAPn/AAACAAAAAAAKAPz/AQAEAAEAAAAEAP3/AAABAAAAAAADAP3/AAABAAAAAAACAP3/AAABAAAAAAACAPz/AAACAAAAAAALAP3/AAABAAAAAAAMAP3/AAABAAAAAAANAP3/AAABAAAAAAAOAP3/AAABAAAAAAAPAP3/AAABAAAAAAAQAP3/AAABAAAAAAARAP3/AAABAAAAAAAUAP3/AAABAAAAAAATAP3/AAABAAAAAAASAP3/AAABAAAAAAANAPz/AQADAAAAAAAMAPz/AQAFAAIAAAAMAPb/AAABAAAAAAANAPb/AAABAAAAAAAOAPb/AAABAAAAAAAPAPb/AAABAAAAAAAQAPb/AAABAAAAAAARAPb/AAABAAAAAAASAPb/AAABAAAAAAAVAP3/AAABAAAAAAAWAP3/AAABAAAAAAAUAPz/AQADAAAAAAARAPX/AQAHAAAAAAASAPX/AQADAAMAAAATAPX/AAABAAAAAAAUAPX/AAABAAAAAAAXAPf/AAABAAAAAAAXAPb/AQAFAAAAAAAYAPb/AAABAAAAAAAVAPX/AAABAAAAAAAdAPz/AAACAAAAAAAdAPv/AAACAAAAAAAdAPr/AAACAAAAAAAdAPn/AAACAAAAAAAdAPj/AAACAAAAAAAdAPf/AAACAAAAAAAdAPb/AAACAAAAAAAdAPX/AAACAAAAAAAdAPT/AAACAAAAAAAdAPP/AAACAAAAAAAdAPL/AAACAAAAAAAdAPH/AAACAAAAAAAXAPz/AQAAAAUAAAAYAPz/AQAAAAUAAAAZAPz/AQAAAAUAAAAaAPz/AQAAAAUAAAAbAPz/AQAAAAUAAAAcAPz/AQAAAAUAAAAXAP3/AAABAAAAAAAYAP3/AAABAAAAAAAZAP3/AAABAAAAAAAaAP3/AAABAAAAAAAbAP3/AAABAAAAAAAcAP3/AAABAAAAAAAdAP3/AAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQACAAAAAAAAAPv/AQAAAAAAAAABAPv/AQACAAAAAAD6//z/AQAAAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD4//z/AQAAAAEAAAD4//3/AQAAAAIAAAD6//v/AQAAAAUAAAD7//v/AQAAAAUAAAD8//v/AQAAAAUAAAD9//v/AQAAAAUAAAABAPr/AQADAAAAAAD3//r/AAACAAAAAAD3//n/AAACAAAAAAD3//j/AAACAAAAAAD3//f/AAACAAAAAAD3//b/AAACAAAAAAD3//X/AAACAAAAAAD3//T/AAACAAAAAAD3//P/AAACAAAAAAD3//L/AAACAAAAAAD+//z/AQABAAAAAAD///z/AQACAAAAAAD///v/AQAFAAAAAAD+//v/AQAFAAMAAAAPAPr/AAABAAAAAAAQAPr/AAABAAAAAAAOAPr/AAABAAAAAAACAPv/AQAGAAAAAAAFAP3/AAABAAAAAAAKAP3/AAABAAAAAAAGAP3/AAABAAAAAAAHAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAP3/AAABAAAAAAAHAPz/AQAAAAUAAAAIAPz/AQAAAAUAAAAJAPz/AQAAAAUAAAAGAPz/AQAAAAUAAAAFAPz/AQAHAAEAAAAEAPb/AAABAAAAAAAFAPb/AAABAAAAAAAGAPb/AAABAAAAAAAHAPb/AAABAAAAAAAIAPb/AAABAAAAAAAJAPb/AAABAAAAAAAKAPb/AAABAAAAAAALAPb/AAABAAAAAAAFAPX/AQAFAAIAAAAGAPX/AQAAAAUAAAAHAPX/AQAAAAUAAAAIAPX/AQAAAAUAAAAKAPX/AQAAAAUAAAAJAPX/AQAAAAUAAAALAPX/AQAEAAEAAAARAPr/AAABAAAAAAASAPr/AAABAAAAAAASAPf/AAACAAAAAAASAPj/AQAAAAMAAAASAPn/AAACAAAAAAAKAPz/AQAEAAEAAAAEAP3/AAABAAAAAAADAP3/AAABAAAAAAACAP3/AAABAAAAAAACAPz/AQAAAAMAAAALAP3/AAABAAAAAAAMAP3/AAABAAAAAAANAP3/AAABAAAAAAAOAP3/AAABAAAAAAAPAP3/AAABAAAAAAAQAP3/AAABAAAAAAARAP3/AAABAAAAAAAUAP3/AAABAAAAAAATAP3/AAABAAAAAAASAP3/AAABAAAAAAANAPz/AQADAAAAAAAMAPz/AQAFAAIAAAAMAPb/AAABAAAAAAANAPb/AAABAAAAAAAOAPb/AAABAAAAAAAPAPb/AAABAAAAAAAQAPb/AAABAAAAAAARAPb/AAABAAAAAAASAPb/AAABAAAAAAAVAP3/AAABAAAAAAAWAP3/AAABAAAAAAAUAPz/AQADAAAAAAARAPX/AQAHAAAAAAASAPX/AQADAAMAAAATAPX/AAABAAAAAAAUAPX/AAABAAAAAAAXAPf/AAABAAAAAAAXAPb/AQAFAAAAAAAYAPb/AAABAAAAAAAVAPX/AAABAAAAAAAdAPz/AAACAAAAAAAdAPv/AAACAAAAAAAdAPr/AAACAAAAAAAdAPn/AAACAAAAAAAdAPj/AAACAAAAAAAdAPf/AAACAAAAAAAdAPb/AAACAAAAAAAdAPX/AAACAAAAAAAdAPT/AAACAAAAAAAdAPP/AAACAAAAAAAdAPL/AAACAAAAAAAdAPH/AAACAAAAAAAXAPz/AQAAAAUAAAAYAPz/AQAAAAUAAAAZAPz/AQAAAAUAAAAaAPz/AQAAAAUAAAAbAPz/AQAAAAUAAAAcAPz/AQAAAAUAAAAXAP3/AAABAAAAAAAYAP3/AAABAAAAAAAZAP3/AAABAAAAAAAaAP3/AAABAAAAAAAbAP3/AAABAAAAAAAcAP3/AAABAAAAAAAdAP3/AAABAAAAAAADAPz/AQAGAAAAAAAEAPn/AAABAAAAAAAFAPn/AAABAAAAAAAKAPn/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_wos53")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_c0t0n")]
-position = Vector2(-261, -95)
+position = Vector2(-241, -94)
 
 [node name="End Level Menu" parent="." instance=ExtResource("5_oig5m")]
 
@@ -165,7 +166,7 @@ position = Vector2(-261, -95)
 [node name="Background2" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(745, -161)
+position = Vector2(717, -161)
 scale = Vector2(2.7004952, 2.6875)
 texture = ExtResource("5_gurnj")
 metadata/_edit_lock_ = true
@@ -173,7 +174,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(94.00001, -494)
+position = Vector2(66.00001, -494)
 rotation = 3.1414099
 scale = Vector2(2.7031431, 2.5216405)
 texture = ExtResource("5_gurnj")
@@ -182,7 +183,7 @@ metadata/_edit_lock_ = true
 [node name="Background" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(97, -161)
+position = Vector2(69, -161)
 scale = Vector2(2.7, 2.6874998)
 texture = ExtResource("5_gurnj")
 metadata/_edit_lock_ = true
@@ -190,7 +191,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse2" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(742.0001, -494)
+position = Vector2(714.0001, -494)
 rotation = 3.1414108
 scale = Vector2(2.6985166, 2.5190701)
 texture = ExtResource("5_gurnj")
@@ -198,16 +199,16 @@ metadata/_edit_lock_ = true
 
 [node name="background separator" type="Panel" parent="Background"]
 z_index = -2
-offset_left = -257.0
+offset_left = -285.0
 offset_top = -656.0
-offset_right = 1070.0
+offset_right = 1042.0
 offset_bottom = -1.0
 metadata/_edit_lock_ = true
 
 [node name="Background3" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2040.4067, -161)
+position = Vector2(2012.4067, -161)
 scale = Vector2(2.7004952, 2.6875)
 texture = ExtResource("5_gurnj")
 metadata/_edit_lock_ = true
@@ -215,7 +216,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse3" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(1389.4067, -494)
+position = Vector2(1361.4067, -494)
 rotation = 3.1414099
 scale = Vector2(2.7031431, 2.5216405)
 texture = ExtResource("5_gurnj")
@@ -224,7 +225,7 @@ metadata/_edit_lock_ = true
 [node name="Background4" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(1392.4067, -161)
+position = Vector2(1364.4067, -161)
 scale = Vector2(2.7, 2.6874998)
 texture = ExtResource("5_gurnj")
 metadata/_edit_lock_ = true
@@ -232,7 +233,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse4" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2037.4067, -494)
+position = Vector2(2009.4067, -494)
 rotation = 3.1414108
 scale = Vector2(2.6985166, 2.5190701)
 texture = ExtResource("5_gurnj")
@@ -240,9 +241,9 @@ metadata/_edit_lock_ = true
 
 [node name="background separator2" type="Panel" parent="Background"]
 z_index = -2
-offset_left = 1070.0
+offset_left = 1042.0
 offset_top = -656.0
-offset_right = 2394.4067
+offset_right = 2366.4067
 offset_bottom = -1.0
 metadata/_edit_lock_ = true
 
@@ -264,16 +265,16 @@ position = Vector2(698, -47)
 [node name="Breakable Shelves" type="Node" parent="Scene objects"]
 
 [node name="Breaking Platform" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
-position = Vector2(250, -119)
+position = Vector2(250, -151)
 
 [node name="Breaking Platform2" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
-position = Vector2(282, -119)
+position = Vector2(282, -151)
 
 [node name="Breaking Platform3" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
-position = Vector2(314, -119)
+position = Vector2(314, -151)
 
 [node name="Breaking Platform4" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
-position = Vector2(346, -119)
+position = Vector2(346, -151)
 
 [node name="Breaking Platform5" parent="Scene objects/Breakable Shelves" instance=ExtResource("8_h47uo")]
 position = Vector2(730, -205)
@@ -307,5 +308,51 @@ position = Vector2(538, -146)
 [node name="Cardboard8" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
 position = Vector2(538, -170)
 
+[node name="Cardboard9" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(523, -146)
+
+[node name="Cardboard10" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(523, -170)
+
+[node name="Cardboard11" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(538, -146)
+
+[node name="Cardboard12" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
+position = Vector2(538, -170)
+
 [node name="endlevel" parent="Scene objects" instance=ExtResource("2_gnqhv")]
 position = Vector2(733, -334)
+
+[node name="Arrows" type="Node" parent="Scene objects"]
+
+[node name="arrows" type="Label" parent="Scene objects/Arrows"]
+offset_left = 93.0
+offset_top = -215.0
+offset_right = 193.0
+offset_bottom = -149.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("12_0e0np")
+theme_override_font_sizes/font_size = 48
+text = " →"
+
+[node name="arrows2" type="Label" parent="Scene objects/Arrows"]
+offset_left = 78.00001
+offset_top = -257.00003
+offset_right = 174.0
+offset_bottom = -191.00003
+rotation = -0.61086524
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("12_0e0np")
+theme_override_font_sizes/font_size = 48
+text = " →"
+
+[node name="arrows3" type="Label" parent="Scene objects/Arrows"]
+offset_left = 125.000015
+offset_top = -154.00002
+offset_right = 221.00002
+offset_bottom = -88.000015
+rotation = 0.61086524
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("12_0e0np")
+theme_override_font_sizes/font_size = 48
+text = " →"
