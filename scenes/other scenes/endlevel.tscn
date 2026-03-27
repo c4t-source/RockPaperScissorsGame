@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cit2ihbiuam5q"]
+[gd_scene load_steps=5 format=3 uid="uid://cit2ihbiuam5q"]
 
 [ext_resource type="Script" uid="uid://cidv40djjj2td" path="res://scripts/endlevel.gd" id="1_pjyb7"]
 [ext_resource type="Texture2D" uid="uid://owpbkm7tjqd2" path="res://art/actual art/endlevelrpss.png" id="2_66gg6"]
+[ext_resource type="AudioStream" uid="uid://02myaghh1gps" path="res://art/sound effects/universfield-game-level-complete-143022.mp3" id="3_nhj4x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vi8uq"]
 size = Vector2(28, 46)
@@ -18,5 +19,8 @@ texture_filter = 1
 position = Vector2(-41, 24.5)
 scale = Vector2(1.375, 1.34375)
 texture = ExtResource("2_66gg6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nhj4x")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

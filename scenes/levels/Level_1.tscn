@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://3kup5s2id4qr"]
+[gd_scene load_steps=20 format=4 uid="uid://3kup5s2id4qr"]
 
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="1_cnmxh"]
 [ext_resource type="Script" uid="uid://b32xfcjq1ppm1" path="res://scripts/level_1_script.gd" id="1_y54f7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="4_t1jjp"]
 [ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="5_5x2jh"]
 [ext_resource type="Texture2D" uid="uid://da6excawcccj6" path="res://art/actual art/rps altmini  tileset.png" id="5_50olt"]
+[ext_resource type="AudioStream" uid="uid://dhoukxncdjw6l" path="res://art/sound effects/universfield-level-passed-143039.mp3" id="5_hknnn"]
 [ext_resource type="PackedScene" uid="uid://l80shcho8jj" path="res://scenes/other scenes/Horizontal_fan.tscn" id="6_u8eek"]
 [ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="8_50olt"]
 [ext_resource type="PackedScene" uid="uid://cdp7hokd82lql" path="res://scenes/other scenes/Cardboard.tscn" id="9_u84xi"]
@@ -157,6 +158,10 @@ z_index = -4096
 texture_filter = 1
 position = Vector2(393, -805)
 scale = Vector2(10.540178, 12.840277)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hknnn")
+volume_db = -1.709
 
 [node name="Scene Objects" type="Node" parent="."]
 

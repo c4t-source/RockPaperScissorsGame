@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cieaw8rrsq2td"]
+[gd_scene load_steps=39 format=3 uid="uid://cieaw8rrsq2td"]
 
 [ext_resource type="Texture2D" uid="uid://cf82simgc8u5y" path="res://art/actual art/unnamed (1).png" id="1_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://ctogwl5vyi1k2" path="res://art/actual art/PaperRPSS4Game.png" id="2_1jxqw"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://rdvdp6pjju21" path="res://art/actual art/RockRPS4Gamespritesheet.png" id="4_b26j0"]
 [ext_resource type="Texture2D" uid="uid://ci1lwfwfu4e5d" path="res://art/actual art/paperanimrpss4game.png" id="4_fecyu"]
 [ext_resource type="Texture2D" uid="uid://devnisj2oiys3" path="res://art/actual art/scissorsanimthatihaventsaidbeforeinprogress.png" id="5_n7ghd"]
-[ext_resource type="AudioStream" uid="uid://ca3iihn18y7e" path="res://art/sound effects/freesound_community-cinderblockmove-91891.mp3" id="7_fecyu"]
 
 [sub_resource type="GDScript" id="GDScript_jm67y"]
 script/source = "extends CharacterBody2D
@@ -42,6 +41,11 @@ var can_jump := true
 var base_gravity := 0.0
 var wind_velocity_horizontal: Vector2 = Vector2.ZERO
 var wind_velocity_vertical: Vector2 = Vector2.ZERO
+
+var X_sound = preload(\"res://art/sound effects/freesound_community-cinderblockmove-91891.mp3\")
+var Y_sound = preload(\"res://art/sound effects/freesound_community-scissors-69248-[AudioTrimmer.com] (4).mp3\")
+var Z_sound = preload(\"res://art/sound effects/freesound_community-paper-flutter-5933-[AudioTrimmer.com] (1).mp3\")
+
 signal player_died
 
 
@@ -59,6 +63,7 @@ func _ready():
 	base_gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 	apply_character()
 	add_to_group(\"player\")
+	audio.volume_db = 0
 
 func _input(event):
 	if event.is_action_pressed(\"swap_character\") and amount_of_swaps < 100:
@@ -78,14 +83,12 @@ func _physics_process(delta):
 		if abs(velocity.x) < 1:
 			sprite.pause()
 			sprite.frame = 0
-		
+			audio.play()
 		else:
 			if not sprite.is_playing():
 				sprite.play()
 				
-		if abs(velocity.x) < 1 and current_character == CharacterType.X:
-				audio.play()
-				
+
 	if Input.is_action_just_pressed(\"Jump\") and is_on_floor() and can_jump:
 		velocity.y = current_jump_velocity
 	
@@ -129,7 +132,7 @@ func apply_character():
 			if sprite and sprite_x:
 				sprite.play(\"Rock\")
 			floor_max_angle = 0
-
+			audio.stream = X_sound
 			
 		CharacterType.Y:
 			current_speed = speed_y
@@ -143,7 +146,7 @@ func apply_character():
 			if sprite and sprite_y:
 				sprite.play(\"cutpaperthing\")
 				floor_max_angle = deg_to_rad(70)
-			
+			audio.stream = Y_sound
 
 		CharacterType.Z:
 			current_speed = speed_z
@@ -157,8 +160,8 @@ func apply_character():
 			floor_max_angle = 0
 			if sprite and sprite_z:
 				sprite.play(\"Paper\")
-			
-			
+			audio.stream = Z_sound
+
 
 
 
@@ -171,7 +174,7 @@ func die():
 	deathornotdeath = true
 	sprite.frame = 0
 	sprite.pause()
-	audio.play()
+	audio.volume_db = -80
 	set_physics_process(false)
 	player_died.emit()
 "
@@ -434,7 +437,6 @@ sprite_frames = SubResource("SpriteFrames_xkvc5")
 animation = &"Paper"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_fecyu")
 bus = &"SFX"
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
