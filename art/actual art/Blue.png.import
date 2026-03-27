@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dheyjkwr4xtwb"
-path="res://.godot/imported/rpss tileset.png-354c052f3c7c0b54035813ad90eaf9f0.ctex"
+uid="uid://6dgdmvwse3rr"
+path="res://.godot/imported/Blue.png-1f36e591e0b54fa7b9e68959451a796f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/rpss tileset.png"
-dest_files=["res://.godot/imported/rpss tileset.png-354c052f3c7c0b54035813ad90eaf9f0.ctex"]
+source_file="res://art/actual art/Blue.png"
+dest_files=["res://.godot/imported/Blue.png-1f36e591e0b54fa7b9e68959451a796f.ctex"]
 
 [params]
 

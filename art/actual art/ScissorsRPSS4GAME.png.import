@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjhhbc4xnjv06"
-path="res://.godot/imported/realbackgroundforrpssgameplay.png-7d8be31ccacc45530da44371a08d6588.ctex"
+uid="uid://drnpfk5yaj406"
+path="res://.godot/imported/ScissorsRPSS4GAME.png-17149d7dc4d5517ea30a8f869c26ced1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/realbackgroundforrpssgameplay.png"
-dest_files=["res://.godot/imported/realbackgroundforrpssgameplay.png-7d8be31ccacc45530da44371a08d6588.ctex"]
+source_file="res://art/actual art/ScissorsRPSS4GAME.png"
+dest_files=["res://.godot/imported/ScissorsRPSS4GAME.png-17149d7dc4d5517ea30a8f869c26ced1.ctex"]
 
 [params]
 

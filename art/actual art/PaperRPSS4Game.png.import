@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://devnisj2oiys3"
-path="res://.godot/imported/scissorsanimthatihaventsaidbeforeinprogress.png-8a2d69cd587d243db7ba0669f3451468.ctex"
+uid="uid://ctogwl5vyi1k2"
+path="res://.godot/imported/PaperRPSS4Game.png-98c2802a4a098818c915492f7b4fdfdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/scissorsanimthatihaventsaidbeforeinprogress.png"
-dest_files=["res://.godot/imported/scissorsanimthatihaventsaidbeforeinprogress.png-8a2d69cd587d243db7ba0669f3451468.ctex"]
+source_file="res://art/actual art/PaperRPSS4Game.png"
+dest_files=["res://.godot/imported/PaperRPSS4Game.png-98c2802a4a098818c915492f7b4fdfdd.ctex"]
 
 [params]
 

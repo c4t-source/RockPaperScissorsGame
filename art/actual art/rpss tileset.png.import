@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clogx8g6uyc4e"
-path="res://.godot/imported/usablemainmenubgrpss224x126.png-fdfc15181c38407d169f2615a549091a.ctex"
+uid="uid://dheyjkwr4xtwb"
+path="res://.godot/imported/rpss tileset.png-b624fac2c5d3027f46c56c402f275448.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/usablemainmenubgrpss224x126.png"
-dest_files=["res://.godot/imported/usablemainmenubgrpss224x126.png-fdfc15181c38407d169f2615a549091a.ctex"]
+source_file="res://art/actual art/rpss tileset.png"
+dest_files=["res://.godot/imported/rpss tileset.png-b624fac2c5d3027f46c56c402f275448.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da6excawcccj6"
-path="res://.godot/imported/rps altmini  tileset.png-bb6a6fc08bac6412a70d8e67a82d4924.ctex"
+uid="uid://bjhhbc4xnjv06"
+path="res://.godot/imported/realbackgroundforrpssgameplay.png-139d5fde0c8300d6b0d6576090a10a33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/rps altmini  tileset.png"
-dest_files=["res://.godot/imported/rps altmini  tileset.png-bb6a6fc08bac6412a70d8e67a82d4924.ctex"]
+source_file="res://art/actual art/realbackgroundforrpssgameplay.png"
+dest_files=["res://.godot/imported/realbackgroundforrpssgameplay.png-139d5fde0c8300d6b0d6576090a10a33.ctex"]
 
 [params]
 

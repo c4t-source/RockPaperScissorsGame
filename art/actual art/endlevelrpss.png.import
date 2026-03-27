@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdiy6k8ttxygt"
-path="res://.godot/imported/WINDYFANRPSS.png-e86be7eaaa9bae49efd00308fa57e429.ctex"
+uid="uid://owpbkm7tjqd2"
+path="res://.godot/imported/endlevelrpss.png-48eb9b50378391f194e85353d997165e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/WINDYFANRPSS.png"
-dest_files=["res://.godot/imported/WINDYFANRPSS.png-e86be7eaaa9bae49efd00308fa57e429.ctex"]
+source_file="res://art/actual art/endlevelrpss.png"
+dest_files=["res://.godot/imported/endlevelrpss.png-48eb9b50378391f194e85353d997165e.ctex"]
 
 [params]
 

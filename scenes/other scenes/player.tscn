@@ -1,12 +1,12 @@
 [gd_scene load_steps=40 format=3 uid="uid://cieaw8rrsq2td"]
 
-[ext_resource type="Texture2D" uid="uid://cf82simgc8u5y" path="res://art/unnamed (1).png" id="1_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://ctogwl5vyi1k2" path="res://art/PaperRPSS4Game.png" id="2_1jxqw"]
-[ext_resource type="Texture2D" uid="uid://drnpfk5yaj406" path="res://art/ScissorsRPSS4GAME.png" id="3_dw050"]
-[ext_resource type="Texture2D" uid="uid://rdvdp6pjju21" path="res://art/RockRPS4Gamespritesheet.png" id="4_b26j0"]
-[ext_resource type="Texture2D" uid="uid://ci1lwfwfu4e5d" path="res://art/paperanimrpss4game.png" id="4_fecyu"]
-[ext_resource type="Texture2D" uid="uid://devnisj2oiys3" path="res://art/scissorsanimthatihaventsaidbeforeinprogress.png" id="5_n7ghd"]
-[ext_resource type="AudioStream" uid="uid://doof4nwbictfl" path="res://art/super-mario-64-thwomp-sound-online-audio-converter.mp3" id="6_nvl01"]
+[ext_resource type="Texture2D" uid="uid://cf82simgc8u5y" path="res://art/actual art/unnamed (1).png" id="1_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://ctogwl5vyi1k2" path="res://art/actual art/PaperRPSS4Game.png" id="2_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://drnpfk5yaj406" path="res://art/actual art/ScissorsRPSS4GAME.png" id="3_dw050"]
+[ext_resource type="Texture2D" uid="uid://rdvdp6pjju21" path="res://art/actual art/RockRPS4Gamespritesheet.png" id="4_b26j0"]
+[ext_resource type="Texture2D" uid="uid://ci1lwfwfu4e5d" path="res://art/actual art/paperanimrpss4game.png" id="4_fecyu"]
+[ext_resource type="Texture2D" uid="uid://devnisj2oiys3" path="res://art/actual art/scissorsanimthatihaventsaidbeforeinprogress.png" id="5_n7ghd"]
+[ext_resource type="AudioStream" uid="uid://ca3iihn18y7e" path="res://art/sound effects/freesound_community-cinderblockmove-91891.mp3" id="7_fecyu"]
 
 [sub_resource type="GDScript" id="GDScript_jm67y"]
 script/source = "extends CharacterBody2D
@@ -63,8 +63,8 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed(\"swap_character\") and amount_of_swaps < 100:
 		swap_character()
-	if event.is_action_pressed(\"ability\"):
-		use_ability()
+
+
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -160,21 +160,7 @@ func apply_character():
 			
 			
 
-func use_ability():
-	match current_character:
-		CharacterType.X:
-			x_ability()
-		CharacterType.Y:
-			y_ability()
-		CharacterType.Z:
-			z_ability()
-func x_ability():
-	current_speed = 1000
-func y_ability():
-	current_speed = 1000
-func z_ability():
-	current_speed = 1000
-	current_gravity_scale = -0.1
+
 
 
 func _on_hurtbox_body_entered(_body: Node2D) -> void:
@@ -448,7 +434,7 @@ sprite_frames = SubResource("SpriteFrames_xkvc5")
 animation = &"Paper"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_nvl01")
+stream = ExtResource("7_fecyu")
 bus = &"SFX"
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

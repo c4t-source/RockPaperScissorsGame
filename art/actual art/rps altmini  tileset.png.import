@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6dgdmvwse3rr"
-path="res://.godot/imported/Blue.png-144da2195b0f6a8ae6b8cf4239714c3a.ctex"
+uid="uid://da6excawcccj6"
+path="res://.godot/imported/rps altmini  tileset.png-64d1bb789a0bfa55b967f646838ae6e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Blue.png"
-dest_files=["res://.godot/imported/Blue.png-144da2195b0f6a8ae6b8cf4239714c3a.ctex"]
+source_file="res://art/actual art/rps altmini  tileset.png"
+dest_files=["res://.godot/imported/rps altmini  tileset.png-64d1bb789a0bfa55b967f646838ae6e1.ctex"]
 
 [params]
 

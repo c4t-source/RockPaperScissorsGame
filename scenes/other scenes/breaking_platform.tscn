@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bisonwrda7q8g"]
 
-[ext_resource type="Texture2D" uid="uid://dlxcx8jh571dc" path="res://art/crackedshelf.png" id="1_hwwrw"]
+[ext_resource type="Texture2D" uid="uid://dlxcx8jh571dc" path="res://art/actual art/crackedshelf.png" id="1_hwwrw"]
 [ext_resource type="Script" uid="uid://606myudf18b1" path="res://breaking_platform.gd" id="2_s6isy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qkejb"]

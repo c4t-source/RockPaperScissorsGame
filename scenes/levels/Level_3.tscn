@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://kcigusslbjn2"]
 
-[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_3kf05"]
+[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/actual art/rpss tileset.png" id="1_3kf05"]
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="2_3ffft"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_me5uq"]

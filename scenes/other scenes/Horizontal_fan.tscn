@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://l80shcho8jj"]
 
 [ext_resource type="Script" uid="uid://dgo8s6u8whyxb" path="res://horizontal_fan.gd" id="1_f2agi"]
-[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/rpss tileset.png" id="1_ln46t"]
+[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/actual art/rpss tileset.png" id="1_ln46t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2agi"]
 size = Vector2(202, 37)

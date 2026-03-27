@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://doof4nwbictfl"
+path="res://.godot/imported/super-mario-64-thwomp-sound-online-audio-converter.mp3-f59fa7a485d9648f563250885b57c868.mp3str"
+
+[deps]
+
+source_file="res://art/sound effects/super-mario-64-thwomp-sound-online-audio-converter.mp3"
+dest_files=["res://.godot/imported/super-mario-64-thwomp-sound-online-audio-converter.mp3-f59fa7a485d9648f563250885b57c868.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

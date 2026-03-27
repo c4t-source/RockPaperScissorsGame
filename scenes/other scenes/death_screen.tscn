@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://nv4dupa0q4gh"]
 
 [ext_resource type="Script" uid="uid://1qk6yp8knw8w" path="res://scripts/death_screen.gd" id="1_drkur"]
-[ext_resource type="FontFile" uid="uid://dirqoanfdv7ia" path="res://art/Daydream DEMO.otf" id="1_xyeeu"]
+[ext_resource type="FontFile" uid="uid://dirqoanfdv7ia" path="res://art/actual art/Daydream DEMO.otf" id="1_xyeeu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyeeu"]
 bg_color = Color(1, 1, 1, 0.98039216)

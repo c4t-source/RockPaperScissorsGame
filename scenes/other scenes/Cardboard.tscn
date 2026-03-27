@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdp7hokd82lql"]
+[gd_scene load_steps=7 format=3 uid="uid://cdp7hokd82lql"]
 
 [ext_resource type="Script" uid="uid://bsi5g5va76so4" path="res://scripts/cardboard.gd" id="1_3i5qj"]
-[ext_resource type="Texture2D" uid="uid://c34e2fjrj0an0" path="res://art/cardboardrpss.png" id="1_o1ctx"]
-[ext_resource type="AudioStream" uid="uid://dn2rrqjelg6ky" path="res://scenes/other scenes/smoke-detector-beep.mp3" id="3_j2e06"]
+[ext_resource type="Texture2D" uid="uid://c34e2fjrj0an0" path="res://art/actual art/cardboardrpss.png" id="1_o1ctx"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j2e06"]
 particle_flag_disable_z = true
@@ -58,6 +57,5 @@ position = Vector2(29.40103, 26.058193)
 shape = SubResource("RectangleShape2D_j2e06")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_j2e06")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

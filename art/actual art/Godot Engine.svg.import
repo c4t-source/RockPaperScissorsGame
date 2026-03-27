@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci1lwfwfu4e5d"
-path="res://.godot/imported/paperanimrpss4game.png-f0751e6551cb321a18188b3daacb246f.ctex"
+uid="uid://blnm1ire6va8x"
+path="res://.godot/imported/Godot Engine.svg-21366420aa78372d4f77bc21d09489ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/paperanimrpss4game.png"
-dest_files=["res://.godot/imported/paperanimrpss4game.png-f0751e6551cb321a18188b3daacb246f.ctex"]
+source_file="res://art/actual art/Godot Engine.svg"
+dest_files=["res://.godot/imported/Godot Engine.svg-21366420aa78372d4f77bc21d09489ea.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

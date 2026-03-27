@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4q335xxs2p"
-path="res://.godot/imported/icon.svg-2ffe2e9772a318535303737ea3c29287.ctex"
+uid="uid://c34e2fjrj0an0"
+path="res://.godot/imported/cardboardrpss.png-44c56acfae028c73474879a94adec3da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-2ffe2e9772a318535303737ea3c29287.ctex"]
+source_file="res://art/actual art/cardboardrpss.png"
+dest_files=["res://.godot/imported/cardboardrpss.png-44c56acfae028c73474879a94adec3da.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

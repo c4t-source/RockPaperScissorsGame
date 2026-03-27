@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctogwl5vyi1k2"
-path="res://.godot/imported/PaperRPSS4Game.png-17e2396a067474c28e6f3cac196eb175.ctex"
+uid="uid://cdiy6k8ttxygt"
+path="res://.godot/imported/WINDYFANRPSS.png-1f0f9e036f38050e2b91df764eb6616a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/PaperRPSS4Game.png"
-dest_files=["res://.godot/imported/PaperRPSS4Game.png-17e2396a067474c28e6f3cac196eb175.ctex"]
+source_file="res://art/actual art/WINDYFANRPSS.png"
+dest_files=["res://.godot/imported/WINDYFANRPSS.png-1f0f9e036f38050e2b91df764eb6616a.ctex"]
 
 [params]
 

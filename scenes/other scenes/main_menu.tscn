@@ -1,10 +1,10 @@
 [gd_scene load_steps=20 format=3 uid="uid://uknglwydosjw"]
 
 [ext_resource type="Script" uid="uid://24wkohk5s3p4" path="res://scripts/main_menu.gd" id="1_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://clogx8g6uyc4e" path="res://art/usablemainmenubgrpss224x126.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://clogx8g6uyc4e" path="res://art/actual art/usablemainmenubgrpss224x126.png" id="2_7vrkn"]
 [ext_resource type="Script" uid="uid://cx8i5aakbwq1x" path="res://scenes/other scenes/audioslider.gd" id="3_6gp4m"]
-[ext_resource type="AudioStream" uid="uid://dn2rrqjelg6ky" path="res://scenes/other scenes/smoke-detector-beep.mp3" id="4_fsydl"]
 [ext_resource type="Script" uid="uid://dgfk8gw3td5qy" path="res://scenes/other scenes/fullscreen_control.gd" id="4_htw6m"]
+[ext_resource type="AudioStream" uid="uid://qubarftscfan" path="res://art/sound effects/mondamusic-retro-arcade-game-music-491667.mp3" id="5_htw6m"]
 [ext_resource type="PackedScene" uid="uid://dldll6i5j70by" path="res://scenes/other scenes/transition_fade.tscn" id="6_htw6m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
@@ -322,7 +322,7 @@ text = "Music"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_fsydl")
+stream = ExtResource("5_htw6m")
 autoplay = true
 bus = &"Music"
 parameters/looping = true

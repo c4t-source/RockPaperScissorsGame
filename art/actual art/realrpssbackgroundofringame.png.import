@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rdvdp6pjju21"
-path="res://.godot/imported/RockRPS4Gamespritesheet.png-91251addb020134f9bc8754214fddcaa.ctex"
+uid="uid://dol37j6yi58lg"
+path="res://.godot/imported/realrpssbackgroundofringame.png-47bdcc167963b2a0f5b07660285e8e60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/RockRPS4Gamespritesheet.png"
-dest_files=["res://.godot/imported/RockRPS4Gamespritesheet.png-91251addb020134f9bc8754214fddcaa.ctex"]
+source_file="res://art/actual art/realrpssbackgroundofringame.png"
+dest_files=["res://.godot/imported/realrpssbackgroundofringame.png-47bdcc167963b2a0f5b07660285e8e60.ctex"]
 
 [params]
 

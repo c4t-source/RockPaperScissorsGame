@@ -1,10 +1,10 @@
 [gd_scene load_steps=28 format=3 uid="uid://do4uxdlii4wws"]
 
-[ext_resource type="Texture2D" uid="uid://ctogwl5vyi1k2" path="res://art/PaperRPSS4Game.png" id="1_px5sl"]
-[ext_resource type="Texture2D" uid="uid://rdvdp6pjju21" path="res://art/RockRPS4Gamespritesheet.png" id="2_0qfo5"]
-[ext_resource type="Texture2D" uid="uid://drnpfk5yaj406" path="res://art/ScissorsRPSS4GAME.png" id="3_yxww1"]
-[ext_resource type="Texture2D" uid="uid://devnisj2oiys3" path="res://art/scissorsanimthatihaventsaidbeforeinprogress.png" id="4_wdpcj"]
-[ext_resource type="AudioStream" uid="uid://doof4nwbictfl" path="res://art/super-mario-64-thwomp-sound-online-audio-converter.mp3" id="5_qi5as"]
+[ext_resource type="Texture2D" uid="uid://ctogwl5vyi1k2" path="res://art/actual art/PaperRPSS4Game.png" id="1_px5sl"]
+[ext_resource type="Texture2D" uid="uid://rdvdp6pjju21" path="res://art/actual art/RockRPS4Gamespritesheet.png" id="2_0qfo5"]
+[ext_resource type="Texture2D" uid="uid://drnpfk5yaj406" path="res://art/actual art/ScissorsRPSS4GAME.png" id="3_yxww1"]
+[ext_resource type="Texture2D" uid="uid://devnisj2oiys3" path="res://art/actual art/scissorsanimthatihaventsaidbeforeinprogress.png" id="4_wdpcj"]
+[ext_resource type="AudioStream" uid="uid://doof4nwbictfl" path="res://art/sound effects/super-mario-64-thwomp-sound-online-audio-converter.mp3" id="5_qi5as"]
 
 [sub_resource type="GDScript" id="GDScript_kgqac"]
 script/source = "extends CharacterBody2D

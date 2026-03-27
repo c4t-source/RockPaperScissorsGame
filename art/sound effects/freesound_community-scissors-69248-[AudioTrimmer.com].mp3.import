@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmysn8jvh4rpu"
+path="res://.godot/imported/freesound_community-scissors-69248-[AudioTrimmer.com].mp3-bb18a0cadf906b6af13c499c4e993b38.mp3str"
+
+[deps]
+
+source_file="res://art/sound effects/freesound_community-scissors-69248-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/freesound_community-scissors-69248-[AudioTrimmer.com].mp3-bb18a0cadf906b6af13c499c4e993b38.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
