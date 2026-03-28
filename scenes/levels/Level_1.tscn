@@ -180,6 +180,12 @@ position = Vector2(464, -112)
 rotation = -6.2863793
 speed = Vector2(650, 0)
 
+[node name="Horizontal fan4" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
+position = Vector2(460.00003, -142.00002)
+rotation = -0.0063880607
+scale = Vector2(0.99999994, 0.99999994)
+speed = Vector2(650, 0)
+
 [node name="Breaking Platforms" type="Node" parent="Scene Objects"]
 
 [node name="Breaking Platform" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
