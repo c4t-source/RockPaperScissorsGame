@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://kcigusslbjn2"]
+[gd_scene load_steps=17 format=4 uid="uid://kcigusslbjn2"]
 
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/actual art/rpss tileset.png" id="1_3kf05"]
 [ext_resource type="Script" uid="uid://bjyi6jf4ja5ke" path="res://scenes/levels/level_3.gd" id="1_x0l25"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cdp7hokd82lql" path="res://scenes/other scenes/Cardboard.tscn" id="2_5ml2i"]
 [ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="2_mqegc"]
 [ext_resource type="PackedScene" uid="uid://l80shcho8jj" path="res://scenes/other scenes/Horizontal_fan.tscn" id="3_bb37f"]
+[ext_resource type="Texture2D" uid="uid://da6excawcccj6" path="res://art/actual art/rps altmini  tileset.png" id="3_lt2e5"]
 [ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="4_t76d4"]
 [ext_resource type="PackedScene" uid="uid://2ph7t6u1l6nh" path="res://scenes/other scenes/End Level Menu.tscn" id="5_upq13"]
 [ext_resource type="PackedScene" uid="uid://nv4dupa0q4gh" path="res://scenes/other scenes/death_screen.tscn" id="6_hgrxw"]
@@ -111,11 +112,24 @@ texture_region_size = Vector2i(32, 32)
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.888889, 1.7777786, 8.888889, 1.7777786, 12.444445, 8.888889, 12.444445, 16, -12.444445, 16, -12.444445, 8.888889)
 2:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-11.6673, 3.35876, 12.3744, 3.53553, 11.1369, 16, -12.1976, 16)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4hiy"]
+texture = ExtResource("3_lt2e5")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.31863022, 16, 0.31863022, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -2.5490456, -16, -2.5490456)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
 [sub_resource type="TileSet" id="TileSet_rdkxc"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 0
+
 sources/1 = SubResource("TileSetAtlasSource_x0l25")
 
 [node name="Level_3" type="Node2D"]
@@ -139,13 +153,13 @@ position = Vector2(42, 65)
 tile_map_data = PackedByteArray("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AAAIAP7/AQAAAAUAAAAJAP//AQABAAAAAAAKAAIAAQACAAEAAAAOAAMAAQABAAAAAAAPAAMAAQACAAAAAAD+//r/AQACAAEAAAD+//v/AQACAAEAAAD+//z/AQACAAEAAAD+//3/AQACAAEAAAD+////AQAAAAAAAAD/////AQABAAAAAAAAAP//AQABAAAAAAABAP//AQABAAAAAAACAP//AQABAAAAAAADAP//AQABAAAAAAAEAPX/AQAAAAAAAAAEAP//AQABAAAAAAAFAP//AQABAAAAAAAGAPX/AQACAAAAAAAGAPb/AQAAAAEAAAAGAPf/AQAAAAEAAAAGAPj/AQAAAAEAAAAGAPr/AQAAAAEAAAAGAP//AQABAAAAAAAHAPr/AQABAAAAAAAHAP//AQABAAAAAAAIAPr/AQABAAAAAAAIAP//AQABAAAAAAAJAPr/AQABAAAAAAAKAPP/AQACAAEAAAAKAPT/AQACAAEAAAAKAPr/AQABAAAAAAAKAP//AQABAAAAAAAKAAAAAQACAAEAAAAKAAEAAQACAAEAAAAKAAMAAQAAAAAAAAALAPr/AQABAAAAAAALAP//AQACAAAAAAALAAMAAQABAAAAAAAMAPr/AQABAAAAAAAMAAMAAQABAAAAAAANAPr/AQACAAAAAAANAAMAAQABAAAAAAAOAP//AQAAAAAAAAAPAP//AQABAAAAAAAPAAQAAQAEAAQAAAAQAP//AQACAAAAAAAQAAQAAQAFAAQAAAARAPj/AQACAAEAAAARAPn/AQACAAEAAAARAPr/AQACAAEAAAA=")
 tile_set = SubResource("TileSet_rdkxc")
 
-[node name="endlevel" parent="TextureRect" instance=ExtResource("2_mqegc")]
-position = Vector2(2777, -270)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_3ffft")]
 position = Vector2(0, 35)
 
 [node name="Scene objects" type="Node" parent="."]
+
+[node name="endlevel" parent="Scene objects" instance=ExtResource("2_mqegc")]
+position = Vector2(3993, -648)
 
 [node name="breaking platforms" type="Node" parent="Scene objects"]
 
@@ -285,7 +299,7 @@ metadata/_edit_lock_ = true
 [node name="Background3" type="Sprite2D" parent="Scene objects/Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(3723.0332, -272.7251)
+position = Vector2(3724.0332, -272.7251)
 scale = Vector2(3.05, 2.847)
 texture = ExtResource("8_as75d")
 metadata/_edit_lock_ = true
@@ -293,7 +307,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse3" type="Sprite2D" parent="Scene objects/Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2991.0332, -636.7251)
+position = Vector2(2992.0332, -636.7251)
 rotation = 3.1414099
 scale = Vector2(3.05, 2.847)
 texture = ExtResource("8_as75d")
@@ -302,7 +316,7 @@ metadata/_edit_lock_ = true
 [node name="Background4" type="Sprite2D" parent="Scene objects/Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2991.0332, -272.7251)
+position = Vector2(2992.0332, -272.7251)
 scale = Vector2(3.05, 2.847)
 texture = ExtResource("8_as75d")
 metadata/_edit_lock_ = true
@@ -310,7 +324,7 @@ metadata/_edit_lock_ = true
 [node name="back reverse4" type="Sprite2D" parent="Scene objects/Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(3723.0332, -636.7251)
+position = Vector2(3724.0332, -636.7251)
 rotation = 3.1414108
 scale = Vector2(3.05, 2.847)
 texture = ExtResource("8_as75d")
@@ -318,9 +332,9 @@ metadata/_edit_lock_ = true
 
 [node name="background separator2" type="Panel" parent="Scene objects/Background"]
 z_index = -2
-offset_left = 2625.0
+offset_left = 2626.0
 offset_top = -819.0
-offset_right = 4089.0
+offset_right = 4090.0
 offset_bottom = -90.0
 metadata/_edit_lock_ = true
 
