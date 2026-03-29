@@ -1,21 +1,14 @@
-[gd_scene load_steps=15 format=4 uid="uid://kcigusslbjn2"]
+[gd_scene load_steps=8 format=4 uid="uid://gvetudjo4o6c"]
 
-[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/actual art/rpss tileset.png" id="1_3kf05"]
-[ext_resource type="Script" uid="uid://bjyi6jf4ja5ke" path="res://scenes/levels/level_3.gd" id="1_x0l25"]
-[ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="2_3ffft"]
-[ext_resource type="PackedScene" uid="uid://cdp7hokd82lql" path="res://scenes/other scenes/Cardboard.tscn" id="2_5ml2i"]
-[ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="2_mqegc"]
-[ext_resource type="PackedScene" uid="uid://l80shcho8jj" path="res://scenes/other scenes/Horizontal_fan.tscn" id="3_bb37f"]
-[ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="4_t76d4"]
-[ext_resource type="PackedScene" uid="uid://2ph7t6u1l6nh" path="res://scenes/other scenes/End Level Menu.tscn" id="5_upq13"]
-[ext_resource type="PackedScene" uid="uid://nv4dupa0q4gh" path="res://scenes/other scenes/death_screen.tscn" id="6_hgrxw"]
-[ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="6_mqegc"]
-[ext_resource type="Texture2D" uid="uid://bjhhbc4xnjv06" path="res://art/actual art/realbackgroundforrpssgameplay.png" id="8_as75d"]
+[ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/actual art/rpss tileset.png" id="1_qlpw8"]
+[ext_resource type="PackedScene" uid="uid://cit2ihbiuam5q" path="res://scenes/other scenes/endlevel.tscn" id="2_p3ikh"]
+[ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="3_1gpcn"]
+[ext_resource type="Texture2D" uid="uid://bjhhbc4xnjv06" path="res://art/actual art/realbackgroundforrpssgameplay.png" id="4_p3ikh"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_me5uq"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0qxpx"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khvpc"]
-texture = ExtResource("1_3kf05")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6p1k"]
+texture = ExtResource("1_qlpw8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -111,16 +104,14 @@ texture_region_size = Vector2i(32, 32)
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.888889, 1.7777786, 8.888889, 1.7777786, 12.444445, 8.888889, 12.444445, 16, -12.444445, 16, -12.444445, 8.888889)
 2:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-11.6673, 3.35876, 12.3744, 3.53553, 11.1369, 16, -12.1976, 16)
 
-[sub_resource type="TileSet" id="TileSet_rdkxc"]
+[sub_resource type="TileSet" id="TileSet_3wsqs"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 0
-sources/1 = SubResource("TileSetAtlasSource_khvpc")
+sources/1 = SubResource("TileSetAtlasSource_b6p1k")
 
-[node name="Level_3" type="Node2D"]
-position = Vector2(1216, -378)
-script = ExtResource("1_x0l25")
+[node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -128,7 +119,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_me5uq")
+texture = SubResource("CompressedTexture2D_0qxpx")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -137,192 +128,94 @@ physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(42, 65)
 tile_map_data = PackedByteArray("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")
-tile_set = SubResource("TileSet_rdkxc")
+tile_set = SubResource("TileSet_3wsqs")
 
-[node name="endlevel" parent="TextureRect" instance=ExtResource("2_mqegc")]
+[node name="endlevel" parent="TextureRect" instance=ExtResource("2_p3ikh")]
 position = Vector2(2777, -270)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_3ffft")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_1gpcn")]
 
-[node name="Scene objects" type="Node" parent="."]
+[node name="Background" type="Node" parent="."]
 
-[node name="breaking platforms" type="Node" parent="Scene objects"]
-
-[node name="Breaking Platform" parent="Scene objects/breaking platforms" instance=ExtResource("4_t76d4")]
-position = Vector2(1626, -369)
-
-[node name="Breaking Platform2" parent="Scene objects/breaking platforms" instance=ExtResource("4_t76d4")]
-position = Vector2(1658, -369)
-
-[node name="Breaking Platform3" parent="Scene objects/breaking platforms" instance=ExtResource("4_t76d4")]
-position = Vector2(2554, -241)
-
-[node name="Breaking Platform4" parent="Scene objects/breaking platforms" instance=ExtResource("4_t76d4")]
-position = Vector2(2586, -241)
-
-[node name="Vertical fans" type="Node" parent="Scene objects"]
-
-[node name="vertical fan" parent="Scene objects/Vertical fans" instance=ExtResource("6_mqegc")]
-position = Vector2(1727, -392)
-
-[node name="vertical fan2" parent="Scene objects/Vertical fans" instance=ExtResource("6_mqegc")]
-position = Vector2(1493, -553)
-
-[node name="vertical fan3" parent="Scene objects/Vertical fans" instance=ExtResource("6_mqegc")]
-position = Vector2(2218, -136)
-
-[node name="vertical fan4" parent="Scene objects/Vertical fans" instance=ExtResource("6_mqegc")]
-position = Vector2(2343, -264)
-
-[node name="vertical fan5" parent="Scene objects/Vertical fans" instance=ExtResource("6_mqegc")]
-position = Vector2(2570, -455)
-
-[node name="vertical fan6" parent="Scene objects/Vertical fans" instance=ExtResource("6_mqegc")]
-position = Vector2(3315, -264)
-
-[node name="vertical fan7" parent="Scene objects/Vertical fans" instance=ExtResource("6_mqegc")]
-position = Vector2(3530, -423)
-
-[node name="horizontal fans" type="Node" parent="Scene objects"]
-
-[node name="Horizontal_Fan2" parent="Scene objects/horizontal fans" instance=ExtResource("3_bb37f")]
-position = Vector2(1761, -561)
-rotation = 3.1415927
-speed = Vector2(-650, 0)
-
-[node name="Horizontal_Fan" parent="Scene objects/horizontal fans" instance=ExtResource("3_bb37f")]
-position = Vector2(2295, -455)
-speed = Vector2(650, 0)
-
-[node name="Horizontal_Fan3" parent="Scene objects/horizontal fans" instance=ExtResource("3_bb37f")]
-position = Vector2(1535, -728)
-rotation = 3.1415927
-speed = Vector2(-1200, 0)
-
-[node name="cardboard" type="Node" parent="Scene objects"]
-
-[node name="Cardboard" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(1926, -141)
-
-[node name="Cardboard2" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(1940, -141)
-
-[node name="Cardboard3" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(1926, -164)
-
-[node name="Cardboard4" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(1940, -164)
-
-[node name="Cardboard5" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2427, -269)
-
-[node name="Cardboard6" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2442, -269)
-
-[node name="Cardboard7" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2427, -292)
-
-[node name="Cardboard8" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2442, -292)
-
-[node name="Cardboard9" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2632, -459)
-
-[node name="Cardboard10" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2646, -459)
-
-[node name="Cardboard11" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2646, -482)
-
-[node name="Cardboard12" parent="Scene objects/cardboard" instance=ExtResource("2_5ml2i")]
-position = Vector2(2632, -482)
-
-[node name="Background" type="Node" parent="Scene objects"]
-
-[node name="Background2" type="Sprite2D" parent="Scene objects/Background"]
+[node name="Background2" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2260.0332, -272.7251)
+position = Vector2(1098.0332, 114.27487)
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="back reverse" type="Sprite2D" parent="Scene objects/Background"]
+[node name="back reverse" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(1528.0333, -636.7251)
+position = Vector2(366.03333, -249.7251)
 rotation = 3.1414099
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="Background" type="Sprite2D" parent="Scene objects/Background"]
+[node name="Background" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(1528.0333, -272.7251)
+position = Vector2(366.03333, 114.27487)
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="back reverse2" type="Sprite2D" parent="Scene objects/Background"]
+[node name="back reverse2" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2260.0332, -636.7251)
+position = Vector2(1098.0332, -249.7251)
 rotation = 3.1414108
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="background separator" type="Panel" parent="Scene objects/Background"]
+[node name="background separator" type="Panel" parent="Background"]
 z_index = -2
-offset_left = 1162.0
-offset_top = -819.0
-offset_right = 2626.0
-offset_bottom = -90.0
+offset_top = -432.0
+offset_right = 1464.0
+offset_bottom = 297.0
 metadata/_edit_lock_ = true
 
-[node name="Background3" type="Sprite2D" parent="Scene objects/Background"]
+[node name="Background3" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(3723.0332, -272.7251)
+position = Vector2(2561.0332, 114.27487)
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="back reverse3" type="Sprite2D" parent="Scene objects/Background"]
+[node name="back reverse3" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2991.0332, -636.7251)
+position = Vector2(1829.0332, -249.7251)
 rotation = 3.1414099
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="Background4" type="Sprite2D" parent="Scene objects/Background"]
+[node name="Background4" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(2991.0332, -272.7251)
+position = Vector2(1829.0332, 114.27487)
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="back reverse4" type="Sprite2D" parent="Scene objects/Background"]
+[node name="back reverse4" type="Sprite2D" parent="Background"]
 z_index = -10
 texture_filter = 1
-position = Vector2(3723.0332, -636.7251)
+position = Vector2(2561.0332, -249.7251)
 rotation = 3.1414108
 scale = Vector2(3.05, 2.847)
-texture = ExtResource("8_as75d")
+texture = ExtResource("4_p3ikh")
 metadata/_edit_lock_ = true
 
-[node name="background separator2" type="Panel" parent="Scene objects/Background"]
+[node name="background separator2" type="Panel" parent="Background"]
 z_index = -2
-offset_left = 2625.0
-offset_top = -819.0
-offset_right = 4089.0
-offset_bottom = -90.0
+offset_left = 1463.0
+offset_top = -432.0
+offset_right = 2927.0
+offset_bottom = 297.0
 metadata/_edit_lock_ = true
-
-[node name="Death Screen" parent="." instance=ExtResource("6_hgrxw")]
-
-[node name="End Level Menu" parent="." instance=ExtResource("5_upq13")]
