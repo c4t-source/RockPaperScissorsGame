@@ -288,13 +288,13 @@ position = Vector2(762, -205)
 position = Vector2(493, -274)
 
 [node name="Cardboard2" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
-position = Vector2(493, -298)
+position = Vector2(493, -297)
 
 [node name="Cardboard3" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
-position = Vector2(508, -274)
+position = Vector2(507, -274)
 
 [node name="Cardboard4" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
-position = Vector2(508, -298)
+position = Vector2(507, -297)
 
 [node name="Cardboard5" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
 position = Vector2(523, -146)
@@ -312,13 +312,13 @@ position = Vector2(538, -170)
 position = Vector2(523, -146)
 
 [node name="Cardboard10" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
-position = Vector2(523, -170)
+position = Vector2(523, -168.99998)
 
 [node name="Cardboard11" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
-position = Vector2(538, -146)
+position = Vector2(537, -146)
 
 [node name="Cardboard12" parent="Scene objects/Cardboard" instance=ExtResource("9_5ftci")]
-position = Vector2(538, -170)
+position = Vector2(537, -168.99998)
 
 [node name="endlevel" parent="Scene objects" instance=ExtResource("2_gnqhv")]
 position = Vector2(733, -334)
