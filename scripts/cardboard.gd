@@ -17,7 +17,6 @@ func choose_a_sound():
 	audio_stream_player_2d.play()
 
 var sounds = [
-	preload("res://art/sound effects/freesound_community-scissors-69248-[AudioTrimmer.com] (4).mp3"),
 	preload("res://art/sound effects/freesound_community-scissors-69248-[AudioTrimmer.com] (5).mp3"),
 	preload("res://art/sound effects/freesound_community-scissors-slow_1-39677-[AudioTrimmer.com].mp3")
 ]

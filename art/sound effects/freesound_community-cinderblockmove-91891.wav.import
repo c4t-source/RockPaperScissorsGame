@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u2nu8slw0jvy"
+path="res://.godot/imported/freesound_community-cinderblockmove-91891.wav-53350fce2a40ec5adac78f3b38cccb58.sample"
+
+[deps]
+
+source_file="res://art/sound effects/freesound_community-cinderblockmove-91891.wav"
+dest_files=["res://.godot/imported/freesound_community-cinderblockmove-91891.wav-53350fce2a40ec5adac78f3b38cccb58.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

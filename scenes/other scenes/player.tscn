@@ -42,9 +42,9 @@ var base_gravity := 0.0
 var wind_velocity_horizontal: Vector2 = Vector2.ZERO
 var wind_velocity_vertical: Vector2 = Vector2.ZERO
 
-var X_sound = preload(\"res://art/sound effects/freesound_community-cinderblockmove-91891.mp3\")
-var Y_sound = preload(\"res://art/sound effects/freesound_community-scissors-69248-[AudioTrimmer.com] (4).mp3\")
-var Z_sound = preload(\"res://art/sound effects/freesound_community-paper-flutter-5933-[AudioTrimmer.com] (1).mp3\")
+var X_sound = preload(\"res://art/sound effects/freesound_community-cinderblockmove-91891.wav\")
+var Y_sound = preload(\"res://art/sound effects/freesound_community-scissors-69248-[AudioTrimmer.com] (4).wav\")
+var Z_sound = preload(\"res://art/sound effects/freesound_community-paper-flutter-5933-[AudioTrimmer.com] (1).wav\")
 
 signal player_died
 
