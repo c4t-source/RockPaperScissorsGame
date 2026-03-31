@@ -16,12 +16,14 @@ func _ready():
 func _on_player_finished_game():
 	character_body_2d.set_process_input(false)
 	character_body_2d.set_physics_process(false)
+	character_body_2d.get_node("AudioStreamPlayer2D").stop()
 	get_tree().paused = false
 	$Label2.text = "Your amount of swaps through the entire game was %s. Do you think you can get lower?" % Global.swaps_count
 	await TransitionFade.fade(0.75, 0.5).finished
 	show()
 	await get_tree().create_timer(0.5).timeout
 	particles.emitting = true
+	
 
 
 func _on_main_menu_pressed():
