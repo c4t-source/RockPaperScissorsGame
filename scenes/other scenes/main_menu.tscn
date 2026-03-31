@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://uknglwydosjw"]
+[gd_scene load_steps=19 format=3 uid="uid://uknglwydosjw"]
 
 [ext_resource type="Script" uid="uid://24wkohk5s3p4" path="res://scripts/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://clogx8g6uyc4e" path="res://art/actual art/usablemainmenubgrpss224x126.png" id="2_7vrkn"]
 [ext_resource type="Script" uid="uid://cx8i5aakbwq1x" path="res://scenes/other scenes/audioslider.gd" id="3_6gp4m"]
-[ext_resource type="Script" uid="uid://dgfk8gw3td5qy" path="res://scenes/other scenes/fullscreen_control.gd" id="4_htw6m"]
 [ext_resource type="AudioStream" uid="uid://qubarftscfan" path="res://art/sound effects/mondamusic-retro-arcade-game-music-491667.mp3" id="5_htw6m"]
 [ext_resource type="PackedScene" uid="uid://dldll6i5j70by" path="res://scenes/other scenes/transition_fade.tscn" id="6_htw6m"]
 
@@ -238,17 +237,6 @@ value = 1.0
 script = ExtResource("3_6gp4m")
 audio_bus_name = "Music"
 
-[node name="Fullscreen control" type="CheckButton" parent="options"]
-layout_mode = 0
-offset_left = 16.19
-offset_top = 241.0
-offset_right = 421.495
-offset_bottom = 300.0
-scale = Vector2(1.155, 1.155)
-theme_override_font_sizes/font_size = 30
-text = "Fullscreen"
-script = ExtResource("4_htw6m")
-
 [node name="Master" type="Label" parent="options"]
 layout_mode = 1
 anchors_preset = 5
@@ -434,7 +422,6 @@ text = "Level 1
 [connection signal="pressed" from="Menubuttons/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="options/back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="options/Audioslider" to="options/Audioslider" method="_on_value_changed"]
-[connection signal="toggled" from="options/Fullscreen control" to="options/Fullscreen control" method="_on_toggled"]
 [connection signal="value_changed" from="options/Audioslider2" to="options/Audioslider2" method="_on_value_changed"]
 [connection signal="value_changed" from="options/Audioslider3" to="options/Audioslider3" method="_on_value_changed"]
 [connection signal="pressed" from="Levels" to="." method="_on_levels_pressed"]
