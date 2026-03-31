@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://2ph7t6u1l6nh"]
 
 [ext_resource type="Script" uid="uid://bb36kjwyal81o" path="res://scripts/endlevelmenu.gd" id="1_trjkf"]
-[ext_resource type="FontFile" uid="uid://dirqoanfdv7ia" path="res://art/actual art/Daydream DEMO.otf" id="1_uucs0"]
+[ext_resource type="FontFile" uid="uid://7ibbhd3c6ifa" path="res://Born2bSportyFS.otf" id="2_xng11"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guvjo"]
 bg_color = Color(1, 1, 1, 0.98039216)
@@ -46,9 +46,9 @@ offset_left = 144.0
 offset_top = 92.0
 offset_right = 1014.0
 offset_bottom = 196.0
-theme_override_fonts/font = ExtResource("1_uucs0")
-theme_override_font_sizes/font_size = 64
-text = "LEVEL   FINISHED!"
+theme_override_fonts/font = ExtResource("2_xng11")
+theme_override_font_sizes/font_size = 112
+text = "Level   Finished!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

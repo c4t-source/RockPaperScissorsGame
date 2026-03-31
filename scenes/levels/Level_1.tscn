@@ -149,7 +149,7 @@ position = Vector2(-438.3, -403)
 physics_interpolation_mode = 1
 texture_filter = 1
 position = Vector2(23, 13)
-tile_map_data = PackedByteArray("AAD///P/AQABAAAAAAAAAPP/AQABAAAAAAABAPP/AQABAAAAAAACAPP/AQABAAAAAAADAPP/AQABAAAAAAAEAPP/AQABAAAAAAAFAPP/AQABAAAAAAAGAPP/AQABAAAAAAAHAPP/AQABAAAAAAAIAPP/AQABAAAAAAAJAPP/AQABAAAAAAAKAPP/AQABAAAAAAALAPP/AQABAAAAAAAMAPP/AQABAAAAAAANAPP/AQABAAAAAAAOAPP/AQABAAAAAAAPAPP/AQABAAAAAAAQAPP/AQABAAAAAAARAPP/AQABAAAAAAASAPP/AQABAAAAAAATAPP/AQABAAAAAAAUAPP/AQABAAAAAAAVAPP/AQABAAAAAAAWAPP/AQABAAAAAAAXAPP/AQABAAAAAAAYAPP/AQABAAAAAAAZAPP/AQABAAAAAAAaAPP/AQABAAAAAAAbAPP/AQABAAAAAAAcAPP/AQABAAAAAAAdAPP/AQACAAAAAAACAO7/AAABAAAAAAABAPL/AQADAAAAAAACAPD/AAACAAAAAAACAPH/AAACAAAAAAACAPL/AQAAAAMAAAAHAPH/AAABAAAAAAAHAPD/AQADAAIAAAAKAPH/AAABAAAAAAAJAPH/AAABAAAAAAAGAPD/AAACAAAAAAAGAO//AAACAAAAAAAGAO7/AAACAAAAAAAGAO3/AAACAAAAAAAGAOz/AAACAAAAAAAGAPH/AAABAAAAAAAGAOv/AAACAAAAAAANAPH/AAABAAAAAAAOAPH/AAABAAAAAAATAPL/AAACAAAAAAATAPH/AAACAAAAAAATAPD/AAACAAAAAAATAO//AAACAAAAAAATAO7/AAACAAAAAAASAPL/AQAAAAUAAAARAPL/AQAAAAMAAAAQAPL/AQAHAAAAAAATAO3/AAACAAAAAAAMAPH/AAABAAAAAAALAPH/AAABAAAAAAAIAPH/AAABAAAAAAD1//P/AQABAAAAAAD2//P/AQABAAAAAAD3//P/AQABAAAAAAD4//P/AQABAAAAAAD5//P/AQABAAAAAAD6//P/AQABAAAAAADx/+v/AAACAAAAAADx/+z/AAADAAAAAADx/+3/AAACAAAAAADx/+7/AAADAAAAAADx/+//AAACAAAAAADx//D/AAADAAAAAADx//H/AAACAAAAAADx//L/AAACAAAAAADx//P/AQAAAAAAAADy//P/AQABAAAAAADz//P/AQABAAAAAAD0//P/AQABAAAAAAD1//L/AQAHAAAAAAD5//L/AQAAAAUAAAD6//L/AQAAAAUAAAD7//L/AQAAAAUAAAD+//P/AQABAAAAAAD9//P/AQABAAAAAAD8//P/AQABAAAAAAD7//P/AQABAAAAAAD8//L/AQACAAcAAAD4//L/AQAAAAcAAAD2//L/AAADAAAAAAD3//L/AAADAAAAAAA=")
+tile_map_data = PackedByteArray("AAD///P/AQABAAAAAAAAAPP/AQABAAAAAAABAPP/AQABAAAAAAACAPP/AQABAAAAAAADAPP/AQABAAAAAAAEAPP/AQABAAAAAAAFAPP/AQABAAAAAAAGAPP/AQABAAAAAAAHAPP/AQABAAAAAAAIAPP/AQABAAAAAAAJAPP/AQABAAAAAAAKAPP/AQABAAAAAAALAPP/AQABAAAAAAAMAPP/AQABAAAAAAANAPP/AQABAAAAAAAOAPP/AQABAAAAAAAPAPP/AQABAAAAAAAQAPP/AQABAAAAAAARAPP/AQABAAAAAAASAPP/AQABAAAAAAATAPP/AQABAAAAAAAUAPP/AQABAAAAAAAVAPP/AQABAAAAAAAWAPP/AQABAAAAAAAXAPP/AQABAAAAAAAYAPP/AQABAAAAAAAZAPP/AQABAAAAAAAaAPP/AQABAAAAAAAbAPP/AQABAAAAAAAcAPP/AQABAAAAAAAdAPP/AQACAAAAAAACAO7/AAABAAAAAAABAPL/AQADAAAAAAACAPD/AAACAAAAAAACAPH/AAACAAAAAAACAPL/AQAAAAMAAAAHAPH/AAABAAAAAAAHAPD/AQADAAIAAAAKAPH/AAABAAAAAAAJAPH/AAABAAAAAAAGAPD/AAACAAAAAAAGAO//AAACAAAAAAAGAO7/AAACAAAAAAAGAO3/AAACAAAAAAAGAOz/AAACAAAAAAAGAPH/AAABAAAAAAAGAOv/AAACAAAAAAANAPH/AAABAAAAAAAOAPH/AAABAAAAAAATAPL/AAACAAAAAAATAPH/AAACAAAAAAATAPD/AAACAAAAAAATAO//AAACAAAAAAATAO7/AAACAAAAAAASAPL/AQAAAAUAAAARAPL/AQAAAAMAAAAQAPL/AQAHAAAAAAATAO3/AAACAAAAAAAMAPH/AAABAAAAAAALAPH/AAABAAAAAAAIAPH/AAABAAAAAAD1//P/AQABAAAAAAD2//P/AQABAAAAAAD3//P/AQABAAAAAAD4//P/AQABAAAAAAD5//P/AQABAAAAAAD6//P/AQABAAAAAADx/+v/AAACAAAAAADx/+z/AAADAAAAAADx/+3/AAACAAAAAADx/+7/AAADAAAAAADx/+//AAACAAAAAADx//D/AAADAAAAAADx//H/AAACAAAAAADx//L/AAACAAAAAADx//P/AQAAAAAAAADy//P/AQABAAAAAADz//P/AQABAAAAAAD0//P/AQABAAAAAAD1//L/AQAHAAAAAAD5//L/AQAAAAUAAAD6//L/AQAAAAUAAAD7//L/AQAAAAUAAAD+//P/AQABAAAAAAD9//P/AQABAAAAAAD8//P/AQABAAAAAAD7//P/AQABAAAAAAD8//L/AQAAAAUAAAD4//L/AQAAAAUAAAD2//L/AAADAAAAAAD3//L/AAADAAAAAAAHAO//AAAAAAAAAAACAO//AAADAAAAAAADAO7/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_mxw0r")
 use_kinematic_bodies = true
 
@@ -181,7 +181,7 @@ rotation = -6.2863793
 speed = Vector2(650, 0)
 
 [node name="Horizontal fan4" parent="Scene Objects/Horizontal Fans" instance=ExtResource("6_u8eek")]
-position = Vector2(460.00003, -142.00002)
+position = Vector2(464.00003, -160)
 rotation = -0.0063880607
 scale = Vector2(0.99999994, 0.99999994)
 speed = Vector2(650, 0)
@@ -189,7 +189,7 @@ speed = Vector2(650, 0)
 [node name="Breaking Platforms" type="Node" parent="Scene Objects"]
 
 [node name="Breaking Platform" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
-position = Vector2(336, -184)
+position = Vector2(400, -184)
 
 [node name="Breaking Platform2" parent="Scene Objects/Breaking Platforms" instance=ExtResource("8_50olt")]
 position = Vector2(368, -184)
@@ -230,32 +230,52 @@ offset_right = -44.0
 offset_bottom = -109.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="rock + fan" type="Label" parent="Tutorial text"]
+[node name="rock" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 33.0
-offset_top = -151.0
-offset_right = 193.0
-offset_bottom = -104.0
+offset_left = -25.0
+offset_top = -120.0
+offset_right = 135.0
+offset_bottom = -73.0
 theme = SubResource("Theme_50olt")
 theme_override_fonts/font = ExtResource("10_sha1w")
-text = "Only rock can survive pencil spikes, and fans only move paper =)"
+text = "Only rock can survive pencil spikes!"
 label_settings = SubResource("LabelSettings_50olt")
 autowrap_mode = 2
 
-[node name="behind rock + fan" type="ColorRect" parent="Tutorial text"]
+[node name="behind rock" type="ColorRect" parent="Tutorial text"]
 z_index = -2
-offset_left = 23.0
-offset_top = -160.0
-offset_right = 191.0
-offset_bottom = -113.0
+offset_left = -31.0
+offset_top = -128.0
+offset_right = 135.0
+offset_bottom = -98.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="fan" type="Label" parent="Tutorial text"]
+z_index = -1
+offset_left = 139.0
+offset_top = -92.0
+offset_right = 299.0
+offset_bottom = -45.0
+theme = SubResource("Theme_50olt")
+theme_override_fonts/font = ExtResource("10_sha1w")
+text = "Fans only move paper!"
+label_settings = SubResource("LabelSettings_50olt")
+autowrap_mode = 2
+
+[node name="behind fan" type="ColorRect" parent="Tutorial text"]
+z_index = -2
+offset_left = 128.0
+offset_top = -96.0
+offset_right = 244.0
+offset_bottom = -70.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="breaking shelves" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 293.0
-offset_top = -267.0
-offset_right = 415.0
-offset_bottom = -228.4375
+offset_left = 290.0
+offset_top = -257.0
+offset_right = 412.0
+offset_bottom = -218.4375
 theme = SubResource("Theme_50olt")
 theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Be careful! Cracked shelves break. Step on them to go down!"
@@ -264,18 +284,18 @@ autowrap_mode = 2
 
 [node name="breaking shelves behind" type="ColorRect" parent="Tutorial text"]
 z_index = -2
-offset_left = 288.0
-offset_top = -272.0
-offset_right = 414.0
-offset_bottom = -225.0
+offset_left = 285.0
+offset_top = -262.0
+offset_right = 411.0
+offset_bottom = -215.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="fan can push too" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 614.0
-offset_top = -195.0
-offset_right = 725.0
-offset_bottom = -146.0
+offset_left = 695.0
+offset_top = -160.0
+offset_right = 806.0
+offset_bottom = -111.0
 theme = SubResource("Theme_50olt")
 theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Fans can push paper and scissors, but not rock!"
@@ -284,18 +304,18 @@ autowrap_mode = 2
 
 [node name="behind fan can push too" type="ColorRect" parent="Tutorial text"]
 z_index = -2
-offset_left = 608.0
-offset_top = -202.0
-offset_right = 728.0
-offset_bottom = -155.0
+offset_left = 689.0
+offset_top = -167.0
+offset_right = 809.0
+offset_bottom = -120.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="end level" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 467.0
-offset_top = -194.0
-offset_right = 602.0
-offset_bottom = -145.0
+offset_left = 529.0
+offset_top = -179.0
+offset_right = 664.0
+offset_bottom = -130.0
 theme = SubResource("Theme_50olt")
 theme_override_fonts/font = ExtResource("10_sha1w")
 text = "Nice! You made it to the end. The flag will take you to the next level!"
@@ -304,25 +324,25 @@ autowrap_mode = 2
 
 [node name="end level behind" type="ColorRect" parent="Tutorial text"]
 z_index = -2
-offset_left = 460.0
-offset_top = -198.0
-offset_right = 596.0
-offset_bottom = -151.0
+offset_left = 522.0
+offset_top = -183.0
+offset_right = 658.0
+offset_bottom = -136.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="behind cardboard" type="ColorRect" parent="Tutorial text"]
 z_index = -2
-offset_left = 555.0
+offset_left = 365.0
 offset_top = -75.0
-offset_right = 664.0
+offset_right = 474.0
 offset_bottom = -37.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="fan can push too2" type="Label" parent="Tutorial text"]
 z_index = -1
-offset_left = 562.0
+offset_left = 372.0
 offset_top = -70.0
-offset_right = 673.0
+offset_right = 483.0
 offset_bottom = -21.0
 theme = SubResource("Theme_50olt")
 theme_override_fonts/font = ExtResource("10_sha1w")

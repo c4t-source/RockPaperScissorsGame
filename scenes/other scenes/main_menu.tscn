@@ -350,11 +350,31 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
 text = "Levels
 "
 
+[node name="Level3B" type="Button" parent="Levels"]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 188.0
+offset_right = 894.0
+offset_bottom = 227.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
+text = "Level 3
+"
+
 [node name="Level2B" type="Button" parent="Levels"]
 layout_mode = 0
-offset_left = 563.0
+offset_left = 551.0
 offset_top = 189.0
-offset_right = 734.0
+offset_right = 722.0
 offset_bottom = 228.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -372,9 +392,9 @@ text = "Level 2
 
 [node name="TutorialB" type="Button" parent="Levels"]
 layout_mode = 0
-offset_left = 192.0
+offset_left = 180.0
 offset_top = 189.0
-offset_right = 350.0
+offset_right = 338.0
 offset_bottom = 228.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -391,9 +411,9 @@ text = "Tutorial"
 
 [node name="Level1B" type="Button" parent="Levels"]
 layout_mode = 0
-offset_left = 372.0
+offset_left = 360.0
 offset_top = 189.0
-offset_right = 543.0
+offset_right = 531.0
 offset_bottom = 228.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -409,11 +429,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
 text = "Level 1
 "
 
-[node name="Level3B" type="Button" parent="Levels"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [connection signal="pressed" from="Menubuttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menubuttons/options" to="." method="_on_options_2_pressed"]
 [connection signal="pressed" from="Menubuttons/exit" to="." method="_on_exit_pressed"]
@@ -424,7 +439,7 @@ offset_bottom = 8.0
 [connection signal="value_changed" from="options/Audioslider3" to="options/Audioslider3" method="_on_value_changed"]
 [connection signal="pressed" from="Levels" to="." method="_on_levels_pressed"]
 [connection signal="toggled" from="Levels" to="." method="_on_levels_toggled"]
+[connection signal="pressed" from="Levels/Level3B" to="." method="_on_level_3b_pressed"]
 [connection signal="pressed" from="Levels/Level2B" to="." method="_on_level_2b_pressed"]
 [connection signal="pressed" from="Levels/TutorialB" to="." method="_on_tutorial_b_pressed"]
 [connection signal="pressed" from="Levels/Level1B" to="." method="_on_level_1b_pressed"]
-[connection signal="pressed" from="Levels/Level3B" to="." method="_on_level_3b_pressed"]
