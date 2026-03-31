@@ -33,7 +33,6 @@ var current_character: int = CharacterType.X
 
 var deathornotdeath := false
 var ability_duration = 8
-var amount_of_swaps = 0
 var current_speed := 0.0
 var current_gravity_scale := 1.0
 var current_jump_velocity := 0.0
@@ -66,7 +65,7 @@ func _ready():
 	audio.volume_db = 0
 
 func _input(event):
-	if event.is_action_pressed(\"swap_character\") and amount_of_swaps < 100:
+	if event.is_action_pressed(\"swap_character\"):
 		swap_character()
 
 
@@ -125,8 +124,6 @@ func apply_character():
 			current_gravity_scale = gravity_scale_x
 			current_jump_velocity = jump_velocity_x
 			can_jump = false
-			amount_of_swaps = amount_of_swaps + 1
-			print(amount_of_swaps)
 			Collision.shape.extents = Vector2(15, 19)
 			deadbox.shape.extents = Vector2(19, 15)
 			if sprite and sprite_x:
@@ -139,8 +136,6 @@ func apply_character():
 			current_gravity_scale = gravity_scale_y
 			current_jump_velocity = jump_velocity_y
 			can_jump = true
-			amount_of_swaps = amount_of_swaps + 1
-			print(amount_of_swaps)
 			Collision.shape.extents = Vector2(20,14)
 			deadbox.shape.extents = Vector2(15,22)
 			if sprite and sprite_y:
@@ -153,8 +148,6 @@ func apply_character():
 			current_gravity_scale = gravity_scale_z
 			current_jump_velocity = jump_velocity_z
 			can_jump = true
-			amount_of_swaps = amount_of_swaps + 1
-			print(amount_of_swaps)
 			Collision.shape.extents = Vector2(20, 15)
 			deadbox.shape.extents = Vector2(15, 23)
 			floor_max_angle = 0

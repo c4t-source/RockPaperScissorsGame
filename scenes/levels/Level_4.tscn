@@ -154,7 +154,7 @@ tile_map_data = PackedByteArray("AAD3//r/AAACAAAAAAD3//n/AAACAAAAAAD3//j/AAACAAA
 tile_set = SubResource("TileSet_r2h4o")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_1gpcn")]
-position = Vector2(-258, -94)
+position = Vector2(-256, -95)
 
 [node name="End Game Menu" parent="." instance=ExtResource("6_yqixl")]
 

@@ -18,6 +18,7 @@ config/icon="uid://4q335xxs2p"
 [autoload]
 
 TransitionFade="*res://scenes/other scenes/transition_fade.tscn"
+Global="*res://global.gd"
 
 [display]
 

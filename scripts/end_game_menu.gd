@@ -1,6 +1,7 @@
 extends CanvasLayer
 @onready var particles = $GPUParticles2D
 @onready var character_body_2d = $"../CharacterBody2D"
+@onready var label_2: Label = $Label2
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -16,6 +17,7 @@ func _on_player_finished_game():
 	character_body_2d.set_process_input(false)
 	character_body_2d.set_physics_process(false)
 	get_tree().paused = false
+	$Label2.text = "Your amount of swaps through the entire game was %s. Do you think you can get lower?" % Global.swaps_count
 	await TransitionFade.fade(0.75, 0.5).finished
 	show()
 	await get_tree().create_timer(0.5).timeout
@@ -24,6 +26,7 @@ func _on_player_finished_game():
 
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/other scenes/main_menu.tscn")
+
 
 
 func _on_next_level_pressed():
