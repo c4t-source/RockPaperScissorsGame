@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://da6excawcccj6" path="res://art/actual art/rps altmini  tileset.png" id="2_yqixl"]
 [ext_resource type="PackedScene" uid="uid://cieaw8rrsq2td" path="res://scenes/other scenes/player.tscn" id="3_1gpcn"]
 [ext_resource type="Texture2D" uid="uid://bjhhbc4xnjv06" path="res://art/actual art/realbackgroundforrpssgameplay.png" id="4_p3ikh"]
-[ext_resource type="PackedScene" uid="uid://2ph7t6u1l6nh" path="res://scenes/other scenes/End Level Menu.tscn" id="5_h8eal"]
 [ext_resource type="PackedScene" uid="uid://nv4dupa0q4gh" path="res://scenes/other scenes/death_screen.tscn" id="6_6o3yo"]
+[ext_resource type="PackedScene" uid="uid://b3ntt646ls6i2" path="res://scenes/other scenes/end_game_menu.tscn" id="6_yqixl"]
 [ext_resource type="PackedScene" uid="uid://ckkf3g0f50ewd" path="res://scenes/other scenes/vertical_fan.tscn" id="8_qmwg6"]
 [ext_resource type="PackedScene" uid="uid://l80shcho8jj" path="res://scenes/other scenes/Horizontal_fan.tscn" id="9_430b8"]
 [ext_resource type="PackedScene" uid="uid://bisonwrda7q8g" path="res://scenes/other scenes/breaking_platform.tscn" id="9_b5iws"]
@@ -154,9 +154,9 @@ tile_map_data = PackedByteArray("AAD3//r/AAACAAAAAAD3//n/AAACAAAAAAD3//j/AAACAAA
 tile_set = SubResource("TileSet_r2h4o")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_1gpcn")]
-position = Vector2(-256, -94)
+position = Vector2(-258, -94)
 
-[node name="End Level Menu" parent="." instance=ExtResource("5_h8eal")]
+[node name="End Game Menu" parent="." instance=ExtResource("6_yqixl")]
 
 [node name="Death Screen" parent="." instance=ExtResource("6_6o3yo")]
 

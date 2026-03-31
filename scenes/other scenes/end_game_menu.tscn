@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3ntt646ls6i2"]
+
+[ext_resource type="Script" uid="uid://827qm2k4lsk5" path="res://scripts/end_game_menu.gd" id="1_wop3f"]
+[ext_resource type="FontFile" uid="uid://7ibbhd3c6ifa" path="res://Born2bSportyFS.otf" id="2_atc3v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guvjo"]
+bg_color = Color(1, 1, 1, 0.98039216)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="Gradient" id="Gradient_xng11"]
+offsets = PackedFloat32Array(0, 0.095846646, 0.22683705, 0.36741215, 0.5111821, 0.6517572, 0.78913736, 0.913738, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.73586845, 0.2331877, 0.22274604, 1, 0.76767445, 0.29413265, 0.58481437, 1, 0.11093671, 0.5136324, 0.85537493, 1, 0.34382048, 0.67506677, 0.35746425, 1, 0.8897611, 0.57174224, 0.15700206, 1, 0.6879089, 0.6136159, 0.9851727, 1, 0.5073493, 0.8229556, 0.7939201, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x23sm"]
+gradient = SubResource("Gradient_xng11")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xng11"]
+particle_flag_disable_z = true
+direction = Vector3(1, -1, 0)
+spread = 180.0
+initial_velocity_min = -400.0
+initial_velocity_max = -200.0
+angular_velocity_min = 99.999985
+angular_velocity_max = 299.99997
+gravity = Vector3(0, 98, 0)
+scale_min = 5.0
+scale_max = 7.0
+color_initial_ramp = SubResource("GradientTexture1D_x23sm")
+
+[node name="End Game Menu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_wop3f")
+
+[node name="Label2" type="Label" parent="."]
+z_index = 2
+offset_left = 145.0
+offset_top = 184.0
+offset_right = 1015.0
+offset_bottom = 310.0
+theme_override_fonts/font = ExtResource("2_atc3v")
+theme_override_font_sizes/font_size = 64
+text = "Thanks for Playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 92.0
+offset_right = 1014.0
+offset_bottom = 196.0
+theme_override_fonts/font = ExtResource("2_atc3v")
+theme_override_font_sizes/font_size = 112
+text = "Game Finished!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Main Menu" type="Button" parent="."]
+offset_left = 369.0
+offset_top = 307.0
+offset_right = 738.0
+offset_bottom = 382.0
+theme_override_colors/icon_normal_color = Color(0.06666667, 0.06666667, 0.06666667, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_guvjo")
+text = "Main Menu
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(550, 255)
+emitting = false
+amount = 85
+lifetime = 1.5
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_xng11")
+
+[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]
