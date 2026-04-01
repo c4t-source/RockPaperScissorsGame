@@ -15,6 +15,7 @@ func _ready():
 func _on_player_finished_level():
 	character_body_2d.set_process_input(false)
 	character_body_2d.set_physics_process(false)
+	character_body_2d.get_node("AudioStreamPlayer2D").stop()
 	get_tree().paused = false
 	await TransitionFade.fade(0.75, 0.5).finished
 	show()
