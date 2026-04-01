@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckkf3g0f50ewd"]
+[gd_scene load_steps=6 format=3 uid="uid://ckkf3g0f50ewd"]
 
 [ext_resource type="Script" uid="uid://cl0w03a7yfd8s" path="res://scripts/vertical_fan.gd" id="1_koxyi"]
 [ext_resource type="Texture2D" uid="uid://dheyjkwr4xtwb" path="res://art/actual art/rpss tileset.png" id="2_t1sbg"]
@@ -29,25 +29,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Curve" id="Curve_6ohl3"]
-_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.7070707, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_m68jg"]
-curve = SubResource("Curve_6ohl3")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7n4em"]
-particle_flag_disable_z = true
-emission_shape_scale = Vector3(14.05, 1, 1)
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-direction = Vector3(0, -1, 0)
-spread = 0.0
-initial_velocity_min = 100.0
-initial_velocity_max = 150.0
-gravity = Vector3(0, 0, 0)
-alpha_curve = SubResource("CurveTexture_m68jg")
-
 [node name="vertical fan" type="Area2D"]
 collision_layer = 4
 script = ExtResource("1_koxyi")
@@ -63,13 +44,49 @@ sprite_frames = SubResource("SpriteFrames_o4tko")
 animation = &"on"
 autoplay = "on"
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 16
 lifetime = 1.7
 randomness = 1.0
-trail_enabled = true
-trail_lifetime = 0.6
-process_material = SubResource("ParticleProcessMaterial_7n4em")
+fixed_fps = 30
+draw_order = 1
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+
+[node name="GPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(-8, 0)
+amount = 16
+lifetime = 1.7
+randomness = 1.0
+fixed_fps = 30
+draw_order = 1
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+
+[node name="GPUParticles2D3" type="CPUParticles2D" parent="."]
+position = Vector2(9, 0)
+amount = 12
+lifetime = 1.7
+randomness = 1.0
+fixed_fps = 30
+draw_order = 1
+emission_shape = 3
+emission_rect_extents = Vector2(1, 4)
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
